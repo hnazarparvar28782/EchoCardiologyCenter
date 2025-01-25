@@ -1,3 +1,6 @@
+//* #######################################
+//* this is model  for users of site
+//* ##################################### 
 import mongoose from "mongoose";
 import {schema } from "./secure/userValidation.js";
 import bcrypt from "bcryptjs";
