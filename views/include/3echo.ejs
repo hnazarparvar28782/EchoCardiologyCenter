@@ -1,0 +1,186 @@
+<style>
+    .accordion-button {
+        background-color: #f0f8ff;
+        color: #007bff;
+        font-weight: bold;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .accordion-button:hover {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+
+    .accordion-button:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .accordion-button {
+        direction: ltr; /* جهت متن به چپ */
+        text-align: left; /* تراز متن به چپ */
+        font-family: Arial, sans-serif; /* انتخاب فونت مناسب */
+    }
+
+    .accordion-item {
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .accordion-header {
+        margin-bottom: 5px;
+    }
+
+    .accordion-body {
+        background-color: #e9f7fd;
+        border: 1px solid #cce7ff;
+        border-radius: 5px;
+        padding: 15px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .table {
+        margin-top: 10px;
+        width: 100%;
+        border-collapse: collapse; /* برای حذف فاصله بین سلول‌ها */
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #cce7ff; /* اضافه کردن حاشیه به سلول‌ها */
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+
+    .table-bordered {
+        border: 1px solid #cce7ff;
+    }
+
+    input[type="text"].form-control {
+        border: 1px solid #007bff;
+        border-radius: 3px;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2);
+        margin-right: 5px;
+    }
+
+    label {
+        margin-left: 5px;
+        font-weight: normal;
+    }
+
+    hr {
+        border-top: 1px solid #cce7ff;
+        margin: 10px 0;
+    }
+
+    @media (max-width: 576px) {
+        .table thead {
+            display: none; /* مخفی کردن سرستون در حالت موبایل */
+        }
+
+        .table, .table tbody, .table tr, .table td {
+            display: block; /* نمایش هر سلول به صورت بلوک */
+            width: 100%; /* عرض کامل */
+        }
+
+        .table tr {
+            margin-bottom: 1rem; /* فاصله بین سطرها */
+            border: none; /* حذف حاشیه‌های پیش‌فرض */
+        }
+
+        .table td {
+            position: relative;
+            padding-left: 50%; /* فضای خالی برای برچسب */
+            border-bottom: 1px solid #ddd; /* خط جداکننده در پایین هر سطر */
+        }
+
+        .table td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+</style>
+
+<div class="accordion mt-1" id="accordionecho3">
+    <% data3.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                    <img src="/assets/heartline.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Parameter</th>
+                                <th>20-40 years</th>
+                                <th>40-60 years</th>
+                                <th>>60 years</th>
+                                <th>User Value</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% item.parameters.forEach(parameter => { %>
+                                <tr>
+                                    <td data-label="Select"><input type="checkbox" name="select"></td>
+                                    <td data-label="Parameter"><%= parameter.parameter %></td>
+                                    <td data-label="20-40 years">
+                                        Mean ± SD: <%= parameter["20-40 years"].mean_sd %><br>
+                                        CI: <%= parameter["20-40 years"].ci %>
+                                    </td>
+                                    <td data-label="40-60 years">
+                                        Mean ± SD: <%= parameter["40-60 years"].mean_sd %><br>
+                                        CI: <%= parameter["40-60 years"].ci %>
+                                    </td>
+                                    <td data-label=">60 years">
+                                        Mean ± SD: <%= parameter[">60 years"].mean_sd %><br>
+                                        CI: <%= parameter[">60 years"].ci %>
+                                    </td>
+                                    <td data-label="User Value">
+                                        <input type="text" name="uservalue" class="form-control" disabled>
+                                        <input type="checkbox" name="uservalue-select" id="3uservalue-select-<%= index %>">
+                                        <label for="3uservalue-select-<%= index %>">select</label>
+                                    </td>
+                                    <td data-label="Result" class="d-sm-flex">
+                                        <div>
+                                            <input type="checkbox" id="normal-<%= index %>" name="result"  value="Normal" disabled>
+                                            <label for="normal-<%= index %>">Normal</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="moderate-<%= index %>" name="result"  value="Moderate" disabled>
+                                            <label for="moderate-<%= index %>">Moderate</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="abnormal-<%= index %>" name="result"  value="Abnormal" disabled>
+                                            <label for="abnormal-<%= index %>">Abnormal</label>
+                                        </div>
+                                        <input type="checkbox" name="selectResult" style="margin: auto;" id="selectResult<%= index %>">
+                                        <label for="selectResult<%= index %>" style="margin: auto;padding:2px;">select</label>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

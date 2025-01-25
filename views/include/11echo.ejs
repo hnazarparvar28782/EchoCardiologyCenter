@@ -1,0 +1,70 @@
+<div class="accordion mt-1" id="accordionEcho11">
+    <% data11.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo11" aria-expanded="true" aria-controls="collapse<%= index %>echo11">
+                    <img src="/assets/heartmath.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>echo11" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>echo11" data-bs-parent="#accordionEcho11">
+                <div class="accordion-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Parameter</th>
+                                <th>Male Range</th>
+                                <th>Female Range</th>
+                                <th>User Value</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% item.parameters.forEach(parameter => { %>
+                                <tr>
+                                    <td data-label="Select"><input type="checkbox" name="select"></td>
+                                    <td data-label="Parameter"><%= parameter.parameter %></td>
+                                    <td data-label="Male Range">
+                                        Reference: <%= parameter.men.reference_range %><br>
+                                        Mildly Abnormal: <%= parameter.men.mildly_abnormal %><br>
+                                        Moderately Abnormal: <%= parameter.men.moderately_abnormal %><br>
+                                        Severely Abnormal: <%= parameter.men.severely_abnormal %>
+                                    </td>
+                                    <td data-label="Female Range">
+                                        Reference: <%= parameter.women.reference_range %><br>
+                                        Mildly Abnormal: <%= parameter.women.mildly_abnormal %><br>
+                                        Moderately Abnormal: <%= parameter.women.moderately_abnormal %><br>
+                                        Severely Abnormal: <%= parameter.women.severely_abnormal %>
+                                    </td>
+                                    <td data-label="User Value">
+                                        <input type="text" name="uservalue" class="form-control" disabled>
+                                        <input type="checkbox" name="uservalue-select" id="11uservalue-<%= index %>">
+                                        <label for="11uservalue-<%= index %>">select</label>
+                                    </td>
+                                    <td data-label="Result" class="d-sm-flex">
+                                        <div>
+                                            <input type="checkbox" id="normal-<%= index %>" name="result" value="Normal" disabled>
+                                            <label for="normal-<%= index %>">Normal</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="moderate-<%= index %>" name="result" value="Moderate" disabled>
+                                            <label for="moderate-<%= index %>">Moderate</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="abnormal-<%= index %>" name="result" value="Abnormal" disabled>
+                                            <label for="abnormal-<%= index %>">Abnormal</label>
+                                        </div>
+                                        <hr>
+                                        <input type="checkbox" name="selectResult" id="selectResult-<%= index %>">
+                                        <label class="m-auto" for="selectResult-<%= index %>">select</label>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

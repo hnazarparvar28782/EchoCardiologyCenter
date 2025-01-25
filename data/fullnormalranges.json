@@ -1,0 +1,1641 @@
+[{
+  "_id": {
+    "$oid": "670d2fd7b1e38967cf1e3340"
+  },
+  "title": "Normal Values for 2D Echocardiographic Parameters of LV Size and Function According to Gender",
+  "parameters": [
+    {
+      "parameter": "LV internal dimension - Diastolic dimension",
+      "male": {
+        "mean_sd": "50.2 ± 4.1",
+        "range": "42.0–58.4",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "45.0 ± 3.6",
+        "range": "37.8–52.2",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV internal dimension - Systolic dimension",
+      "male": {
+        "mean_sd": "32.4 ± 3.7",
+        "range": "25.0–39.8",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "28.2 ± 3.3",
+        "range": "21.6–34.8",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV volumes (biplane) - LV EDV",
+      "male": {
+        "mean_sd": "106 ± 22",
+        "range": "62–150",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "76 ± 15",
+        "range": "46–106",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV volumes (biplane) - LV ESV",
+      "male": {
+        "mean_sd": "41 ± 10",
+        "range": "21–61",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "2814–42",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV volumes normalized by BSA - LV EDV",
+      "male": {
+        "mean_sd": "54 ± 10",
+        "range": "34–74",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "45 ± 8",
+        "range": "29–61",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV volumes normalized by BSA - LV ESV",
+      "male": {
+        "mean_sd": "21 ± 5",
+        "range": "11–31",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "16 ± 4",
+        "range": "8–24",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV EF (biplane)",
+      "male": {
+        "mean_sd": "62 ± 5",
+        "range": "52–72",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "64 ± 5",
+        "range": "54–74",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3560b1e38967cf1e3343"
+  },
+  "title": "Normal Ranges for LV Mass Indices",
+  "parameters": [
+    {
+      "parameter": "LV mass (g)",
+      "male": {
+        "range": "88–224",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "67–162",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "LV mass/BSA (g/m²)",
+      "male": {
+        "range": "49–115",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "43–95",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Relative wall thickness (cm)",
+      "male": {
+        "range": "0.24–0.42",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "0.22–0.42",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Septal thickness (cm)",
+      "male": {
+        "range": "0.6–1.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "0.6–0.9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Posterior wall thickness (cm)",
+      "male": {
+        "range": "0.6–1.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "0.6–0.9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "2D method LV mass (g)",
+      "male": {
+        "range": "96–200",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "66–150",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "2D method LV mass/BSA (g/m²)",
+      "male": {
+        "range": "50–102",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "range": "44–95",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3660b1e38967cf1e3345"
+  },
+  "title": "Left Ventricular TDI Systolic Parameters According to Age",
+  "parameters": [
+    {
+      "parameter": "Septal s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "8.6 ± 1.3",
+        "ci": "6.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "7.9 ± 1.4",
+        "ci": "5.9–11.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "7.5 ± 1.3",
+        "ci": "5.0–10.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Lateral s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "10.7 ± 2.3",
+        "ci": "6.1–16.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "9.4 ± 2.2",
+        "ci": "4.0–15.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "8.5 ± 2.5",
+        "ci": "4.0–15.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Average septal and lateral s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "9.6 ± 1.6",
+        "ci": "7.0–13.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "8.7 ± 1.5",
+        "ci": "6.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "8.1 ± 1.6",
+        "ci": "5.5–12.5",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Inferior s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "9.3 ± 1.5",
+        "ci": "5.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "8.8 ± 1.5",
+        "ci": "5.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "8.2 ± 1.5",
+        "ci": "5.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Anterior s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "10.0 ± 2.1",
+        "ci": "6.6–13.4",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "8.6 ± 2.0",
+        "ci": "4.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "7.6 ± 2.1",
+        "ci": "4.0–12.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Posterior s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "10.2 ± 1.8",
+        "ci": "7.0–14.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "9.2 ± 1.9",
+        "ci": "5.0–13.2",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "8.8 ± 2.7",
+        "ci": "5.5–18.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Average s' wave (cm/s)",
+      "20-40 years": {
+        "mean_sd": "9.7 ± 1.7",
+        "ci": "7.2–12.9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "40-60 years": {
+        "mean_sd": "8.7 ± 1.4",
+        "ci": "6.2–11.9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      ">60 years": {
+        "mean_sd": "8.1 ± 1.6",
+        "ci": "5.7–12.7",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3701b1e38967cf1e3347"
+  },
+  "title": "Mitral Inflow Velocities in 117 Normal Subjects, Stratified by Phase of Respiration",
+  "parameters": [
+    {
+      "parameter": "Peak E, cm/s",
+      "Inspiration": {
+        "mean_sd": "67 ± 14",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "68 ± 15",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "68 ± 15",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Peak A, cm/s",
+      "Inspiration": {
+        "mean_sd": "48 ± 16",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "50 ± 16",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "49 ± 15",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "E/A ratio",
+      "Inspiration": {
+        "mean_sd": "1.5 ± 0.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "1.5 ± 0.7",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "1.7 ± 0.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "DT, ms",
+      "Inspiration": {
+        "mean_sd": "195 ± 34",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "192 ± 33",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "194 ± 35",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "IVRT, ms",
+      "Inspiration": {
+        "mean_sd": "83 ± 16",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "83 ± 16",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "82 ± 16",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d38a4b1e38967cf1e334b"
+  },
+  "title": "Pulmonary Venous Flow Velocities in 85 Normal Subjects, Stratified by Phase of Respiration",
+  "parameters": [
+    {
+      "parameter": "Peak velocity, cm/s - Systolic",
+      "Inspiration": {
+        "mean_sd": "55 ± 11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "54 ± 11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "54 ± 11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Peak velocity, cm/s - Diastolic",
+      "Inspiration": {
+        "mean_sd": "43 ± 11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "46 ± 12",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "44 ± 11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Peak velocity, cm/s - PVa",
+      "Inspiration": {
+        "mean_sd": "20.2 ± 4.4",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "21.1 ± 4.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "20.5 ± 4.3",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Forward time velocity integral, cm - Systolic",
+      "Inspiration": {
+        "mean_sd": "14 ± 3",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "13 ± 3",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "13 ± 3",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Forward time velocity integral, cm - Diastolic",
+      "Inspiration": {
+        "mean_sd": "8.8 ± 2.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "9.4 ± 2.7",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "9.1 ± 2.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Forward time velocity integral, cm - PVa",
+      "Inspiration": {
+        "mean_sd": "1.9 ± 0.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "2.0 ± 0.8",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "2.0 ± 0.1",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "FTVI systole, %",
+      "Inspiration": {
+        "mean_sd": "61 ± 9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "59 ± 10",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "60 ± 9",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "Reverse TVI as % of FTVI",
+      "Inspiration": {
+        "mean_sd": "8.8 ± 3.2",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Expiration": {
+        "mean_sd": "9.2 ± 4.0",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "Apnea": {
+        "mean_sd": "9.1 ± 3.7",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": "ObjectId",
+  "title": "Normal Values for RV Chamber Size",
+  "parameters": [
+    {
+      "parameter": "RV basal diameter (mm)",
+      "mean_sd": "33 ± 4",
+      "normal_range": "25–41",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RV mid diameter (mm)",
+      "mean_sd": "27 ± 4",
+      "normal_range": "19–35",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RV longitudinal diameter (mm)",
+      "mean_sd": "71 ± 7",
+      "normal_range": "59–83",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RVOT PLAX diameter (mm)",
+      "mean_sd": "25 ± 2.5",
+      "normal_range": "20–30",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RVOT proximal diameter (mm)",
+      "mean_sd": "30 ± 3.5",
+      "normal_range": "21–35",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RVOT distal diameter (mm)",
+      "mean_sd": "22 ± 2.5",
+      "normal_range": "17–27",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RV wall thickness (mm)",
+      "mean_sd": "3 ± 1",
+      "normal_range": "1–5",
+      "userValue": null,
+      "status": null,
+      "severity": null
+    },
+    {
+      "parameter": "RVOT EDA (cm²)",
+      "men": {
+        "mean_sd": "17 ± 3.5",
+        "normal_range": "10–24",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "14 ± 3",
+        "normal_range": "8–20",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "RV EDA indexed to BSA (cm²/m²)",
+      "men": {
+        "mean_sd": "8.8 ± 1.9",
+        "normal_range": "5–12.6",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "8 ± 1.75",
+        "normal_range": "4.5–11.5",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "RV ESA (cm²)",
+      "men": {
+        "mean_sd": "9 ± 3",
+        "normal_range": "3–15",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "7 ± 2.35",
+        "normal_range": "3–11",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "RV ESA indexed to BSA (cm²/m²)",
+      "men": {
+        "mean_sd": "4.7 ± 1.35",
+        "normal_range": "2.0–7.4",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "4.0 ± 1.2",
+        "normal_range": "1.6–6.4",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "RV EDV indexed to BSA (ml/m²)",
+      "men": {
+        "mean_sd": "61 ± 13",
+        "normal_range": "35–87",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "53 ± 10.5",
+        "normal_range": "32–74",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    },
+    {
+      "parameter": "RV ESV indexed to BSA (ml/m²)",
+      "men": {
+        "mean_sd": "27 ± 8.5",
+        "normal_range": "10–44",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      "women": {
+        "mean_sd": "20 ± 7",
+        "normal_range": "8–36",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d39eab1e38967cf1e334e"
+  },
+  "title": "Severity Grading of Aortic Regurgitation",
+  "parameters": [
+    {
+      "category": "Structural parameters",
+      "parameters": [
+        {
+          "parameter": "Aortic leaflets",
+          "mild": "Normal or abnormal",
+          "moderate": "Normal or abnormal",
+          "severe": "Abnormal/flail, or wide coaptation defect"
+        },
+        {
+          "parameter": "LV size",
+          "mild": "Normal",
+          "moderate": "Normal or dilated",
+          "severe": "Usually dilated"
+        }
+      ]
+    },
+    {
+      "category": "Qualitative Doppler",
+      "parameters": [
+        {
+          "parameter": "Jet width in LVOT, color flow",
+          "mild": "Small in central jets",
+          "moderate": "Intermediate",
+          "severe": "Large in central jets; variable in eccentric jets"
+        },
+        {
+          "parameter": "Flow convergence, color flow",
+          "mild": "None or very small",
+          "moderate": "Intermediate",
+          "severe": "Large"
+        },
+        {
+          "parameter": "Jet density, CW",
+          "mild": "Incomplete or faint",
+          "moderate": "Dense",
+          "severe": "Dense"
+        },
+        {
+          "parameter": "Jet deceleration rate, CW (PHT, milliseconds)",
+          "mild": "Incomplete or faint slow, >500",
+          "moderate": "Medium, 500–200",
+          "severe": "Steep, <200"
+        },
+        {
+          "parameter": "Diastolic flow reversal in descending aorta, FW",
+          "mild": "Brief, early diastolic reversal",
+          "moderate": "Intermediate",
+          "severe": "Prominent holodiastolic reversal"
+        }
+      ]
+    },
+    {
+      "category": "Semiquantitative parameters",
+      "parameters": [
+        {
+          "parameter": "VCW (cm)",
+          "mild": "<0.3",
+          "moderate": "0.3–0.6",
+          "severe": ">0.6"
+        },
+        {
+          "parameter": "Jet width/LVOT width, central jets (%)",
+          "mild": "<25",
+          "moderate": "25–45",
+          "severe": "≥65"
+        },
+        {
+          "parameter": "Jet CSA/LVOT CSA, central jets (%)",
+          "mild": "<5",
+          "moderate": "5–20",
+          "severe": "≥60"
+        }
+      ]
+    },
+    {
+      "category": "Quantitative parameters",
+      "parameters": [
+        {
+          "parameter": "RVol (mL/beat)",
+          "mild": "<30",
+          "moderate": "30–44",
+          "severe": "≥60"
+        },
+        {
+          "parameter": "RF (%)",
+          "mild": "<30",
+          "moderate": "30–39",
+          "severe": "≥50"
+        },
+        {
+          "parameter": "EROA (cm²)",
+          "mild": "<0.10",
+          "moderate": "0.10–0.19",
+          "severe": "≥0.30"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3a4fb1e38967cf1e3350"
+  },
+  "title": "Severity Grading of Mitral Valve Regurgitation",
+  "parameters": [
+    {
+      "category": "Structural",
+      "parameters": [
+        {
+          "parameter": "MV morphology",
+          "mild": "None or mild leaflet abnormality (e.g., mild thickening, calcifications or prolapse, mild tenting)",
+          "moderate": "Moderate leaflet abnormality or moderate tenting",
+          "severe": "Severe valve lesions (primary: flail leaflet, ruptured papillary muscle, severe retraction, large perforation; secondary: severe tenting, poor leaflet coaptation)"
+        },
+        {
+          "parameter": "LV and LA size",
+          "mild": "Usually normal",
+          "moderate": "Normal or mild dilated",
+          "severe": "Dilated"
+        }
+      ]
+    },
+    {
+      "category": "Qualitative Doppler",
+      "parameters": [
+        {
+          "parameter": "Color flow jet area",
+          "mild": "Small, central, narrow, often brief",
+          "moderate": "Variable",
+          "severe": "Large central jet (>50% of LA) or eccentric wall-impinging jet of variable size"
+        },
+        {
+          "parameter": "Flow convergence",
+          "mild": "Not visible, transient or small",
+          "moderate": "Intermediate in size and duration",
+          "severe": "Large throughout systole"
+        },
+        {
+          "parameter": "CWD jet",
+          "mild": "Faint/partial/parabolic",
+          "moderate": "Dense but partial or parabolic",
+          "severe": "Holosystolic/dense/triangular"
+        }
+      ]
+    },
+    {
+      "category": "Semiquantitative",
+      "parameters": [
+        {
+          "parameter": "VCW (cm)",
+          "mild": "<0.3",
+          "moderate": "Intermediate",
+          "severe": "≥0.7 (≥0.8 for biplane)"
+        },
+        {
+          "parameter": "Pulmonary vein flow",
+          "mild": "Systolic dominance (may be blunted in LV dysfunction or AF)",
+          "moderate": "Normal or systolic blunting",
+          "severe": "Minimal to no systolic flow/systolic flow reversal"
+        },
+        {
+          "parameter": "Mitral inflow",
+          "mild": "A wave dominant",
+          "moderate": "Variable",
+          "severe": "E wave dominant (>1.2 m/s)"
+        }
+      ]
+    },
+    {
+      "category": "Quantitative",
+      "parameters": [
+        {
+          "parameter": "EROA, 2D PISA (cm²)",
+          "mild": "<0.20",
+          "moderate": "0.20–0.29",
+          "severe": "≥0.40 (may be lower in secondary MR with elliptical ROA)"
+        },
+        {
+          "parameter": "RVol (mL)",
+          "mild": "<30",
+          "moderate": "30–44",
+          "severe": "≥60 (may be lower in low flow conditions)"
+        },
+        {
+          "parameter": "RF (%)",
+          "mild": "<30",
+          "moderate": "30–39",
+          "severe": "≥50"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3aa5b1e38967cf1e3352"
+  },
+  "title": "Severity Grading of Mitral Valve Regurgitation",
+  "parameters": [
+    {
+      "category": "Structural",
+      "parameters": [
+        {
+          "parameter": "MV morphology",
+          "mild": "None or mild leaflet abnormality (e.g., mild thickening, calcifications or prolapse, mild tenting)",
+          "moderate": "Moderate leaflet abnormality or moderate tenting",
+          "severe": "Severe valve lesions (primary: flail leaflet, ruptured papillary muscle, severe retraction, large perforation; secondary: severe tenting, poor leaflet coaptation)"
+        },
+        {
+          "parameter": "LV and LA size",
+          "mild": "Usually normal",
+          "moderate": "Normal or mild dilated",
+          "severe": "Dilated"
+        }
+      ]
+    },
+    {
+      "category": "Qualitative Doppler",
+      "parameters": [
+        {
+          "parameter": "Color flow jet area",
+          "mild": "Small, central, narrow, often brief",
+          "moderate": "Variable",
+          "severe": "Large central jet (>50% of LA) or eccentric wall-impinging jet of variable size"
+        },
+        {
+          "parameter": "Flow convergence",
+          "mild": "Not visible, transient or small",
+          "moderate": "Intermediate in size and duration",
+          "severe": "Large throughout systole"
+        },
+        {
+          "parameter": "CWD jet",
+          "mild": "Faint/partial/parabolic",
+          "moderate": "Dense but partial or parabolic",
+          "severe": "Holosystolic/dense/triangular"
+        }
+      ]
+    },
+    {
+      "category": "Semiquantitative",
+      "parameters": [
+        {
+          "parameter": "VCW (cm)",
+          "mild": "<0.3",
+          "moderate": "Intermediate",
+          "severe": "≥0.7 (≥0.8 for biplane)"
+        },
+        {
+          "parameter": "Pulmonary vein flow",
+          "mild": "Systolic dominance (may be blunted in LV dysfunction or AF)",
+          "moderate": "Normal or systolic blunting",
+          "severe": "Minimal to no systolic flow/systolic flow reversal"
+        },
+        {
+          "parameter": "Mitral inflow",
+          "mild": "A wave dominant",
+          "moderate": "Variable",
+          "severe": "E wave dominant (>1.2 m/s)"
+        }
+      ]
+    },
+    {
+      "category": "Quantitative",
+      "parameters": [
+        {
+          "parameter": "EROA, 2D PISA (cm²)",
+          "mild": "<0.20",
+          "moderate": "0.20–0.29",
+          "severe": "≥0.40 (may be lower in secondary MR with elliptical ROA)"
+        },
+        {
+          "parameter": "RVol (mL)",
+          "mild": "<30",
+          "moderate": "30–44",
+          "severe": "≥60 (may be lower in low flow conditions)"
+        },
+        {
+          "parameter": "RF (%)",
+          "mild": "<30",
+          "moderate": "30–39",
+          "severe": "≥50"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3af7b1e38967cf1e3354"
+  },
+  "title": "Dimension of the Aorta",
+  "parameters": [
+    {
+      "parameter": "Annulus",
+      "absolute_values": {
+        "men": "2.6 ± 0.3 cm",
+        "women": "2.3 ± 0.2 cm"
+      },
+      "indexed_values": {
+        "men": "1.3 ± 0.1 cm/m²",
+        "women": "1.3 ± 0.1 cm/m²"
+      }
+    },
+    {
+      "parameter": "Sinuses of Valsalva",
+      "absolute_values": {
+        "men": "3.4 ± 0.3 cm",
+        "women": "3.0 ± 0.3 cm"
+      },
+      "indexed_values": {
+        "men": "1.7 ± 0.2 cm/m²",
+        "women": "1.8 ± 0.2 cm/m²"
+      }
+    },
+    {
+      "parameter": "Sinotubular junction",
+      "absolute_values": {
+        "men": "2.9 ± 0.3 cm",
+        "women": "2.6 ± 0.3 cm"
+      },
+      "indexed_values": {
+        "men": "1.5 ± 0.2 cm/m²",
+        "women": "1.5 ± 0.2 cm/m²"
+      }
+    },
+    {
+      "parameter": "Proximal ascending aorta",
+      "absolute_values": {
+        "men": "3.0 ± 0.4 cm",
+        "women": "2.7 ± 0.4 cm"
+      },
+      "indexed_values": {
+        "men": "1.5 ± 0.2 cm/m²",
+        "women": "1.6 ± 0.3 cm/m²"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3b68b1e38967cf1e3356"
+  },
+  "title": "Reference Limits and Partition Values for Left Atrial Dimensions and Volumes",
+  "parameters": [
+    {
+      "parameter": "LA diameter (cm)",
+      "women": {
+        "reference_range": "2.7–3.8",
+        "mildly_abnormal": "3.9–4.2",
+        "moderately_abnormal": "4.3–4.6",
+        "severely_abnormal": "≥4.7"
+      },
+      "men": {
+        "reference_range": "3.0–4.0",
+        "mildly_abnormal": "4.1–4.6",
+        "moderately_abnormal": "4.7–5.2",
+        "severely_abnormal": "≥5.2"
+      }
+    },
+    {
+      "parameter": "LV diameter/BSA (cm/m²)",
+      "women": {
+        "reference_range": "1.5–2.3",
+        "mildly_abnormal": "2.4–2.6",
+        "moderately_abnormal": "2.7–2.9",
+        "severely_abnormal": "≥3.0"
+      },
+      "men": {
+        "reference_range": "1.5–2.3",
+        "mildly_abnormal": "2.4–2.6",
+        "moderately_abnormal": "2.7–2.9",
+        "severely_abnormal": "≥3.0"
+      }
+    },
+    {
+      "parameter": "RA minor-axis dimension (cm)",
+      "women": {
+        "reference_range": "2.9–4.5",
+        "mildly_abnormal": "4.6–4.9",
+        "moderately_abnormal": "5.0–5.4",
+        "severely_abnormal": "≥5.5"
+      },
+      "men": {
+        "reference_range": "2.9–4.5",
+        "mildly_abnormal": "4.6–4.9",
+        "moderately_abnormal": "5.0–5.4",
+        "severely_abnormal": "≥5.5"
+      }
+    },
+    {
+      "parameter": "RA minor-axis dimension/BSA (cm/m²)",
+      "women": {
+        "reference_range": "1.7–2.5",
+        "mildly_abnormal": "2.6–2.8",
+        "moderately_abnormal": "2.9–3.1",
+        "severely_abnormal": "≥3.2"
+      },
+      "men": {
+        "reference_range": "1.7–2.5",
+        "mildly_abnormal": "2.6–2.8",
+        "moderately_abnormal": "2.9–3.1",
+        "severely_abnormal": "≥3.2"
+      }
+    },
+    {
+      "parameter": "LA area (cm²)",
+      "women": {
+        "reference_range": "≤20",
+        "mildly_abnormal": "20–30",
+        "moderately_abnormal": "30–40",
+        "severely_abnormal": ">40"
+      },
+      "men": {
+        "reference_range": "≤20",
+        "mildly_abnormal": "20–30",
+        "moderately_abnormal": "30–40",
+        "severely_abnormal": ">40"
+      }
+    },
+    {
+      "parameter": "LV diastolic volume (mL)",
+      "women": {
+        "reference_range": "22–52",
+        "mildly_abnormal": "53–62",
+        "moderately_abnormal": "63–72",
+        "severely_abnormal": "≥73"
+      },
+      "men": {
+        "reference_range": "18–58",
+        "mildly_abnormal": "59–68",
+        "moderately_abnormal": "69–78",
+        "severely_abnormal": "≥79"
+      }
+    },
+    {
+      "parameter": "LA volume/BSA (mL/m²)",
+      "women": {
+        "reference_range": "22 ± 6",
+        "mildly_abnormal": "29–33",
+        "moderately_abnormal": "34–39",
+        "severely_abnormal": "≥40"
+      },
+      "men": {
+        "reference_range": "22 ± 6",
+        "mildly_abnormal": "29–33",
+        "moderately_abnormal": "34–39",
+        "severely_abnormal": "≥40"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3dadb1e38967cf1e3359"
+  },
+  "title": "Stages of Valvular Aortic Stenosis (AS)",
+  "parameters": [
+    {
+      "stage": "A",
+      "definition": "At risk of AS",
+      "valve_anatomy": "Bicuspid aortic valve (or other congenital valve anomaly), Aortic valve sclerosis",
+      "valve_hemodynamics": "Aortic Vmax <2 m/sec with normal leaflet motion",
+      "hemodynamic_consequences": "None",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "B",
+      "definition": "Progressive AS",
+      "valve_anatomy": "Mild to moderate leaflet calcification/fibrosis of bicuspid or trileaflet valve with some reduction in leaflet motion or Rheumatic valve changes with commissural fusion",
+      "valve_hemodynamics": {
+        "mild_as": "Aortic Vmax 2.0-2.9 m/sec or mean AP <20 mm Hg",
+        "moderate_as": "Aortic Vmax 3.0-3.9 m/sec or mean AP 20-39 mm Hg"
+      },
+      "hemodynamic_consequences": "Early LV diastolic dysfunction may be present",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C1",
+      "definition": "Asymptomatic severe AS",
+      "valve_anatomy": "Severe leaflet calcification/fibrosis or congenital stenosis with severely reduced leaflet opening",
+      "valve_hemodynamics": "Severe AS: Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+      "hemodynamic_consequences": "LV diastolic dysfunction, Mild LV hypertrophy",
+      "symptoms": "None, Exercise testing is reasonable to confirm symptom status",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C2",
+      "definition": "Asymptomatic severe AS with LV systolic dysfunction",
+      "valve_anatomy": "Severe leaflet calcification/fibrosis or congenital stenosis with severely reduced leaflet opening",
+      "valve_hemodynamics": "Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+      "hemodynamic_consequences": "LVEF <50%",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D1",
+      "definition": "Symptomatic severe high-gradient AS",
+      "valve_anatomy": "Severe leaflet calcification/fibrosis with severely reduced leaflet opening",
+      "valve_hemodynamics": "Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+      "hemodynamic_consequences": "LV diastolic dysfunction, LV hypertrophy",
+      "symptoms": "Exertional dyspnea, Decreased exercise tolerance",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D2",
+      "definition": "Symptomatic severe low-flow, low-gradient AS with reduced LVEF",
+      "valve_anatomy": "Severe leaflet calcification/fibrosis with restricted leaflet motion",
+      "valve_hemodynamics": "Aortic Vmax <4 m/sec with resting aortic valve area ≤1.0 cm²",
+      "hemodynamic_consequences": "HF, Angina, Syncope or presyncope",
+      "symptoms": "Exertional dyspnea",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D3",
+      "definition": "Symptomatic severe low-gradient AS with normal LVEF or paradoxical low-flow severe AS",
+      "valve_anatomy": "Severe leaflet calcification/fibrosis with restricted leaflet motion",
+      "valve_hemodynamics": "Aortic Vmax <4 m/sec, stroke volume index <35 mL/m²",
+      "hemodynamic_consequences": "Increased LV wall thickness, Small LV chamber with low stroke volume, Restrictive diastolic filling",
+      "symptoms": "HF, Angina, Syncope or presyncope",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3e92b1e38967cf1e335b"
+  },
+  "title": "Clinical Stages of Chronic Aortic Regurgitation (AR)",
+  "parameters": [
+    {
+      "stage": "A",
+      "definition": "At risk of AR",
+      "valve_anatomy": "Bicuspid aortic valve (or other congenital valve anomaly), Aortic valve sclerosis, Diseases of the aortic sinuses or ascending aorta, History of rheumatic fever or known rheumatic heart disease",
+      "valve_hemodynamics": "AR severity none or trace",
+      "hemodynamic_consequences": "None",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "B",
+      "definition": "Progressive AR",
+      "valve_anatomy": "Mild to moderate calcification of a trileaflet valve or bicuspid aortic valve (or other congenital anomaly), Dilated aortic sinuses, Rheumatic valve changes, Previous IE",
+      "valve_hemodynamics": {
+        "mild_ar": "Jet width <25% of LVOT, Vena contracta <0.3 cm, RVol <30 mL/beat, RF <30%, ERO <0.10 cm², Angiography grade 1+",
+        "moderate_ar": "Jet width 25%-64% of LVOT, Vena contracta 0.3-0.6 cm, RVol 30-59 mL/beat, RF 30%-49%, ERO 0.10-0.29 cm², Angiography grade 2+"
+      },
+      "hemodynamic_consequences": "Normal LV systolic function, Normal LV volume or mild LV dilation",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C",
+      "definition": "Asymptomatic severe AR",
+      "valve_anatomy": "Calcific aortic valve disease, Bicuspid valve (or other congenital abnormality), Dilated aortic sinuses or ascending aorta, Rheumatic valve changes, Previous IE with abnormal leaflet closure or perforation",
+      "valve_hemodynamics": "Severe AR: Jet width ≥65% of LVOT, Vena contracta >0.6 cm, Holodiastolic flow reversal in proximal abdominal aorta, RVol ≥60 mL/beat, RF ≥50%, ERO ≥0.3 cm², Angiography grade 3+ to 4+",
+      "hemodynamic_consequences": {
+        "C1": "Normal LVEF (≥55%) and mild to moderate LV dilation (LVESD ≤50 mm)",
+        "C2": "Abnormal LV systolic function (LVEF <55%) or severe LV dilation (LVESD >50 mm or indexed LVESD >25 mm/m²)"
+      },
+      "symptoms": "None; exercise testing is reasonable to confirm symptom status",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D",
+      "definition": "Symptomatic severe AR",
+      "valve_anatomy": "Calcific valve disease, Bicuspid valve (or other congenital abnormality), Dilated aortic sinuses or ascending aorta, Rheumatic valve changes, Previous IE with abnormal leaflet closure or perforation",
+      "valve_hemodynamics": "Severe AR: Doppler jet width ≥65% of LVOT, Vena contracta >0.6 cm, Holodiastolic flow reversal in the proximal abdominal aorta, RVol ≥60 mL/beat, RF ≥50%, ERO ≥0.3 cm², Angiography grade 3+ to 4+",
+      "hemodynamic_consequences": "Symptomatic severe AR may occur with normal systolic function (LVEF >55%), mild to moderate LV dysfunction (LVEF 40% to 55%), or severe LV dysfunction (LVEF <40%). Moderate to severe LV dilation is present",
+      "symptoms": "Exertional dyspnea or angina, or more severe HF symptoms",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3f11b1e38967cf1e335d"
+  },
+  "title": "Stages of Mitral Stenosis (MS)",
+  "parameters": [
+    {
+      "stage": "A",
+      "definition": "At risk for MS",
+      "valve_anatomy": "Mild valve doming during diastole",
+      "valve_hemodynamics": "Normal transmitral flow velocity",
+      "hemodynamic_consequences": "None",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "B",
+      "definition": "Progressive MS",
+      "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA >1.5 cm²",
+      "valve_hemodynamics": "Increased transmitral flow velocities, MVA >1.5 cm², Diastolic pressure half-time <150 msec",
+      "hemodynamic_consequences": "Mild to moderate LA enlargement, Normal pulmonary pressure at rest",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C",
+      "definition": "Asymptomatic severe MS",
+      "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA ≤1.5 cm²",
+      "valve_hemodynamics": "MVA ≤1.5 cm², Diastolic pressure half-time ≥150 msec",
+      "hemodynamic_consequences": "Severe LA enlargement, Elevated PASP >50 mm Hg",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D",
+      "definition": "Symptomatic severe MS",
+      "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA ≤1.5 cm²",
+      "valve_hemodynamics": "MVA ≤1.5 cm², Diastolic pressure half-time ≥150 msec",
+      "hemodynamic_consequences": "Severe LA enlargement, Elevated PASP >50 mm Hg",
+      "symptoms": "Decreased exercise tolerance, Exertional dyspnea",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d3fbdb1e38967cf1e3360"
+  },
+  "title": "Stages of Chronic Primary Mitral Regurgitation (MR)",
+  "parameters": [
+    {
+      "stage": "A",
+      "definition": "At risk for MR",
+      "valve_anatomy": "Mild MVP with normal coaptation, Mild valve thickening and leaflet restriction",
+      "valve_hemodynamics": "Small vena contracta <0.3 cm, Central jet MR <20% LA on Doppler",
+      "hemodynamic_consequences": "None",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "B",
+      "definition": "Progressive MR",
+      "valve_anatomy": "Moderate to severe MVP with normal coaptation, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE",
+      "valve_hemodynamics": "Central jet MR 20%-40% LA or late systolic eccentric jet MR, Vena contracta <0.7 cm, RVol <60 mL, RF <50%, ERO <0.40 cm², Angiographic grade 1-2+",
+      "hemodynamic_consequences": "Mild LA enlargement, No LV enlargement, Normal pulmonary pressure",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C",
+      "definition": "Asymptomatic severe MR",
+      "valve_anatomy": "Severe MVP with loss of coaptation or flail leaflet, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE, Thickening of leaflets with radiation heart disease",
+      "valve_hemodynamics": "Central jet MR >40% LA or holosystolic eccentric jet MR, Vena contracta ≥0.7 cm, RVol ≥60 mL, RF ≥50%, ERO ≥0.40 cm², Angiographic grade 3-4+",
+      "hemodynamic_consequences": "Moderate or severe LA enlargement, LV enlargement, Pulmonary hypertension may be present at rest or with exercise",
+      "symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D",
+      "definition": "Symptomatic severe MR",
+      "valve_anatomy": "Severe MVP with loss of coaptation or flail leaflet, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE, Thickening of leaflets with radiation heart disease",
+      "valve_hemodynamics": "Central jet MR >40% LA or holosystolic eccentric jet MR, Vena contracta ≥0.7 cm, RVol ≥60 mL, RF ≥50%, ERO ≥0.40 cm², Angiographic grade 3-4+",
+      "hemodynamic_consequences": "Moderate or severe LA enlargement, LV enlargement, Pulmonary hypertension present",
+      "symptoms": "Decreased exercise tolerance, Exertional dyspnea",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d407cb1e38967cf1e3362"
+  },
+  "title": "Stages of Chronic Secondary Mitral Regurgitation (MR)",
+  "parameters": [
+    {
+      "stage": "A",
+      "definition": "At risk of MR",
+      "valve_anatomy": "Normal valve leaflets, chords, and annulus in a patient with coronary disease or cardiomyopathy",
+      "valve_hemodynamics": "No MR jet or small central jet area <20% LA on Doppler, Small vena contracta <0.30 cm",
+      "associated_clinical_findings": "Normal or mildly dilated LV size with fixed (infarction) or inducible (ischemia) regional wall motion abnormalities, Primary myocardial disease with LV dilation and systolic dysfunction",
+      "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to appropriate medical therapy",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "B",
+      "definition": "Progressive MR",
+      "valve_anatomy": "Regional wall motion abnormalities with mild tethering of mitral leaflet, Annular dilation with mild loss of central coaptation of the mitral leaflets",
+      "valve_hemodynamics": "ERO <0.40 cm², RVol <60 mL, RF <50%",
+      "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+      "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to revascularization and appropriate medical therapy",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C",
+      "definition": "Asymptomatic severe MR",
+      "valve_anatomy": "Regional wall motion abnormalities and/or LV dilation with severe tethering of mitral leaflet, Annular dilation with severe loss of central coaptation of the mitral leaflets",
+      "valve_hemodynamics": "ERO ≥0.40 cm², RVol ≥60 mL, RF ≥50%",
+      "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+      "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to revascularization and appropriate medical therapy",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D",
+      "definition": "Symptomatic severe MR",
+      "valve_anatomy": "Regional wall motion abnormalities and/or LV dilation with severe tethering of mitral leaflet, Annular dilation with severe loss of central coaptation of the mitral leaflets",
+      "valve_hemodynamics": "ERO ≥0.40 cm², RVol ≥60 mL, RF ≥50%",
+      "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+      "symptoms": "HF symptoms attributable to MR persist after revascularization and optimization of medical therapy, Decreased exercise tolerance, Exertional dyspnea",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670d4237b1e38967cf1e3364"
+  },
+  "title": "Stages of Tricuspid Regurgitation (TR)",
+  "parameters": [
+    {
+      "stage": "B",
+      "definition": "Progressive TR",
+      "valve_hemodynamics": "Central jet ≤50% RA, Vena contracta width ≤0.7 cm, ERO ≤0.4 cm², R Vol ≤45 mL",
+      "hemodynamic_consequences": "None",
+      "clinical_symptoms": "None",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "C",
+      "definition": "Asymptomatic severe TR",
+      "valve_hemodynamics": "Central jet >50% RA, Vena contracta width >0.7 cm, ERO >0.4 cm², R Vol >45 mL, Dense CW signal with dagger shape, Hepatic vein systolic flow reversal",
+      "hemodynamic_consequences": "Dilated RV and RA, Elevated RA with cV wave",
+      "clinical_symptoms": "No symptoms",
+      "userValue": null,
+      "selectedByUser": false
+    },
+    {
+      "stage": "D1",
+      "definition": "Symptomatic severe TR",
+      "valve_hemodynamics": "Central jet >50% RA, Vena contracta width >0.7 cm, ERO >0.4 cm², R Vol >45 mL, Dense CW signal with dagger shape, Hepatic vein systolic flow reversal",
+      "hemodynamic_consequences": "Dilated RV and RA, Elevated RA with cV wave",
+      "clinical_symptoms": "Elevated venous pressure, Dyspnea on exertion, fatigue, ascites, edema",
+      "userValue": null,
+      "selectedByUser": false
+    }
+  ]
+}]

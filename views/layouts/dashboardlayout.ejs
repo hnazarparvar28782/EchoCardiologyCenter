@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="h-100" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="دریافت نوبت اینترنتی ویزیت با قلم نوری  و ایجاد پرونده  پزشکی  برای بیماران مطب">
+  <meta name="author" content="hassan nazarparvar talash computer co.ltd">
+  <meta name="generator" content="hassan 0.112.5">
+  <title>
+    <%= pageTitle %>
+  </title>
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/stylePrj/styles.css">
+  <link rel="stylesheet" href="/fonts/font-awesome.css">
+  <link href="/css/stylePrj/sticky-footer-navbar.css" rel="stylesheet">
+  
+</head>
+
+<body class="d-flex rtl flex-column h-100">
+
+  <header class="mb-4">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark  ">
+      <div class="container-fluid border-success bg-info hnnavbar-top-style ">
+        <a class="navbar-brand" href="#"><span class="fa fa-stethoscope bg-success  my-3"></span> دکتر پیش تو</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav  mb-2 mb-md-0">
+            <!-- vorod & mynobats -->
+            <li class="nav-item pl-0">
+              <a class="nav-link active" id="loginId" aria-current="page" href="#" data-bs-toggle="modal"
+                data-bs-target="#exampleModal"><span class="fa fa-user-circle-o "></span>
+                ورود </a>
+                <a class="nav-link active" href="/users/Mynobats">
+                  <p class="fa fa-clock-o  "> نوبت های  من</p>
+                </a>
+            </li>
+            <!-- register doctor & patient -->
+            <li class="nav-item pl-0">
+              <a class="nav-link active" <% if (typeof user._id!="undefined" ) { %>
+                href="/dashboard/registerDoctor"
+                <% } else { %>
+                  href="/dashboard/preregister"
+                  <% } %>
+                    > <span class="fa fa-user-md p-1 text-"></span>ثبت نام
+                    پزشکان/ تغییر رمز
+              </a>
+              <a class="nav-link active" href="#" data-bs-toggle="modal" id="SignUpSickLink"
+              data-bs-target="#SignUpSick">
+              <span class="fa fa-user p-1 "></span>ثبت نام بیمار
+              </a>
+              
+            </li>
+            <!-- help & contact -->
+            <li class="nav-item pl-0">
+              <a class="nav-link active" href="/dashboard/getHelp">راهنما</a>
+              <a class="nav-link active " href="/dashboard/getContackt" >
+              <span class="fa fa-phone p-1 "></span>تماس با ما  
+              </a>
+            </li>
+            <!-- home link -->
+            <li class="nav-item pl-0">
+              <a class="nav-link active" href="/dashboard">
+                <p class="fa fa-2x fa-home"></p>
+              </a>
+            </li>
+            <!-- exit account -->
+            <li class="nav-item pl-0">
+              <a class="nav-link active" href="/users/logout">
+                <p class="fa fa-2x fa-sign-out"></p>
+              </a>
+            </li>
+            
+          </ul>
+           <!-- dark & light mode -->
+           <li class="nav-item pl-0   col-lg-7 ">
+            <!-- dork mode light mode section -->
+            <div class="form-check form-switch ms-auto mt-2 me-1 ">
+              <label class="form-check-label ms-3" for="lightSwitch">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-brightness-high" viewBox="0 0 16 16">
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                </svg>
+              </label>
+              <input class="form-check-input " type="checkbox" style="display:none" id="lightSwitch" />
+            </div>
+            <form class="input-group bg-warning  p-0  m-3  col-lg-11 col-md-8" role="search" method="GET" action="/dashboard/SearchForDoctor">
+              <input class="form-control  col-12 " type="search" id="SerachFordoctor" name="SerachFordoctor"
+                placeholder="جستجو مثلا حسینی قلب(بدون کلمه تخصص یا فقط نام شهر یا فقط نام دکتر) ..." aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-outline-success" type="submit">
+                  <span class="fa fa-search blue-color fa-lg fa-fw " aria-hidden="true"></span>
+                </button>
+              </div>
+            </form>
+          </li>
+          
+        </div>
+
+        <a class=" navbar-brand col-md-3 col-lg-2 mr-0 px-3 text-center text-light-emphasis" href="#">
+          <% if (user!="") {%>
+            <i class="fa fa-check-circle text-success-emphasis"></i>  
+          <% if (user.nezam!="") { %>
+              خوش آمدید دکتر
+          <% } %>
+            <% if (user.nezam=="") { %>
+             خوش آمدید
+
+            <% } %>
+             <br> 
+               <%-` ${user.FullName}`%> 
+          <% } %>
+        </a>    
+      </div>
+    </nav>
+  </header>
+  <%- include('../include/loginModal.ejs') %>
+  <%- include('../include/SignUpSick.ejs') %>
+    <!-- offconvass side bar -->
+   <div class="mt-5 mt-lg-2 mt-xl-2 mt-md-2">
+    <div class="d-flex mt-5 p-5 flex-row-reverse" >
+      <a class="btn btn-primary" data-bs-toggle="offcanvas"  href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample"
+        
+        <% if ((IsDoctor===true)&&(user.panelNumberActive===true)) { %>
+            style='display:block'> 
+        <%} else {%>
+             <% if ((user.mobileId=="09363125187")&&(IsDoctor)){ %>
+              style='display:block'> 
+             <% } else{ %>
+              style='display:none'>  
+             <% } %>
+        <% } %>
+        <span class=" fa fa-bars hamburger"></span>
+      </a>
+    </div>
+    <div class="offcanvas offcanvas-start "   data-bs-scroll="true" tabindex="-1" id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header ">
+        <h5 class="offcanvas-title text-success" id="offcanvasExampleLabel">امکانات ویژه</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="text-secondary-emphasis">
+         پزشک محترم در این قسمت شما می توانید  نوبت ها روزهای کاری مطب یا  مرکز درمانی  
+        و همچنین فاصله زمانی هر نوبت را نیز مشخص نمایید
+        <hr>
+        </div>
+        <div id="doctorSpesialmenu" class="row">
+         <a href="/dashboard/createNobatDoctor/<%= user._id  %>" class="" ><span class="fa fa-calendar m-2"></span>ایجاد نوبت  ویزیت</a>
+         <a href="/dashboard/NobatHozri/<%= user._id  %>" class="text-success" ><span  class="fa fa-user  text-info m-2" ></span>مطب - رزرو نوبت حضوری</a> 
+         <a href="/dashboard/MatabView/<%= user._id  %>" class="text-danger" ><span  class="fa fa-hospital-o text-danger m-2" ></span>مطب (منشی) - مشاهده نوبت ها</a> 
+         <a href="/dashboard/VisitWithList/<%= user._id  %>" class="text-secondary" ><span  class="fa fa-hospital-o text-danger m-2" ></span>پزشک(ویزیت از طریق لیست)</a> 
+         <hr class="mt-2">
+         <a href="/dashboard/createechoreport/<%= user._id  %>" class="text-secondary" >
+          <span  class="text-danger m-2" >
+          <img src="/assets/cardio.png" alt="Icon" style="width: 40px;height: 40px;margin-right: 5px;" class="icon-small"> 
+         </span>ایجاد گزارش اکو برای بیمار</a> 
+         <a href="/dashboard/TotalNormalValues/<%= user._id  %>" class="text-primary" >
+          <span  class=" m-2" >
+            <img src="/assets/heartnote.png" alt="Icon" style="width: 40px;height: 40px;margin-right: 5px;" class="icon-small"> 
+          </span>اکو پروفایل-اکو آزمایش های منتخب</a> 
+         <a href="/dashboard/BlankEchoConfig/<%= user._id  %>" class="text-success" >
+          <span  class="text-danger m-2" >
+            <img src="/assets/cardiparvand.png" alt="Icon" style="width: 40px;height: 40px;margin-right: 5px;" class="icon-small"> 
+          </span>تنظیمات گزارش اکو</a> 
+    
+        </div>
+       
+        <div class="dropdown mt-3" 
+          <% if (user.mobileId=="09363125187") { %>
+             style='display:block'> 
+          <% } else { %>
+             style='display:none'> 
+          <% } %>
+         >
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMeSupervisor"
+            data-bs-toggle="dropdown">
+             سوپروایزر
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="/dashboard/AdminUserPanel/">پنل کاربران</a></li>
+            <li><a class="dropdown-item" href="/dashboard/AdminNazarat/">نظرات برای پزشکان</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+    <%- body %>
+
+      <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+          <h1>لینک های مرتبط <i class="fa fa-link"></i></h1>
+          <div class="flex-column border border-4 rounded-4 border-danger-subtle">
+             <a class="mb-4 p-4" href="https://irimc.org/">سازمان نظام پزشکی</a>
+             <br>
+             <a class="mb-4 p-4" href="https://dotic.ir/cat/129">پایگاه ملی اطلاع رسانی قوانین ومقررات کشور-وزارت بهداشت درمان و آموزش پزشکی</a>
+             <br>
+             <a class="mb-4 p-4" href="https://behdasht.gov.ir/%D8%B5%D9%81%D8%AD%D9%87-%D9%86%D8%AE%D8%B3%D8%AA">وزارت بهداشت درمان و آموزش پزشکی</a>
+             <br>  
+             <a class="mb-4 p-4 col-8" href="https://gums.ac.ir/">دانشگاه علوم پزشکی گیلان</a>
+          </div>
+          <span class="text-danger-emphasis col-11">پزشک محترم! نوبت اینترنتی و حضوری ایجاد سابقه ویزیت با قلم نوری دراین سامانه ، به راحتی قابل انجام است</span>
+        </div>
+      </footer>
+     
+      <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
+      <!-- <script src="/js/jquery.slim.min.js"></script>   -->
+      <script src="/jsPrj/switch.js"></script>
+      <script src="/jsPrj/SignUpSick.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      
+                  <% if ((((errorlogin.length)>0)||(((errorCaptcha.length)>0))) ) { %>
+                  <%= console.log("vard clik vord sodam") %>
+                    <script>
+                      document.getElementById('loginId').click();
+                    </script>
+
+                    <% } %>
+                   
+                                     
+</body>
+
+</html>

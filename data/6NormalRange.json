@@ -1,0 +1,164 @@
+[{
+    "_id": "ObjectId",
+    "title": "Normal Values for RV Chamber Size",
+    "parameters": [
+      {
+        "parameter": "RV basal diameter (mm)",
+        "mean_sd": "33 ± 4",
+        "normal_range": "25–41",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RV mid diameter (mm)",
+        "mean_sd": "27 ± 4",
+        "normal_range": "19–35",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RV longitudinal diameter (mm)",
+        "mean_sd": "71 ± 7",
+        "normal_range": "59–83",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RVOT PLAX diameter (mm)",
+        "mean_sd": "25 ± 2.5",
+        "normal_range": "20–30",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RVOT proximal diameter (mm)",
+        "mean_sd": "30 ± 3.5",
+        "normal_range": "21–35",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RVOT distal diameter (mm)",
+        "mean_sd": "22 ± 2.5",
+        "normal_range": "17–27",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RV wall thickness (mm)",
+        "mean_sd": "3 ± 1",
+        "normal_range": "1–5",
+        "userValue": null,
+        "status": null,
+        "severity": null
+      },
+      {
+        "parameter": "RVOT EDA (cm²)",
+        "men": {
+          "mean_sd": "17 ± 3.5",
+          "normal_range": "10–24",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "14 ± 3",
+          "normal_range": "8–20",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "RV EDA indexed to BSA (cm²/m²)",
+        "men": {
+          "mean_sd": "8.8 ± 1.9",
+          "normal_range": "5–12.6",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "8 ± 1.75",
+          "normal_range": "4.5–11.5",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "RV ESA (cm²)",
+        "men": {
+          "mean_sd": "9 ± 3",
+          "normal_range": "3–15",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "7 ± 2.35",
+          "normal_range": "3–11",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "RV ESA indexed to BSA (cm²/m²)",
+        "men": {
+          "mean_sd": "4.7 ± 1.35",
+          "normal_range": "2.0–7.4",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "4.0 ± 1.2",
+          "normal_range": "1.6–6.4",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "RV EDV indexed to BSA (ml/m²)",
+        "men": {
+          "mean_sd": "61 ± 13",
+          "normal_range": "35–87",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "53 ± 10.5",
+          "normal_range": "32–74",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "RV ESV indexed to BSA (ml/m²)",
+        "men": {
+          "mean_sd": "27 ± 8.5",
+          "normal_range": "10–44",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        },
+        "women": {
+          "mean_sd": "20 ± 7",
+          "normal_range": "8–36",
+          "userValue": null,
+          "status": null,
+          "severity": null
+        }
+      }
+    ]
+  }]

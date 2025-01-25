@@ -1,0 +1,74 @@
+[{
+    "_id": {
+      "$oid": "670d3dadb1e38967cf1e3359"
+    },
+    "title": "Stages of Valvular Aortic Stenosis (AS)",
+    "parameters": [
+      {
+        "stage": "A",
+        "definition": "At risk of AS",
+        "valve_anatomy": "Bicuspid aortic valve (or other congenital valve anomaly), Aortic valve sclerosis",
+        "valve_hemodynamics": "Aortic Vmax <2 m/sec with normal leaflet motion",
+        "hemodynamic_consequences": "None",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "B",
+        "definition": "Progressive AS",
+        "valve_anatomy": "Mild to moderate leaflet calcification/fibrosis of bicuspid or trileaflet valve with some reduction in leaflet motion or Rheumatic valve changes with commissural fusion",
+        "valve_hemodynamics": {
+          "mild_as": "Aortic Vmax 2.0-2.9 m/sec or mean AP <20 mm Hg",
+          "moderate_as": "Aortic Vmax 3.0-3.9 m/sec or mean AP 20-39 mm Hg"
+        },
+        "hemodynamic_consequences": "Early LV diastolic dysfunction may be present",
+        "symptoms": "None"
+       
+      },
+      {
+        "stage": "C1",
+        "definition": "Asymptomatic severe AS",
+        "valve_anatomy": "Severe leaflet calcification/fibrosis or congenital stenosis with severely reduced leaflet opening",
+        "valve_hemodynamics": "Severe AS: Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+        "hemodynamic_consequences": "LV diastolic dysfunction, Mild LV hypertrophy",
+        "symptoms": "None, Exercise testing is reasonable to confirm symptom status"
+      
+      },
+      {
+        "stage": "C2",
+        "definition": "Asymptomatic severe AS with LV systolic dysfunction",
+        "valve_anatomy": "Severe leaflet calcification/fibrosis or congenital stenosis with severely reduced leaflet opening",
+        "valve_hemodynamics": "Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+        "hemodynamic_consequences": "LVEF <50%",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "D1",
+        "definition": "Symptomatic severe high-gradient AS",
+        "valve_anatomy": "Severe leaflet calcification/fibrosis with severely reduced leaflet opening",
+        "valve_hemodynamics": "Aortic Vmax ≥4 m/sec or mean AP ≥40 mm Hg",
+        "hemodynamic_consequences": "LV diastolic dysfunction, LV hypertrophy",
+        "symptoms": "Exertional dyspnea, Decreased exercise tolerance"
+        
+      },
+      {
+        "stage": "D2",
+        "definition": "Symptomatic severe low-flow, low-gradient AS with reduced LVEF",
+        "valve_anatomy": "Severe leaflet calcification/fibrosis with restricted leaflet motion",
+        "valve_hemodynamics": "Aortic Vmax <4 m/sec with resting aortic valve area ≤1.0 cm²",
+        "hemodynamic_consequences": "HF, Angina, Syncope or presyncope",
+        "symptoms": "Exertional dyspnea"
+        
+      },
+      {
+        "stage": "D3",
+        "definition": "Symptomatic severe low-gradient AS with normal LVEF or paradoxical low-flow severe AS",
+        "valve_anatomy": "Severe leaflet calcification/fibrosis with restricted leaflet motion",
+        "valve_hemodynamics": "Aortic Vmax <4 m/sec, stroke volume index <35 mL/m²",
+        "hemodynamic_consequences": "Increased LV wall thickness, Small LV chamber with low stroke volume, Restrictive diastolic filling",
+        "symptoms": "HF, Angina, Syncope or presyncope"
+       
+      }
+    ]
+  }]

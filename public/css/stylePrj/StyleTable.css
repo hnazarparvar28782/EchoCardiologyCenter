@@ -1,0 +1,5 @@
+th:first-child, td:first-child
+{
+  position:sticky;
+  right:0px;
+}

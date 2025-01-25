@@ -1,0 +1,115 @@
+[
+    {
+        "_id": {
+          "$oid": "670d3701b1e38967cf1e3347"
+        },
+        "title": "Mitral Inflow Velocities in 117 Normal Subjects, Stratified by Phase of Respiration",
+        "parameters": [
+          {
+            "parameter": "Peak E, cm/s",
+            "Inspiration": {
+              "mean_sd": "67 ± 14",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Expiration": {
+              "mean_sd": "68 ± 15",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Apnea": {
+              "mean_sd": "68 ± 15",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Peak A, cm/s",
+            "Inspiration": {
+              "mean_sd": "48 ± 16",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Expiration": {
+              "mean_sd": "50 ± 16",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Apnea": {
+              "mean_sd": "49 ± 15",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "E/A ratio",
+            "Inspiration": {
+              "mean_sd": "1.5 ± 0.6",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Expiration": {
+              "mean_sd": "1.5 ± 0.7",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Apnea": {
+              "mean_sd": "1.7 ± 0.6",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "DT, ms",
+            "Inspiration": {
+              "mean_sd": "195 ± 34",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Expiration": {
+              "mean_sd": "192 ± 33",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Apnea": {
+              "mean_sd": "194 ± 35",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "IVRT, ms",
+            "Inspiration": {
+              "mean_sd": "83 ± 16",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Expiration": {
+              "mean_sd": "83 ± 16",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "Apnea": {
+              "mean_sd": "82 ± 16",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          }
+        ]
+      }
+]

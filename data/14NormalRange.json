@@ -1,0 +1,44 @@
+[{
+    "_id": {
+      "$oid": "670d3f11b1e38967cf1e335d"
+    },
+    "title": "Stages of Mitral Stenosis (MS)",
+    "parameters": [
+      {
+        "stage": "A",
+        "definition": "At risk for MS",
+        "valve_anatomy": "Mild valve doming during diastole",
+        "valve_hemodynamics": "Normal transmitral flow velocity",
+        "hemodynamic_consequences": "None",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "B",
+        "definition": "Progressive MS",
+        "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA >1.5 cm²",
+        "valve_hemodynamics": "Increased transmitral flow velocities, MVA >1.5 cm², Diastolic pressure half-time <150 msec",
+        "hemodynamic_consequences": "Mild to moderate LA enlargement, Normal pulmonary pressure at rest",
+        "symptoms": "None"
+       
+      },
+      {
+        "stage": "C",
+        "definition": "Asymptomatic severe MS",
+        "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA ≤1.5 cm²",
+        "valve_hemodynamics": "MVA ≤1.5 cm², Diastolic pressure half-time ≥150 msec",
+        "hemodynamic_consequences": "Severe LA enlargement, Elevated PASP >50 mm Hg",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "D",
+        "definition": "Symptomatic severe MS",
+        "valve_anatomy": "Rheumatic valve changes with commissural fusion and diastolic doming of mitral valve leaflets, Planimetered MVA ≤1.5 cm²",
+        "valve_hemodynamics": "MVA ≤1.5 cm², Diastolic pressure half-time ≥150 msec",
+        "hemodynamic_consequences": "Severe LA enlargement, Elevated PASP >50 mm Hg",
+        "symptoms": "Decreased exercise tolerance, Exertional dyspnea"
+        
+      }
+    ]
+  }]

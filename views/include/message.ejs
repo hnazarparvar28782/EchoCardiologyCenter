@@ -1,0 +1,22 @@
+<!-- errror message -->
+<% if ( errorchangePass=="" ) { %>
+    <% if ( errors!="") { %>
+        <% errors.forEach(error=> { %>
+            <div class="alert alert-warning alert-dismissable " role="alert">
+                <%= error.message %>
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+        <% }) %>
+    <% } %>
+                    <% if ( (path=="/registerDoctors" )|| (path=="/preRegister" ) ) { %>
+                        <%- include("../include/opencolapse.ejs") %>
+                            <% } %>
+    
+<% } %>
+
+
+
+
+                            

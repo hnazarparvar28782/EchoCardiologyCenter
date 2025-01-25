@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Echocardiographic Parameters</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (اختیاری) -->
+    <link rel="stylesheet" href="/css/styles.css">
+   
+</head>
+<body>
+
+
+</head>
+<body>
+    <div class="container my-5 custom-table-echo " dir="ltr">
+        <h1 class="text-center mb-4 latin-numbers">2D Echocardiographic Parameters</h1>
+    
+        <!-- Accordion -->
+        <div class="accordion" id="accordionExample">
+            <% data.forEach(function(item, index) { %>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading<%= index %>">
+                        <button class="accordion-button  <%= index === 0 ? '' : 'collapsed' %>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="<%= index === 0 ? 'true' : 'false' %>" aria-controls="collapse<%= index %>">
+                            <%= item.title %> <!-- عنوان جدول در عنوان Accordion -->
+                        </button>
+                    </h2>
+                    <div id="collapse<%= index %>" class="accordion-collapse collapse <%= index === 0 ? 'show' : '' %>" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- جدول داخل Accordion -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Select</th> <!-- ستون چک‌باکس -->
+                                            <th>Parameter</th>
+                                            <th>Gender</th>
+                                            <th>Mean ± SD</th>
+                                            <th>Range</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% item.parameters.forEach(function(param, paramIndex) { %>
+                                            <!-- Row for Male -->
+                                            <tr>
+                                                <td rowspan="2">
+                                                    <input type="checkbox" name="parameter" value="<%= param.parameter %>" id="param-<%= paramIndex %>">
+                                                </td>
+                                                <td rowspan="2"><%= param.parameter %></td>
+                                                <td>Male</td>
+                                                <td class="latin-numbers"><%= param.male.mean_sd %></td>
+                                                <td class="latin-numbers"><%= param.male.range %></td>
+                                            </tr>
+                                            <!-- Row for Female -->
+                                            <tr>
+                                                <td>Female</td>
+                                                <td class="latin-numbers"><%= param.female.mean_sd %></td>
+                                                <td class="latin-numbers"><%= param.female.range %></td>
+                                            </tr>
+                                        <% }); %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    
+    
+
+    
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

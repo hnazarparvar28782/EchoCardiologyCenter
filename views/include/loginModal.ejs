@@ -1,0 +1,54 @@
+<!-- login Modal -->
+<div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="exampleModal" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- modal title -->
+      <div class="modal-header bg-info-subtle">
+        <img class="mb-4" src="/assets/login.png" alt="" width="72" height="57">
+        <h5 class="modal-title custom-title-modal text-bg-primary" id="exampleModalLabel">ورود به سامانه </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- end of modal title -->
+      <!-- modal body -->
+      <div class="modal-body">
+        <form class="form-control" action="/users/login" method="post">
+          <label for="mobileIdId" class="form-label">شماره موبایل</label>
+          <input type="text" class="input-group" id="mobileIdId" name="mobileId">
+          <label for="PassWordId" class="form-label">رمز ورود</label>
+          <input type="text" class="input-group" id="PassWordId" name="PassWord">
+          <button type="submit" class=" btn btn-primary mt-2" id="loginId">ورود</button>
+          <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">انصراف</button>
+          <label class="form-label p-2">
+            <input type="checkbox" name="remember" value="remember-me"> مرا به خاطر بسپارید
+          </label>
+          <div class="w-25 text-center">
+            <img src="/users/cpatcha.png" alt="captcha" id="capt" />
+            <input type="text" class="form-control" name="captcha" placeholder="کد امنیتی" />
+            <Button onclick="reload()" style="font-size:24px"><i class="fa fa-refresh"></i></Button>
+            <script type="text/javascript">
+              function reload() {
+                img = document.getElementById("capt");
+                img.src = "/users/cpatcha.png";
+              }
+            </script>
+          </div>
+        </form>
+      </div>
+      <!--end of  modal body -->
+      <% if ( errorCaptcha!="") { %>
+        <div class="modal-footer" style="display:block ;" id="alertLogin">
+          <p class="alert alert-warning "> <%= errorCaptcha %> </p>
+        </div>
+        <%= errorCaptcha="" %>
+      <% } %>
+      <% if (errorlogin.length>0) { %>
+        <div class="modal-footer" style="display:block ;" id="alertLogin">
+          <p class="alert alert-warning "> <%- errorlogin%> </p>
+        </div>
+      
+      <% } %>
+     
+    </div>
+  </div>
+</div>

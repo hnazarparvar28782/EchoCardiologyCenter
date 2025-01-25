@@ -1,0 +1,37 @@
+<!-- login Modal -->
+<div class="modal fade col-lg-2" data-bs-backdrop="static" data-bs-keyboard="false" id="SignUpSick" tabindex="-1"
+  aria-labelledby="SignUpsickModalLabel" aria-hidden="true">
+  <div class="modal-dialog col-md-3">
+    <div class="modal-content col-2">
+      <!-- modal title -->
+      <div class="modal-header bg-info-subtle">
+        <img class="mb-4" style="border-radius: 40%; border-image: round; border-color: rgb(36, 76, 209);" src="/assets/malefemaleuser.png" alt="" width="72" height="57">
+        <h5 class="modal-title custom-title-modal text-bg-primary " id="exampleModalLabel">ثبت نام بیمار</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- end of modal title -->
+      <!-- modal body -->
+      <div class="modal-body">
+        <form class="form-control">
+          <label for="FullNameId" class="form-label">نام و نام خانوادگی</label>
+          <input type="text" class="input-group" id="FullNameId" name="FullName" value="">
+          <label for="CodemilliId" class="form-label">کد ملی</label>
+          <input type="text" class="input-group" id="CodemilliId" name="Codemilli" value="">
+          <label for="Email" class="label-identifydoctors col-form-label-sm">Email</label>
+          <input type="email" class="input-group" id="Email" name="Email" value="">
+          <label for="mobileIdId2" class="form-label">شماره موبایل</label>
+          <input type="text" class="input-group" id="mobileIdId2" name="mobileId2" value="">
+          <label for="PassWordId2" class="form-label">رمز ورود</label>
+          <input type="text" class="input-group" id="PassWordId2" name="PassWord2">
+          <label for="RepassWordId" class="form-label">تکرار رمز</label>
+          <input type="text" class="input-group" id="RepassWordId" name="RepassWord">
+          <button type="button"  onclick="DoSabtSick()"           
+            class=" btn btn-primary mt-2" id="loginId">ثبت</button>
+          <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">انصراف</button>
+        </form>
+      </div>
+      <!--end of  modal body -->
+         
+    </div>
+  </div>
+</div>

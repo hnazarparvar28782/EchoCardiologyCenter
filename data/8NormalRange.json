@@ -1,0 +1,94 @@
+[{
+    "_id": {
+      "$oid": "670d3a4fb1e38967cf1e3350"
+    },
+    "title": "Severity Grading of Mitral Valve Regurgitation",
+    "parameters": [
+      {
+        "category": "Structural",
+        "parameters": [
+          {
+            "parameter": "MV morphology",
+            "mild": "None or mild leaflet abnormality (e.g., mild thickening, calcifications or prolapse, mild tenting)",
+            "moderate": "Moderate leaflet abnormality or moderate tenting",
+            "severe": "Severe valve lesions (primary: flail leaflet, ruptured papillary muscle, severe retraction, large perforation; secondary: severe tenting, poor leaflet coaptation)"
+          },
+          {
+            "parameter": "LV and LA size",
+            "mild": "Usually normal",
+            "moderate": "Normal or mild dilated",
+            "severe": "Dilated"
+          }
+        ]
+      },
+      {
+        "category": "Qualitative Doppler",
+        "parameters": [
+          {
+            "parameter": "Color flow jet area",
+            "mild": "Small, central, narrow, often brief",
+            "moderate": "Variable",
+            "severe": "Large central jet (>50% of LA) or eccentric wall-impinging jet of variable size"
+          },
+          {
+            "parameter": "Flow convergence",
+            "mild": "Not visible, transient or small",
+            "moderate": "Intermediate in size and duration",
+            "severe": "Large throughout systole"
+          },
+          {
+            "parameter": "CWD jet",
+            "mild": "Faint/partial/parabolic",
+            "moderate": "Dense but partial or parabolic",
+            "severe": "Holosystolic/dense/triangular"
+          }
+        ]
+      },
+      {
+        "category": "Semiquantitative",
+        "parameters": [
+          {
+            "parameter": "VCW (cm)",
+            "mild": "<0.3",
+            "moderate": "Intermediate",
+            "severe": "≥0.7 (≥0.8 for biplane)"
+          },
+          {
+            "parameter": "Pulmonary vein flow",
+            "mild": "Systolic dominance (may be blunted in LV dysfunction or AF)",
+            "moderate": "Normal or systolic blunting",
+            "severe": "Minimal to no systolic flow/systolic flow reversal"
+          },
+          {
+            "parameter": "Mitral inflow",
+            "mild": "A wave dominant",
+            "moderate": "Variable",
+            "severe": "E wave dominant (>1.2 m/s)"
+          }
+        ]
+      },
+      {
+        "category": "Quantitative",
+        "parameters": [
+          {
+            "parameter": "EROA, 2D PISA (cm²)",
+            "mild": "<0.20",
+            "moderate": "0.20–0.29",
+            "severe": "≥0.40 (may be lower in secondary MR with elliptical ROA)"
+          },
+          {
+            "parameter": "RVol (mL)",
+            "mild": "<30",
+            "moderate": "30–44",
+            "severe": "≥60 (may be lower in low flow conditions)"
+          },
+          {
+            "parameter": "RF (%)",
+            "mild": "<30",
+            "moderate": "30–39",
+            "severe": "≥50"
+          }
+        ]
+      }
+    ]
+  }]

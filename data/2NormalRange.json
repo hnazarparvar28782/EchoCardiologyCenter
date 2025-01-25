@@ -1,0 +1,100 @@
+[{
+    "_id": {
+      "$oid": "670d3560b1e38967cf1e3343"
+    },
+    "title": "Normal Ranges for LV Mass Indices",
+    "parameters": [
+      {
+        "parameter": "LV mass (g)",
+        "male": {
+          "range": "88–224",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "67–162",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "LV mass/BSA (g/m²)",
+        "male": {
+          "range": "49–115",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "43–95",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "Relative wall thickness (cm)",
+        "male": {
+          "range": "0.24–0.42",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "0.22–0.42",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "Septal thickness (cm)",
+        "male": {
+          "range": "0.6–1.0",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "0.6–0.9",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "Posterior wall thickness (cm)",
+        "male": {
+          "range": "0.6–1.0",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "0.6–0.9",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "2D method LV mass (g)",
+        "male": {
+          "range": "96–200",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "66–150",
+          "status": null,
+          "severity": null
+        }
+      },
+      {
+        "parameter": "2D method LV mass/BSA (g/m²)",
+        "male": {
+          "range": "50–102",
+          "status": null,
+          "severity": null
+        },
+        "female": {
+          "range": "44–95",
+          "status": null,
+          "severity": null
+        }
+      }
+    ]
+  }
+  ]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Paint Clone</title>
+	<style>
+        /* style.css */
+
+canvas {
+	border: 2px solid black;
+	cursor: crosshair;
+
+}
+
+.paint-tools {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	max-width: 500px;
+	align-items: center;
+}
+
+#brush-size {
+	padding: 10px;
+	background-color: #333;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#pen {
+	padding: 10px;
+	background-color: #0800ff;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#eraser {
+	padding: 10px;
+	background-color: #ee00cf;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#color-picker {
+	cursor: pointer;
+}
+
+#clear-canvas {
+	padding: 10px;
+	background-color: #ff3333;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+	<div class="paint-clone">
+		<canvas id="canvas"></canvas>
+		<div class="paint-tools">
+			<input type="range"
+				id="brush-size" min="1"
+				max="50" value="5">
+			<input type="color"
+				id="color-picker">
+			<button id="pen">
+				Pen
+			</button>
+			<button id="eraser">
+				Eraser
+			</button>
+			<button id="clear-canvas">
+				Clear
+			</button>
+		</div>
+	</div>
+<script src="/jsPrj/LightPenvisit1.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("../../fonts/BYekan-webfont.eot") format("eot"),
+        url("../../fonts/BYekan-webfont.woff") format("woff"),
+        url("../../fonts/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "BYekan" !important;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+    content: "انتخاب عکس" !important;
+}
+.custom-title-modal{
+    border-radius:40%;
+    padding: 8pt;
+    }
+.custom-file-input ~ .custom-file-label::after {
+        content: "انتخاب عکس" !important;
+ }
+
+
+ .latin-numbers {
+    font-family: Arial, sans-serif; /* یا هر فونت دیگری که می‌خواهید */
+    unicode-bidi: bidi-override; /* برای اطمینان از اینکه اعداد به صورت لاتین نمایش داده شوند */
+    direction: ltr; /* جهت متن را به چپ به راست تنظیم می‌کند */
+}
+
+/* ECoh style section */
+.table-bordered td, .table-bordered th { border: 1px solid #dee2e6; }
+.table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0,0,0,.05); }
+.result-checkboxes label { display: inline-flex; align-items: center; margin-right: 5px;}
+.accordion { margin-top: 5rem; }
+.table {
+    font-family: Arial, sans-serif;
+    unicode-bidi: bidi-override;
+    direction: ltr;
+}
+@media (max-width: 768px) {
+    .table-responsive { overflow-x: auto; }
+    .accordion-button { font-size: 1rem; }
+}
+/* end of ecoh style section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/painterror/painterro-1.2.87.min.js"></script>
+    <link href="/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body  >
+  <div class="container mt-5">
+    <div id="CaptionSick" class="border border-2 mt-5 h-25 text-center rounded-4 bg-warning">
+       <h4 id="SickName" class="text-center m-2"><%=SickFullName%></h4>
+    </div>
+    <div id="tooles" class="row mt-4 w-25 m-4 text-center align-self-center">
+      <div class="col border border-1 border-primary mt-2" id="tools">
+        <p class="fa fa-pencil border border-1 p-1 mt-2" id=<%= SickCodeMilli  %>  onclick="OpenNewPageInPainErro(this)"></p>
+      </div>
+      <div class="col border border-1 border-primary mt-2" id="EndVisit">
+        <form action="/dashboard/EndVisitWithList"  method="POST" id="FormEndVisit">
+          <button type="submit" 
+           class="fa fa-close border border-1 p-1 mt-1" id=<%= SickCodeMilli  %>  ></button>
+          <input  name="IdRecord" type="text" value="<%= IdRecord %>" hidden>
+          <input  name="IdNobat" type="text" value="<%= IdNobat %>" hidden>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <!-- carusel section -->
+    
+    <div id="CarouselHanddoctor" class="carousel slide col-4 m-5  align-self-center" data-bs-ride="carousel">
+      
+    <div class="carousel-inner ">
+        <% let i=0 %>
+        <% ListVistFiles.forEach(File => { %>
+          <% if (i==0) { %>
+            <div id="<%= i %>" class="carousel-item  active">
+          <% } else {%>
+            <div id="<%= i %>" class="carousel-item  ">
+           <% } %> 
+            <img id="/handdoctor/<%= DoctorCodemilli%>/<%= SickCodeMilli  %>/<%= File %>"
+                 src="/handdoctor/<%= DoctorCodemilli%>/<%= SickCodeMilli  %>/<%= File %>"
+               onclick="OpenInPaintErro(this)"
+               style="overflow: visible;"
+              class="d-block w-100 border border-2" alt="...">
+          </div>
+          <%  i=i+1 %>
+        <% }) %>  
+       
+       
+      </div>
+      <button class="carousel-control-prev carousel-dark  col-1" type="button" data-bs-target="#CarouselHanddoctor" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next carousel-dark  col-1" type="button" data-bs-target="#CarouselHanddoctor" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- end of carusel -->
+ <div id="PaintDiv" class="col-8 mt-5" style="position: absolute ;" ></div>
+</body>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/public/js/jquery.min.js"></script>
+<script src="/jsPrj/LightPenVisit.js"></script>
+</html>

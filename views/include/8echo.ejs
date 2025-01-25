@@ -1,0 +1,57 @@
+<div class="accordion mt-1" id="accordionEcho8">
+    <% data8.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo8" aria-expanded="true" aria-controls="collapse<%= index %>echo8">
+                    <img src="/assets/heartamam.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>echo8" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionEcho8">
+                <div class="accordion-body">
+                    <% item.parameters.forEach(category => { %>
+                        <h5><%= category.category %></h5>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Parameter</th>
+                                    <th>Mild</th>
+                                    <th>Moderate</th>
+                                    <th>Severe</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% category.parameters.forEach(parameter => { %>
+                                    <tr>
+                                        <td data-label="Select"><input type="checkbox" name="select"></td>
+                                        <td data-label="Parameter"><%= parameter.parameter %></td>
+                                        <td data-label="Mild">
+                                            <%= parameter.mild %>
+                                            <div>
+                                                <input type="checkbox" name="selectmild">
+                                            </div>
+                                        </td>
+                                        <td data-label="Moderate">
+                                            <%= parameter.moderate %>
+                                            <div>
+                                                <input type="checkbox" name="selectmoderate">
+                                            </div>
+                                        </td>
+                                        <td data-label="Severe">
+                                            <%= parameter.severe %>
+                                            <div>
+                                                <input type="checkbox" name="selectsevere">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
+

@@ -1,0 +1,44 @@
+[{
+    "_id": {
+      "$oid": "670d407cb1e38967cf1e3362"
+    },
+    "title": "Stages of Chronic Secondary Mitral Regurgitation (MR)",
+    "parameters": [
+      {
+        "stage": "A",
+        "definition": "At risk of MR",
+        "valve_anatomy": "Normal valve leaflets, chords, and annulus in a patient with coronary disease or cardiomyopathy",
+        "valve_hemodynamics": "No MR jet or small central jet area <20% LA on Doppler, Small vena contracta <0.30 cm",
+        "associated_clinical_findings": "Normal or mildly dilated LV size with fixed (infarction) or inducible (ischemia) regional wall motion abnormalities, Primary myocardial disease with LV dilation and systolic dysfunction",
+        "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to appropriate medical therapy"
+       
+      },
+      {
+        "stage": "B",
+        "definition": "Progressive MR",
+        "valve_anatomy": "Regional wall motion abnormalities with mild tethering of mitral leaflet, Annular dilation with mild loss of central coaptation of the mitral leaflets",
+        "valve_hemodynamics": "ERO <0.40 cm², RVol <60 mL, RF <50%",
+        "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+        "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to revascularization and appropriate medical therapy"
+        
+      },
+      {
+        "stage": "C",
+        "definition": "Asymptomatic severe MR",
+        "valve_anatomy": "Regional wall motion abnormalities and/or LV dilation with severe tethering of mitral leaflet, Annular dilation with severe loss of central coaptation of the mitral leaflets",
+        "valve_hemodynamics": "ERO ≥0.40 cm², RVol ≥60 mL, RF ≥50%",
+        "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+        "symptoms": "Symptoms attributable to coronary ischemia or HF may be present and respond to revascularization and appropriate medical therapy"
+        
+      },
+      {
+        "stage": "D",
+        "definition": "Symptomatic severe MR",
+        "valve_anatomy": "Regional wall motion abnormalities and/or LV dilation with severe tethering of mitral leaflet, Annular dilation with severe loss of central coaptation of the mitral leaflets",
+        "valve_hemodynamics": "ERO ≥0.40 cm², RVol ≥60 mL, RF ≥50%",
+        "associated_clinical_findings": "Regional wall motion abnormalities with reduced LV systolic function, LV dilation and systolic dysfunction attributable to primary myocardial disease",
+        "symptoms": "HF symptoms attributable to MR persist after revascularization and optimization of medical therapy, Decreased exercise tolerance, Exertional dyspnea"
+        
+      }
+    ]
+  }]

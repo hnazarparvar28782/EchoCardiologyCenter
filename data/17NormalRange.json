@@ -1,0 +1,32 @@
+[{
+    "_id": {
+      "$oid": "670d4237b1e38967cf1e3364"
+    },
+    "title": "Stages of Tricuspid Regurgitation (TR)",
+    "parameters": [
+      {
+        "stage": "B",
+        "definition": "Progressive TR",
+        "valve_hemodynamics": "Central jet ≤50% RA, Vena contracta width ≤0.7 cm, ERO ≤0.4 cm², R Vol ≤45 mL",
+        "hemodynamic_consequences": "None",
+        "clinical_symptoms": "None"
+        
+      },
+      {
+        "stage": "C",
+        "definition": "Asymptomatic severe TR",
+        "valve_hemodynamics": "Central jet >50% RA, Vena contracta width >0.7 cm, ERO >0.4 cm², R Vol >45 mL, Dense CW signal with dagger shape, Hepatic vein systolic flow reversal",
+        "hemodynamic_consequences": "Dilated RV and RA, Elevated RA with cV wave",
+        "clinical_symptoms": "No symptoms"
+       
+      },
+      {
+        "stage": "D1",
+        "definition": "Symptomatic severe TR",
+        "valve_hemodynamics": "Central jet >50% RA, Vena contracta width >0.7 cm, ERO >0.4 cm², R Vol >45 mL, Dense CW signal with dagger shape, Hepatic vein systolic flow reversal",
+        "hemodynamic_consequences": "Dilated RV and RA, Elevated RA with cV wave",
+        "clinical_symptoms": "Elevated venous pressure, Dyspnea on exertion, fatigue, ascites, edema"
+        
+      }
+    ]
+  }]

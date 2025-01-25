@@ -1,0 +1,115 @@
+<div class="container col-6 col-sm-10 mt-5 " dir="rtl">
+    <table id="ListNobats"
+        class="table  mx-0 align-middle table-sm table-bordered table-hover table-striped table-primary p-2 mt-5 m-4">
+        <thead id="ff" class="table-light ">
+            <tr id="gg" class="table-primary listechoofdayheader" style="text-align:right">
+                <% let saveOrDel="" %>
+                    <% let displayValue="" %>
+                        <% if (Object.keys(SickEchos).length===0) { %>
+                            <% saveOrDel="ذخیره" %>
+                                <% displayValue="style='display:none;' " %>
+                                    <% } else {%>
+                                        <% saveOrDel="حذف" %>
+                                            <% displayValue="style='display:block;' " %>
+                                                <%}%>
+                                                    <th id="k" scope="col">
+                                                        <%= saveOrDel %>
+                                                    </th>
+                                                    <th id="k" scope="col">نمایش اکو</th>
+                                                    <th id="ffg" scope="col" onclick="sortTable(3)">تاریخ</th>
+                                                    <!-- شماره ستون تاریخ اصلاح شده -->
+                                                    <th id="g" class="d-none d-sm-table-cell " scope="col" onclick="sortTable(2)">موبایل</th>
+                                                    <th id="hh" class="d-none d-sm-table-cell " scope="col" onclick="sortTable(1)">کد ملی</th>
+                                                    <th id="h" scope="col" onclick="sortTable(0)">نام</th>
+            </tr>
+        </thead>
+        <tbody class="listdetail">
+            <% let Iid=0 %>
+            <% let lastinfo={} %>
+                <% if (Object.keys(SickEchos).length===0) { %>
+                 <% if (Object.keys(SickInfo).length===0) { %>
+                    <h4 class="text-center text-danger">مشخصات بیمار تاکنون ثبت نشده است</h4>
+                  
+                 <% } else{ %>
+                    <h4 class="text-center text-danger">بیمار آماده برای ثبت اولین اکو</h4>
+                    <% } %>
+                    <% SickInfo.forEach(Day=> { %>
+                        <tr>
+                            <td id="gg1" scope="row" class="col-1">
+                                <button type="button" class="fa fa-save m-1" onclick="saveCurrEcho(
+                                         JSON.stringify({
+                                         sickcodemilli: '<%=  Day.codemilli %>',
+                                         fullnamesick: '<%=  Day.FullName %>',
+                                         mobilesick: '<%= Day.mobileId %>',
+                                         FinalResult: 'Das ist Finalresult..................'
+                                        }))"></button>
+                            </td>
+                            <td id="gg2" scope="row" class="col-1">
+                                <button type="button" id="previewPdf" recordid="111111111111"
+                                    class="fa fa-file-pdf-o m-1"
+                                    onclick="fetchReport(this.getAttribute('recordid'))"></button>
+                            </td>
+
+                            <td id="bb" class="col-1">
+                                <%= moment(Day.crateDate).format("jYYYY/jMM/jDD") %>
+                            </td>
+                            <td id="bbb" class="d-none d-sm-table-cell col-1">
+                                <%= Day.mobileId %>
+                            </td>
+                            <td id="jb" class="d-none d-sm-table-cell col-1">
+                                <%= Day.codemilli %>
+                            </td>
+                            <td id="<%= Iid %>" class="text-primary col-2">
+                                <%= Day.FullName %>
+                            </td>
+                        </tr>
+                        <% Iid++ %>
+                            <% }) %>
+                                <% } else { %>
+                                        <h4 class="text-center text-danger mt-5  ">
+                                            بیمار دارای سوابق اکو به شرح زیر
+                                        </h4>
+                                    <% SickEchos.forEach(Day=> { %>
+                                        <tr>
+                                            <td id="gg1" scope="row" class="col-1">
+                                                <form id="ِDeleteEcho" action="/dashboard/deleteEchoById/"
+                                                    onsubmit="return false;" method="GET">
+                                                    <button type="submit" class="fa fa-remove m-1"
+                                                        onclick="confirmAndSubmit()"></button>
+                                                    <input name="IdRecord" type="text" value="<%= Day._id %>"
+                                                        hidden>
+                                                    <input name="codemilli" type="text"
+                                                        value="<%= Day.sickcodemilli %>" hidden>
+                                                </form>
+                                            </td>
+                                            <td id="gg2" scope="row" class="col-1">
+                                                </form>
+                                                <button type="button" class="fa fa-file-pdf-o m-1"
+                                                    onclick="fetchReport('<%= Day._id %>')"></button>
+                                            </td>
+
+                                            <td id="bb" class="col-1">
+                                                <%= moment(Day.createDate).format("jYYYY/jMM/jDD") %>
+                                            </td>
+                                            <td id="bbb" class="d-none d-sm-table-cell col-1">
+                                                <%= Day.mobilesick %>
+                                            </td>
+                                            <td id="jb" class="d-none d-sm-table-cell col-1">
+                                                <%= Day.sickcodemilli %>
+                                            </td>
+                                            <td id="<%= Iid %>" class="text-primary col-2">
+                                                <%= Day.fullnamesick %>
+                                            </td>
+                                        </tr>
+                                        <% Iid++ %>
+                                        <% }) %>
+                                            <!-- adding echo button -->
+                                                <% } %>
+        </tbody>
+    </table>
+    <div class="text-start mt-1" <%- displayValue %>> 
+        <button id="saveButton" class=" mx-1 btn btn-success" onclick="saveCurrEcho('<%= SickInfoSave %>')">
+            <p class="fa fa-plus-square"></p>
+        </button>
+    </div>
+</div>

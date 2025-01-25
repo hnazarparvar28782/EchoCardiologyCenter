@@ -1,0 +1,17 @@
+<% if (typeof errorEditingInfo!=="undefined" ) { %>
+    <% if (typeof errors!=="undefined" ) { %>
+        <% errors.forEach(error=> { %>
+            <div class="alert alert-warning alert-dismissable fade show" role="alert">
+                <%= error.message %>
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+        <% }) %>
+        
+        <%- include("../include/opencollapsEditUploadImage.ejs") %>
+        <% } %>
+
+
+
+<% } %>

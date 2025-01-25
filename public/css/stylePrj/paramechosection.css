@@ -1,0 +1,57 @@
+    /* استایل عمومی */
+.container {
+    padding: 15px;
+}
+
+.accordion-button {
+    font-size: 16px; /* اندازه فونت برای موبایل */
+}
+
+/* استایل برای جداول */
+.table {
+    width: 100%; /* جدول به طور کامل عرض را بگیرد */
+    margin-bottom: 15px; /* فاصله بین جداول */
+}
+
+.table th, .table td {
+    padding: 8px; /* فاصله داخلی سلول‌ها */
+    font-size: 14px; /* اندازه فونت برای موبایل */
+}
+
+/* استایل برای ورودی‌ها */
+input[type="text"] {
+    width: 100%; /* ورودی به طور کامل عرض را بگیرد */
+    padding: 8px; /* فاصله داخلی ورودی */
+    margin-top: 5px; /* فاصله بالای ورودی */
+}
+
+/* استایل برای چک باکس‌ها */
+input[type="checkbox"] {
+    margin-right: 5px; /* فاصله سمت راست چک باکس */
+}
+
+/* استایل برای هدرها */
+h5[data-type="category"] {
+    font-size: 18px; /* اندازه فونت برای هدرهای دسته بندی */
+    margin-top: 10px; /* فاصله بالای هدر */
+}
+
+/* مدیا کوئری برای نمایش بهتر در موبایل */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 14px; /* اندازه فونت کوچک‌تر برای موبایل */
+    }
+
+    .accordion-body {
+        padding: 10px; /* فاصله داخلی برای بدنه آکاردئون */
+    }
+
+    .table th, .table td {
+        font-size: 12px; /* اندازه فونت کوچک‌تر برای جداول */
+    }
+
+    h5[data-type="category"] {
+        font-size: 16px; /* اندازه فونت کوچک‌تر برای هدرهای دسته بندی */
+    }
+
+}

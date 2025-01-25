@@ -1,0 +1,113 @@
+[{
+    "_id": {
+      "$oid": "670d3b68b1e38967cf1e3356"
+    },
+    "title": "Reference Limits and Partition Values for Left Atrial Dimensions and Volumes",
+    "parameters": [
+      {
+        "parameter": "LA diameter (cm)",
+        "women": {
+          "reference_range": "2.7–3.8",
+          "mildly_abnormal": "3.9–4.2",
+          "moderately_abnormal": "4.3–4.6",
+          "severely_abnormal": "≥4.7"
+        },
+        "men": {
+          "reference_range": "3.0–4.0",
+          "mildly_abnormal": "4.1–4.6",
+          "moderately_abnormal": "4.7–5.2",
+          "severely_abnormal": "≥5.2"
+        }
+      },
+      {
+        "parameter": "LV diameter/BSA (cm/m²)",
+        "women": {
+          "reference_range": "1.5–2.3",
+          "mildly_abnormal": "2.4–2.6",
+          "moderately_abnormal": "2.7–2.9",
+          "severely_abnormal": "≥3.0"
+        },
+        "men": {
+          "reference_range": "1.5–2.3",
+          "mildly_abnormal": "2.4–2.6",
+          "moderately_abnormal": "2.7–2.9",
+          "severely_abnormal": "≥3.0"
+        }
+      },
+      {
+        "parameter": "RA minor-axis dimension (cm)",
+        "women": {
+          "reference_range": "2.9–4.5",
+          "mildly_abnormal": "4.6–4.9",
+          "moderately_abnormal": "5.0–5.4",
+          "severely_abnormal": "≥5.5"
+        },
+        "men": {
+          "reference_range": "2.9–4.5",
+          "mildly_abnormal": "4.6–4.9",
+          "moderately_abnormal": "5.0–5.4",
+          "severely_abnormal": "≥5.5"
+        }
+      },
+      {
+        "parameter": "RA minor-axis dimension/BSA (cm/m²)",
+        "women": {
+          "reference_range": "1.7–2.5",
+          "mildly_abnormal": "2.6–2.8",
+          "moderately_abnormal": "2.9–3.1",
+          "severely_abnormal": "≥3.2"
+        },
+        "men": {
+          "reference_range": "1.7–2.5",
+          "mildly_abnormal": "2.6–2.8",
+          "moderately_abnormal": "2.9–3.1",
+          "severely_abnormal": "≥3.2"
+        }
+      },
+      {
+        "parameter": "LA area (cm²)",
+        "women": {
+          "reference_range": "≤20",
+          "mildly_abnormal": "20–30",
+          "moderately_abnormal": "30–40",
+          "severely_abnormal": ">40"
+        },
+        "men": {
+          "reference_range": "≤20",
+          "mildly_abnormal": "20–30",
+          "moderately_abnormal": "30–40",
+          "severely_abnormal": ">40"
+        }
+      },
+      {
+        "parameter": "LV diastolic volume (mL)",
+        "women": {
+          "reference_range": "22–52",
+          "mildly_abnormal": "53–62",
+          "moderately_abnormal": "63–72",
+          "severely_abnormal": "≥73"
+        },
+        "men": {
+          "reference_range": "18–58",
+          "mildly_abnormal": "59–68",
+          "moderately_abnormal": "69–78",
+          "severely_abnormal": "≥79"
+        }
+      },
+      {
+        "parameter": "LA volume/BSA (mL/m²)",
+        "women": {
+          "reference_range": "22 ± 6",
+          "mildly_abnormal": "29–33",
+          "moderately_abnormal": "34–39",
+          "severely_abnormal": "≥40"
+        },
+        "men": {
+          "reference_range": "22 ± 6",
+          "mildly_abnormal": "29–33",
+          "moderately_abnormal": "34–39",
+          "severely_abnormal": "≥40"
+        }
+      }
+    ]
+  }]

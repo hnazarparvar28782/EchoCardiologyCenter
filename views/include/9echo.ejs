@@ -1,0 +1,43 @@
+<div class="accordion mt-1" id="accordionEcho9">
+    <% data9.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo9" aria-expanded="true" aria-controls="collapse<%= index %>echo9">
+                    <img src="/assets/heartmath.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>echo9" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionEcho9">
+                <div class="accordion-body">
+                    <% for (const category in item) { %>
+                        <% if (category !== "title") { %>
+                            <h5><%= category.replace(/_/g, " ").toUpperCase() %></h5>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Parameter</th>
+                                        <th>Mild</th>
+                                        <th>Moderate</th>
+                                        <th>Severe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for (const parameter in item[category]) { %>
+                                        <tr>
+                                            <td data-label="Select"><input type="checkbox" name="select"></td>
+                                            <td data-label="Parameter"><%= parameter.replace(/_/g, " ") %></td>
+                                            <td data-label="Mild"><input type="checkbox" name="mild"> <%= item[category][parameter].mild || "" %></td>
+                                            <td data-label="Moderate"><input type="checkbox" name="moderate"> <%= item[category][parameter].moderate || "" %></td>
+                                            <td data-label="Severe"><input type="checkbox" name="severe"> <%= item[category][parameter].severe || "" %></td>
+                                        </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

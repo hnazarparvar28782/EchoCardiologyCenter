@@ -1,0 +1,44 @@
+[{
+    "_id": {
+      "$oid": "670d3fbdb1e38967cf1e3360"
+    },
+    "title": "Stages of Chronic Primary Mitral Regurgitation (MR)",
+    "parameters": [
+      {
+        "stage": "A",
+        "definition": "At risk for MR",
+        "valve_anatomy": "Mild MVP with normal coaptation, Mild valve thickening and leaflet restriction",
+        "valve_hemodynamics": "Small vena contracta <0.3 cm, Central jet MR <20% LA on Doppler",
+        "hemodynamic_consequences": "None",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "B",
+        "definition": "Progressive MR",
+        "valve_anatomy": "Moderate to severe MVP with normal coaptation, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE",
+        "valve_hemodynamics": "Central jet MR 20%-40% LA or late systolic eccentric jet MR, Vena contracta <0.7 cm, RVol <60 mL, RF <50%, ERO <0.40 cm², Angiographic grade 1-2+",
+        "hemodynamic_consequences": "Mild LA enlargement, No LV enlargement, Normal pulmonary pressure",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "C",
+        "definition": "Asymptomatic severe MR",
+        "valve_anatomy": "Severe MVP with loss of coaptation or flail leaflet, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE, Thickening of leaflets with radiation heart disease",
+        "valve_hemodynamics": "Central jet MR >40% LA or holosystolic eccentric jet MR, Vena contracta ≥0.7 cm, RVol ≥60 mL, RF ≥50%, ERO ≥0.40 cm², Angiographic grade 3-4+",
+        "hemodynamic_consequences": "Moderate or severe LA enlargement, LV enlargement, Pulmonary hypertension may be present at rest or with exercise",
+        "symptoms": "None"
+        
+      },
+      {
+        "stage": "D",
+        "definition": "Symptomatic severe MR",
+        "valve_anatomy": "Severe MVP with loss of coaptation or flail leaflet, Rheumatic valve changes with leaflet restriction and loss of central coaptation, Previous IE, Thickening of leaflets with radiation heart disease",
+        "valve_hemodynamics": "Central jet MR >40% LA or holosystolic eccentric jet MR, Vena contracta ≥0.7 cm, RVol ≥60 mL, RF ≥50%, ERO ≥0.40 cm², Angiographic grade 3-4+",
+        "hemodynamic_consequences": "Moderate or severe LA enlargement, LV enlargement, Pulmonary hypertension present",
+        "symptoms": "Decreased exercise tolerance, Exertional dyspnea"
+        
+      }
+    ]
+  }]

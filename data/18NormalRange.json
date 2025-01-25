@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "118d2fd7b1e38967cf1e3340"
+  },
+   "title": "Pericardium,CardiacFunction,CardiacTamponade,Other...",
+  "parameters":[
+   {
+      "parameter":"Pericardium", 
+      "PericardialInfiltration": "Present/Absent",
+      "PericardialEffusion": "Present/Absent",
+      "PericardialFluidThickness": "Measurement (mm)",
+      "FluidCharacteristics": "Clear/Bloody/Purulent",
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+       }
+   },{
+    "parameter": "CardiacFunction", 
+      "LeftVentricleSize": "Normal/DecreasedVolume/IncreasedVolume",
+      "LeftVentricularEjectionFraction": "Value (%)",
+      "WallMotion": "Normal/WallMotionAbnormality",
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+       } 
+    },{
+     "parameter":"CardiacTamponade", 
+      "ClinicalEvidence": "Present/Absent",
+      "SystolicBloodPressure": "Value (mmHg)",
+      "ChangesInVentricularSize": "Present/Absent",
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+       } 
+    },{
+     "parameter": "Other Findings", 
+      "ValvularInsufficiency": "Present/Absent",
+      "CoronaryArteryDisease": "Present/Absent",
+      "HeartRhythm": "Sinus/Arrhythmia",
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    }]
+  }]

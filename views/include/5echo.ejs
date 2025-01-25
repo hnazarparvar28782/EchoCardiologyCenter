@@ -1,0 +1,67 @@
+<div class="accordion mt-1" id="accordionEcho5">
+    <% data5.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>Echo5" aria-expanded="true" aria-controls="collapse<%= index %>">
+                    <img src="/assets/heartrectangle.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>Echo5" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>accordionEcho5" data-bs-parent="#accordionEcho5">
+                <div class="accordion-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Parameter</th>
+                                <th>Inspiration</th>
+                                <th>Expiration</th>
+                                <th>Apnea</th>
+                                <th>User Value</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% item.parameters.forEach(parameter => { %>
+                                <tr>
+                                    <td data-label="Select"><input type="checkbox" name="select"></td>
+                                    <td data-label="Parameter"><%= parameter.parameter %></td>
+                                    <td data-label="Inspiration">
+                                        Mean ± SD: <%= parameter.Inspiration.mean_sd %>
+                                    </td>
+                                    <td data-label="Expiration">
+                                        Mean ± SD: <%= parameter.Expiration.mean_sd %>
+                                    </td>
+                                    <td data-label="Apnea">
+                                        Mean ± SD: <%= parameter.Apnea.mean_sd %>
+                                    </td>
+                                    <td data-label="User Value">
+                                        <input type="text" name="uservalue" class="form-control" disabled>
+                                        <input type="checkbox" name="uservalue-select" id="5uservalue-select-<%= index %>">
+                                        <label for="5uservalue-select-<%= index %>">select</label>
+                                    </td>
+                                    <td data-label="Result" class="d-sm-flex">
+                                        <div>
+                                            <input type="checkbox" id="normal-<%= index %>" name="result" value="Normal" disabled>
+                                            <label for="normal-<%= index %>">Normal</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="moderate-<%= index %>" name="result" value="Moderate" disabled>
+                                            <label for="moderate-<%= index %>">Moderate</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="abnormal-<%= index %>" name="result" value="Abnormal" disabled>
+                                            <label for="abnormal-<%= index %>">Abnormal</label>
+                                        </div>
+                                        <input  type="checkbox" name="selectResult" id="selectResult-<%= index %>">
+                                        <label class="m-auto" for="selectResult-<%= index %>">select</label>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Test</title>
+  <style>
+    @font-face {
+      font-family: 'Satisfy';
+      src: url('/public/fonts/Satisfy-Regular.woff2') format('woff2'),
+           url('/public/fonts/Satisfy-Regular.woff') format('woff'),
+           url('/public/fonts/Satisfy-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+        font-family: 'ReenieBeanie';
+        src: url(/public/fonts/ReenieBeanie-Regular.eot);
+        src: url(/public/fonts/ReenieBeanie-Regular.eot?#iefix) format('embedded-opentype'),
+             url(/public/fonts/ReenieBeanie-Regular.ttf) format('truetype'),
+             url(/public/fonts/ReenieBeanie-Regular.woff) format('woff'),
+             url(/public/fonts/ReenieBeanie-Regular.woff2) format('woff2');
+      }
+    body {
+      font-family: 'ReenieBeanie', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>تست فونت Satisfy</h1>
+  <p style="font-family: 'ReenieBeanie';">this is a test!</p>
+</body>
+</html>

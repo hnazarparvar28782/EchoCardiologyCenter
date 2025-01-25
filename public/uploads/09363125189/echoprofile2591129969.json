@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "title": "Normal Values for 2D Echocardiographic Parameters of LV Size and Function According to Gender",
+      "categories": [
+        {
+          "category": null,
+          "parameters": [
+            {
+              "Parameter": "LV internal dimension - Diastolic dimension",
+              "Male (Mean ± SD)": "50.2 ± 4.1",
+              "Male (Range)": "42.0–58.4",
+              "Female (Mean ± SD)": "45.0 ± 3.6",
+              "Female (Range)": "37.8–52.2",
+              "User Value": null,
+              "Result": {
+                "Normal": false,
+                "Moderate": false,
+                "Abnormal": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

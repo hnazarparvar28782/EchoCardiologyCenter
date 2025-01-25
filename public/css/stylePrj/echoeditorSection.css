@@ -1,0 +1,101 @@
+
+#spinner {
+   display: none; /* مخفی کردن spinner در ابتدا */
+   width: 70px; /* اندازه دلخواه */
+   height: 70px; /* اندازه دلخواه */
+}
+.loader-inner div {
+   background-color: #000; /* رنگ دایره‌ها به مشکی */
+}
+body {
+   direction: ltr;
+   /* Set text direction to left-to-right */
+   font-family: Arial, sans-serif;
+   /* Set a clean font for better readability */
+   margin: 0;
+   padding: 20px;
+   /* Add padding to the body */
+   background-color: #f8f9fa;
+   /* Light background color */
+}
+
+#content {
+   display: flex;
+   /* Arrange content in a row */
+   margin-top: 40px;
+   /* Top margin for spacing */
+   gap: 10px;
+   /* Space between editor and sample sentences */
+}
+
+.container {
+   background-color: white;
+   /* White background for containers */
+   border-radius: 8px;
+   /* Rounded corners */
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   /* Subtle shadow for depth */
+   padding: 15px;
+   /* Padding inside containers */
+   flex: 1;
+   /* Allow containers to grow equally */
+   min-width: 300px;
+   /* Minimum width for responsiveness */
+}
+
+#sampleSentences {
+   max-height: 300px;
+   /* Set a max height for scrolling */
+   overflow-y: auto;
+   /* Enable vertical scrolling */
+   border: 1px solid #ccc;
+   /* Border for sample sentences */
+   padding: 10px;
+   /* Padding for sample sentences */
+   font-size: 18px;
+   /* Increase font size for sample sentences */
+}
+
+#editor {
+   max-height: 250px;
+   /* Set a max height for scrolling */
+   overflow-y: auto;
+   /* Enable vertical scrolling */
+   border: 1px solid #ccc;
+   /* Border for editor */
+   padding: 10px;
+   /* Padding for editor */
+   font-size: 18px;
+   /* Increase font size for editor */
+   position: relative;
+   /* Position relative for cursor effect */
+}
+
+.draggable {
+   cursor: pointer;
+   user-select: none;
+   /* Prevent text selection */
+   margin-bottom: 5px;
+   /* Space between sentences */
+   padding: 5px;
+   /* Padding for each sentence */
+   border-radius: 4px;
+   /* Rounded corners for sentences */
+   transition: background-color 0.2s;
+   /* Smooth background transition */
+}
+
+.draggable:hover {
+   background-color: #e9ecef;
+   /* Highlight on hover */
+}
+
+.selected {
+   background-color: #cce5ff;
+   /* Highlight selected sentences */
+}
+
+h3 {
+   margin: 0 0 10px;
+   /* Margin for headings */
+}

@@ -1,0 +1,178 @@
+[
+    {
+        "_id": {
+          "$oid": "670d3660b1e38967cf1e3345"
+        },
+        "title": "Left Ventricular TDI Systolic Parameters According to Age",
+        "parameters": [
+          {
+            "parameter": "Septal s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "8.6 ± 1.3",
+              "ci": "6.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "7.9 ± 1.4",
+              "ci": "5.9–11.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "7.5 ± 1.3",
+              "ci": "5.0–10.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Lateral s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "10.7 ± 2.3",
+              "ci": "6.1–16.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "9.4 ± 2.2",
+              "ci": "4.0–15.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "8.5 ± 2.5",
+              "ci": "4.0–15.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Average septal and lateral s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "9.6 ± 1.6",
+              "ci": "7.0–13.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "8.7 ± 1.5",
+              "ci": "6.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "8.1 ± 1.6",
+              "ci": "5.5–12.5",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Inferior s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "9.3 ± 1.5",
+              "ci": "5.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "8.8 ± 1.5",
+              "ci": "5.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "8.2 ± 1.5",
+              "ci": "5.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Anterior s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "10.0 ± 2.1",
+              "ci": "6.6–13.4",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "8.6 ± 2.0",
+              "ci": "4.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "7.6 ± 2.1",
+              "ci": "4.0–12.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Posterior s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "10.2 ± 1.8",
+              "ci": "7.0–14.0",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "9.2 ± 1.9",
+              "ci": "5.0–13.2",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "8.8 ± 2.7",
+              "ci": "5.5–18.6",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          },
+          {
+            "parameter": "Average s' wave (cm/s)",
+            "20-40 years": {
+              "mean_sd": "9.7 ± 1.7",
+              "ci": "7.2–12.9",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            "40-60 years": {
+              "mean_sd": "8.7 ± 1.4",
+              "ci": "6.2–11.9",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            },
+            ">60 years": {
+              "mean_sd": "8.1 ± 1.6",
+              "ci": "5.7–12.7",
+              "userValue": null,
+              "status": null,
+              "severity": null
+            }
+          }
+        ]
+      }
+]

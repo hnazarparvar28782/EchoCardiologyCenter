@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylePrj/echoeditorSection.css">
+
+</head>
+
+<body>
+    <div class="d-flex flex-column">
+        <button id="toggleButton" type="button"
+            class="btn btn-primary m-4  col-sm-3 rounded-4 align-self-center text-center" onclick="toggleVisibility()">
+            <P class="p-1 m-1" style="font-size: 22px;">
+                <span class="material-symbols-outlined">edit_note </span> Final Result
+            </P>
+        </button>
+    
+    </div>
+
+
+    <div id="content" style="display:none" class="mb-4">
+
+        <div class="container">
+            <!-- tooles section editor -->
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="m-0">Final Result</h3>
+                <select id="genderSelect" class="form-select" style="width: 150px;font-size:20px;">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <!-- spinner -->
+                <div id="spinner" class="loader loader--style1" title="3">
+                    <!--<div class="loader-inner ball-pulse">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div> -->
+                
+                    <div class="loader-inner line-scale">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <!-- spinner -->
+                <button id="aiButton" type="button" onclick="ReporterAI()" style="height: 2.5rem;;" class="btn btn-primary m-0 text-center rounded-4">
+                    <p class="fa fa-android fa-2x m-0"></p>
+                </button>
+            </div>
+            
+            <div id="editor" tabindex="0"></div> <!-- Add tabindex for focus -->
+        </div>
+
+        <div class="container">
+            <h3>Sample Sentences</h3>
+            <div id="sampleSentences">
+                <div class="draggable text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LEFT VENTRICLE</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV Size-end systole........mm        23-24mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV Size end diastole.......mm        35-52mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Fractional shortening......%         30-45mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">E point septal separation......mm    0-34mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post. Wall thickness.....mm       5.5-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post. Wall excursion.....mm       5.5-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV septal. Wall thickness.....mm     6-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV septal. Wall excursion.....mm     6-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality of motion.....EF                %</div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">MITRAL VALVE</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve excursion.....mm   </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve E - F slope.....mm/sac   </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve quality..............   </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Pattern of motion..............   </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others..............   </div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LEFT ATRIAL DIAMETER</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others..............      mm </div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">AORTA</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic root dimension............mm      12-40mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic valve opening............mm       12-50mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality of leaflets............................. </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others.......................................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RIGHT VENTRICULAR Dimension..........mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">TRICUSPID VALVE................ </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">PULMONIC VALVE................ </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">PERICARDIUM................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RESULT AND COMMENT.................... </div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The left
+                    ventricular size is within normal limits</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
+                    evidence of left ventricular hypertrophy</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    ejection fraction is estimated to be XX%.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    mitral valve demonstrates normal morphology and function.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
+                    moderate mitral regurgitation.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    aortic valve is trileaflet with no significant stenosis.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
+                    mild aortic regurgitation.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The right
+                    ventricle appears dilated</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Interventricular septum is intact.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    pericardium is free of effusion</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The left
+                    atrium is mildly enlarged.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">No
+                    thrombus is identified in the left atrial appendage.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Doppler
+                    studies reveal normal diastolic function.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
+                    evidence of pulmonary hypertension.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    inferior vena cava is collapsible with respiration.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The wall
+                    motion is normal in all segments.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
+                    a small pericardial effusion noted.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    cardiac chambers are well-defined.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">No
+                    significant valvular abnormalities were detected.</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
+                    findings are consistent with dilated cardiomyopathy.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    ['bold', 'italic', 'underline'],        // toggled buttons
+                    ['link', 'image']                       // link and image
+                ]
+            }
+        });
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function toggleSelect(element) {
+            element.classList.toggle('selected');
+        }
+
+        document.getElementById('sampleSentences').addEventListener('dragover', allowDrop);
+        document.getElementById('editor').addEventListener('dragover', allowDrop);
+
+        document.getElementById('editor').addEventListener('drop', function (event) {
+            event.preventDefault();
+            const selectedSentences = document.querySelectorAll('.selected');
+            selectedSentences.forEach(sentence => {
+                const sentenceText = sentence.innerText;
+                quill.insertText(quill.getLength() - 1, sentenceText + '\n', Quill.sources.USER);
+                sentence.classList.remove('selected'); // Deselect after adding to editor
+            });
+
+            // Move cursor to the end of the last inserted sentence
+            quill.setSelection(quill.getLength() - 1, 0); // Set cursor at the end of the editor
+
+            // Use setTimeout with a longer delay to ensure the cursor is visible
+            setTimeout(() => {
+                quill.focus(); // Focus the editor after dropping text to keep the cursor visible
+                const range = quill.getSelection();
+                if (range) {
+                    quill.setSelection(range.index, 0); // Reset selection to show cursor
+                }
+            }, 100); // Increase delay to 100ms
+        });
+
+        // Ensure the editor is focused when clicked
+        document.getElementById('editor').addEventListener('mousedown', function () {
+            quill.focus(); // Focus on mousedown
+        });
+
+        document.getElementById('editor').addEventListener('mouseup', function () {
+            quill.focus(); // Ensure focus on mouseup
+        });
+
+        function toggleVisibility() {
+            const content = document.getElementById('content');
+            const isVisible = content.style.display === 'flex';
+
+            // تغییر وضعیت نمایش محتوا
+            content.style.display = isVisible ? 'none' : 'flex';
+
+            // محاسبه موقعیت اسکرول
+            const scrollToPosition = isVisible ? window.scrollY : content.offsetTop - 100; // 100 پیکسل بالاتر از محتوای
+            const buttonHeight = document.getElementById('toggleButton').offsetHeight; // ارتفاع دکمه
+
+            // اسکرول به سمت محتوا
+            window.scrollTo({
+                top: scrollToPosition - buttonHeight - 60, // 60 پیکسل فاصله از دکمه
+                behavior: 'smooth' // اسکرول نرم
+            });
+        }
+    </script>
+
+</body>
+
+</html>

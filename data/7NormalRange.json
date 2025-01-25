@@ -1,0 +1,106 @@
+[{
+    "_id": {
+      "$oid": "670d39eab1e38967cf1e334e"
+    },
+    "title": "Severity Grading of Aortic Regurgitation",
+    "parameters": [
+      {
+        "category": "Structural parameters",
+        "parameters": [
+          {
+            "parameter": "Aortic leaflets",
+            "mild": "Normal or abnormal",
+            "moderate": "Normal or abnormal",
+            "severe": "Abnormal/flail, or wide coaptation defect"
+          },
+          {
+            "parameter": "LV size",
+            "mild": "Normal",
+            "moderate": "Normal or dilated",
+            "severe": "Usually dilated"
+          }
+        ]
+      },
+      {
+        "category": "Qualitative Doppler",
+        "parameters": [
+          {
+            "parameter": "Jet width in LVOT, color flow",
+            "mild": "Small in central jets",
+            "moderate": "Intermediate",
+            "severe": "Large in central jets; variable in eccentric jets"
+          },
+          {
+            "parameter": "Flow convergence, color flow",
+            "mild": "None or very small",
+            "moderate": "Intermediate",
+            "severe": "Large"
+          },
+          {
+            "parameter": "Jet density, CW",
+            "mild": "Incomplete or faint",
+            "moderate": "Dense",
+            "severe": "Dense"
+          },
+          {
+            "parameter": "Jet deceleration rate, CW (PHT, milliseconds)",
+            "mild": "Incomplete or faint slow, >500",
+            "moderate": "Medium, 500–200",
+            "severe": "Steep, <200"
+          },
+          {
+            "parameter": "Diastolic flow reversal in descending aorta, FW",
+            "mild": "Brief, early diastolic reversal",
+            "moderate": "Intermediate",
+            "severe": "Prominent holodiastolic reversal"
+          }
+        ]
+      },
+      {
+        "category": "Semiquantitative parameters",
+        "parameters": [
+          {
+            "parameter": "VCW (cm)",
+            "mild": "<0.3",
+            "moderate": "0.3–0.6",
+            "severe": ">0.6"
+          },
+          {
+            "parameter": "Jet width/LVOT width, central jets (%)",
+            "mild": "<25",
+            "moderate": "25–45",
+            "severe": "≥65"
+          },
+          {
+            "parameter": "Jet CSA/LVOT CSA, central jets (%)",
+            "mild": "<5",
+            "moderate": "5–20",
+            "severe": "≥60"
+          }
+        ]
+      },
+      {
+        "category": "Quantitative parameters",
+        "parameters": [
+          {
+            "parameter": "RVol (mL/beat)",
+            "mild": "<30",
+            "moderate": "30–44",
+            "severe": "≥60"
+          },
+          {
+            "parameter": "RF (%)",
+            "mild": "<30",
+            "moderate": "30–39",
+            "severe": "≥50"
+          },
+          {
+            "parameter": "EROA (cm²)",
+            "mild": "<0.10",
+            "moderate": "0.10–0.19",
+            "severe": "≥0.30"
+          }
+        ]
+      }
+    ]
+  }]

@@ -1,0 +1,9 @@
+<% if (typeof errorEditingInfo!=undefined) { %>
+    <%- include("../include/opencolapsseworkexpreience.ejs") %>
+        <div class="alert alert-warning alert-dismissable fade show" role="alert">
+            <%= errorEditingInfo %>
+                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+<% } %>

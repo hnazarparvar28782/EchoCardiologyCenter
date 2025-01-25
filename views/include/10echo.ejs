@@ -1,0 +1,84 @@
+<div class="accordion mt-1" id="accordionEcho10">
+    <% data10.forEach((item, index) => { %>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<%= index %>">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo10" aria-expanded="true" aria-controls="collapse<%= index %>echo10">
+                    <img src="/assets/heartsting.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
+                    <%= item.title %>
+                </button>
+            </h2>
+            <div id="collapse<%= index %>echo10" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>echo10" data-bs-parent="#accordionEcho10">
+                <div class="accordion-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Parameter</th>
+                                <th>Male Absolute</th>
+                                <th>Female Absolute</th>
+                                <th>Male Indexed</th>
+                                <th>Female Indexed</th>
+                                <th>User Value</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% item.parameters.forEach(parameter => { %>
+                                <tr>
+                                    <td data-label="Select"><input type="checkbox" name="select"></td>
+                                    <td data-label="Parameter"><%= parameter.parameter %></td>
+                                    <td data-label="Male Absolute">
+                                        <%= parameter.absolute_values.men %>
+                                        <div>
+                                            <input type="checkbox" name="male-absolute">
+                                        </div>
+                                    </td>
+                                    <td data-label="Female Absolute">
+                                        <%= parameter.absolute_values.women %>
+                                        <div>
+                                            <input type="checkbox" name="female-absolute">
+                                        </div>
+                                    </td>
+                                    <td data-label="Male Indexed">
+                                        <%= parameter.indexed_values.men %>
+                                        <div>
+                                            <input type="checkbox" name="male-indexed">
+                                        </div>
+                                    </td>
+                                    <td data-label="Female Indexed">
+                                        <%= parameter.indexed_values.women %>
+                                        <div>
+                                            <input type="checkbox" name="female-indexed">
+                                        </div>
+                                    </td>
+                                    <td data-label="User Value">
+                                        <input type="text" name="uservalue" class="form-control" disabled>
+                                        <input type="checkbox" name="uservalue-select" id="10uservalue-<%= index %>">
+                                        <label for="10uservalue-<%= index %>">select</label>
+                                    </td>
+                                    <td data-label="Result" class="d-sm-flex">
+                                        <div>
+                                            <input type="checkbox" id="normal-<%= index %>" name="result" value="Normal" disabled>
+                                            <label for="normal-<%= index %>">Normal</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="moderate-<%= index %>" name="result" value="Moderate" disabled>
+                                            <label for="moderate-<%= index %>">Moderate</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="abnormal-<%= index %>" name="result" value="Abnormal" disabled>
+                                            <label for="abnormal-<%= index %>">Abnormal</label>
+                                        </div>
+                                        <hr>
+                                        <input type="checkbox" name="selectResult" id="selectResult-<%= index %>">
+                                        <label class="m-auto" for="selectResult-<%= index %>">select</label>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

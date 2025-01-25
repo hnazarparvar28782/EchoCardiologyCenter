@@ -1,0 +1,76 @@
+[{
+  "title": "Severity Grading of Tricuspid Valve Regurgitation",
+  "structural": {
+    "tv_morphology": {
+      "mild": "Normal or mildly abnormal leaflets",
+      "moderate": "Moderately abnormal leaflets",
+      "severe": "Severe valve lesions (e.g., flail leaflet, severe retraction, large perforation)"
+    },
+    "rv_and_ra_size": {
+      "mild": "Usually normal",
+      "moderate": "Normal or mild dilatation",
+      "severe": "Usually dilated"
+    },
+    "inferior_vena_cava_diameter": {
+      "mild": "Normal < 2 cm",
+      "moderate": "Normal or mildly dilated 2.1-2.5 cm",
+      "severe": "Dilated > 2.5 cm"
+    }
+  },
+  "qualitative_doppler": {
+    "color_flow_jet_area": {
+      "mild": "Small, narrow, central",
+      "moderate": "Moderate central",
+      "severe": "Large central jet or eccentric wall-impinging jet of variable size"
+    },
+    "flow_convergence_zone": {
+      "mild": "Not visible, transient or small",
+      "moderate": "Intermediate in size and duration",
+      "severe": "Large throughout systole"
+    },
+    "cwd_jet": {
+      "mild": "Faint/partial/parabolic",
+      "moderate": "Dense, parabolic or triangular",
+      "severe": "Dense, often triangular"
+    }
+  },
+  "semiquantitative": {
+    "color_flow_jet_area": {
+      "mild": "Not defined",
+      "moderate": "Not defined",
+      "severe": ">10 cm²"
+    },
+    "vcw": {
+      "mild": "<0.3 cm",
+      "moderate": "0.3-0.69 cm",
+      "severe": "≥0.7 cm"
+    },
+    "pisa_radius": {
+      "mild": "≤0.5 cm",
+      "moderate": "0.6-0.9 cm",
+      "severe": ">0.9 cm"
+    },
+    "hepatic_vein_flow": {
+      "mild": "Systolic dominance",
+      "moderate": "Systolic blunting",
+      "severe": "Systolic flow reversal"
+    },
+    "tricuspid_inflow": {
+      "mild": "A wave dominant",
+      "moderate": "Variable",
+      "severe": "E wave > 1.0 m/s"
+    }
+  },
+  "quantitative": {
+    "eroa": {
+      "mild": "<0.20 cm²",
+      "moderate": "0.20-0.39 cm²",
+      "severe": "≥0.40 cm²"
+    },
+    "rvol": {
+      "mild": "<30 mL",
+      "moderate": "30-44 mL",
+      "severe": "≥45 mL"
+    }
+  }
+}]

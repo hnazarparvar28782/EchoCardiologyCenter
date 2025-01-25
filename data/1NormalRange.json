@@ -1,0 +1,155 @@
+[{
+  "_id": {
+    "$oid": "670d2fd7b1e38967cf1e3340"
+  },
+  "title": "Normal Values for 2D Echocardiographic Parameters of LV Size and Function According to Gender",
+  "parameters": [
+    {
+      "parameter": "LV internal dimension - Diastolic dimension",
+      "male": {
+        "mean_sd": "50.2 ± 4.1",
+        "range": "42.0–58.4",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "45.0 ± 3.6",
+        "range": "37.8–52.2",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV internal dimension - Systolic dimension",
+      "male": {
+        "mean_sd": "32.4 ± 3.7",
+        "range": "25.0–39.8",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "28.2 ± 3.3",
+        "range": "21.6–34.8",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV volumes (biplane) - LV EDV",
+      "male": {
+        "mean_sd": "106 ± 22",
+        "range": "62–150",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "76 ± 15",
+        "range": "46–106",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV volumes (biplane) - LV ESV",
+      "male": {
+        "mean_sd": "41 ± 10",
+        "range": "21–61",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "28 ± 7",
+        "range": "14-42",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV volumes normalized by BSA - LV EDV",
+      "male": {
+        "mean_sd": "54 ± 10",
+        "range": "34–74",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "45 ± 8",
+        "range": "29–61",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV volumes normalized by BSA - LV ESV",
+      "male": {
+        "mean_sd": "21 ± 5",
+        "range": "11–31",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "16 ± 4",
+        "range": "8–24",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    },
+    {
+      "parameter": "LV EF (biplane)",
+      "male": {
+        "mean_sd": "62 ± 5",
+        "range": "52–72",
+        "status": null,
+        "severity": null
+      },
+      "female": {
+        "mean_sd": "64 ± 5",
+        "range": "54–74",
+        "status": null,
+        "severity": null
+      },
+      "userValue": null,
+      "result": {
+        "normal": false,
+        "moderate": false,
+        "abnormal": false
+      }
+    }
+  ]
+}]
