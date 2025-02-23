@@ -5,21 +5,24 @@
     rowSelect = { selectedRows: Array.from({ length: 18 }, (_, i) => i + 1) }; 
  } 
 %>
+
 <div class="accordion mt-0 mb-1" id="accordionecho18">
     <% data18.forEach((item, index) => { %>
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading<%= index %>">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo1" aria-expanded="true" aria-controls="collapse<%= index %>echo1" style="font-family: Vazir;">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo18" aria-expanded="true" aria-controls="collapse<%= index %>echo18" style="font-family: Vazir;">
                     <img src="/assets/heartcard.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
                 </button>
             </h2>
-            <div id="collapse<%= index %>echo1" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>echo1" data-bs-parent="#accordionecho1">
+            <div id="collapse<%= index %>echo18" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>echo1" data-bs-parent="#accordionecho1">
                 <div class="accordion-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
+                        <table class="gentable table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th <% if (path != 'setEcho') { %> class="hidden" <% } %>>Select</th>
+                                    <% if (path=='userSelectEcho') { %>
+                                     <th>Select</th>
+                                    <% } %>
                                     <th>Parameter</th>
                                     <th>Details</th>
                                     <th>Result</th>
@@ -27,96 +30,98 @@
                             </thead>
                             <tbody>
                                 <% item.parameters.forEach((parameter, paramIndex) => { %>
-                                    <% console.log(rowSelect.selectedRows) %>
                                     <% if ( rowSelect && rowSelect.selectedRows.includes(paramIndex + 1)) { %>
                                     <tr>
-                                        <td data-label="Select" <% if (path != 'setEcho') { %> class="hidden" <% } %>><input type="checkbox" name="select"></td>
+
+                                        <% if (path=='userSelectEcho') { %>
+                                        <td data-label="Select"><input type="checkbox" name="select"></td>
+                                        <% } %>
                                         <td data-label="Parameter"><%= parameter.parameter %></td>
                                         <td data-label="Details">
                                             <ul style="list-style-type: none; padding: 0;">
                                                 <% if (parameter.PericardialInfiltration) { %>
-                                                    <li style="text-align: center;">Pericardial Infiltration: 
-                                                        <input type="checkbox" name="PericardialInfiltration" value="Present"> Present
-                                                        <input type="checkbox" name="PericardialInfiltration" value="Absent"> Absent
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Pericardial Infiltration: 
+                                                        <input class="m-1" type="checkbox" name="PericardialInfiltration" value="Present"> Present
+                                                        <input class="m-1" type="checkbox" name="PericardialInfiltration" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.PericardialEffusion) { %>
-                                                    <li style="text-align: center;">Pericardial Effusion: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Pericardial Effusion: 
                                                         <input type="checkbox" name="PericardialEffusion" value="Present"> Present
                                                         <input type="checkbox" name="PericardialEffusion" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.PericardialFluidThickness) { %>
-                                                    <li style="text-align: center;">Pericardial Fluid Thickness: 
+                                                    <li style="text-align: center;"class="li-detail d-flex justify-content-center">Pericardial Fluid Thickness: 
                                                         <input type="text" id="PericardialFluidThickness" name="userValue" class="form-control" style="width: 80px; display: inline-block;" placeholder="mm">
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.FluidCharacteristics) { %>
-                                                    <li style="text-align: center;">Fluid Characteristics: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Fluid Characteristics: 
                                                         <input type="checkbox" name="FluidCharacteristics" value="Clear"> Clear
                                                         <input type="checkbox" name="FluidCharacteristics" value="Bloody"> Bloody
                                                         <input type="checkbox" name="FluidCharacteristics" value="Purulent"> Purulent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.LeftVentricleSize) { %>
-                                                    <li style="text-align: center;">Left Ventricle Size: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Left Ventricle Size: 
                                                         <input type="checkbox" name="LeftVentricleSize" value="Normal"> Normal
                                                         <input type="checkbox" name="LeftVentricleSize" value="DecreasedVolume"> Decreased Volume
                                                         <input type="checkbox" name="LeftVentricleSize" value="IncreasedVolume"> Increased Volume
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.LeftVentricularEjectionFraction) { %>
-                                                    <li style="text-align: center;">Left Ventricular Ejection Fraction: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Left Ventricular Ejection Fraction: 
                                                         <input type="text" id="LeftVentricularEjectionFraction" name="userValue" class="form-control" style="width: 80px; display: inline-block;" placeholder="%">
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.WallMotion) { %>
-                                                    <li style="text-align: center;">Wall Motion: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Wall Motion: 
                                                         <input type="checkbox" name="WallMotion" value="Normal"> Normal
-                                                        <input type="checkbox" name="WallMotion" value="WallMotionAbnormality"> Wall Motion Abnormality
+                                                        <input type="checkbox" name="WallMotion" value="WallMotionAbnormality">Abnormality
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.ClinicalEvidence) { %>
-                                                    <li style="text-align: center;">Clinical Evidence: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Clinical Evidence: 
                                                         <input type="checkbox" name="ClinicalEvidence" value="Present"> Present
                                                         <input type="checkbox" name="ClinicalEvidence" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.SystolicBloodPressure) { %>
-                                                    <li style="text-align: center;">Systolic Blood Pressure: 
+                                                    <li style="text-align: center;" >Systolic Blood Pressure: 
                                                         <input type="text" id="SystolicBloodPressure" name="userValue" class="form-control" style="width: 80px; display: inline-block;" placeholder="mmHg">
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.ChangesInVentricularSize) { %>
-                                                    <li style="text-align: center;">Changes In Ventricular Size: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Changes In Ventricular Size: 
                                                         <input type="checkbox" name="ChangesInVentricularSize" value="Present"> Present
                                                         <input type="checkbox" name="ChangesInVentricularSize" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.ValvularInsufficiency) { %>
-                                                    <li style="text-align: center;">Valvular Insufficiency: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Valvular Insufficiency: 
                                                         <input type="checkbox" name="ValvularInsufficiency" value="Present"> Present
                                                         <input type="checkbox" name="ValvularInsufficiency" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.CoronaryArteryDisease) { %>
-                                                    <li style="text-align: center;">Coronary Artery Disease: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Coronary Artery Disease: 
                                                         <input type="checkbox" name="CoronaryArteryDisease" value="Present"> Present
                                                         <input type="checkbox" name="CoronaryArteryDisease" value="Absent"> Absent
                                                     </li>
                                                 <% } %>
                                                 <% if (parameter.HeartRhythm) { %>
-                                                    <li style="text-align: center;">Heart Rhythm: 
+                                                    <li style="text-align: center;" class="li-detail d-flex justify-content-center">Heart Rhythm: 
                                                         <input type="checkbox" name="HeartRhythm" value="Sinus"> Sinus
                                                         <input type="checkbox" name="HeartRhythm" value="Arrhythmia"> Arrhythmia
                                                     </li>
                                                 <% } %>
                                             </ul>
                                         </td>
-                                        <td class="result-checkboxes" data-label="Result">
-                                            <label><input type="checkbox" name="Normal"  <%= parameter.result && parameter.result.normal ? 'checked' : '' %>> Normal</label>
-                                            <label><input type="checkbox" name="Moderate" <%= parameter.result && parameter.result.moderate ? 'checked' : '' %>> Moderate</label>
-                                            <label><input type="checkbox" name="Abnormal" <%= parameter.result && parameter.result.abnormal ? 'checked' : '' %>> Abnormal</label>
+                                        <td class="result-checkboxes d-flex flex-column" data-label="Result" >
+                                            <label><input type="checkbox" name="Normal"  <%= parameter.result && parameter.result.normal ? 'checked' : '' %>>Normal</label>
+                                            <label><input type="checkbox" name="Moderate" <%= parameter.result && parameter.result.moderate ? 'checked' : '' %>>Moderate</label>
+                                            <label><input type="checkbox" name="Abnormal" <%= parameter.result && parameter.result.abnormal ? 'checked' : '' %>>Abnormal</label>
                                         </td>
                                     </tr>
                                    <% } %> 

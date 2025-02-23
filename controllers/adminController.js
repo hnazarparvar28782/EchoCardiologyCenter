@@ -17,7 +17,7 @@ import {
   schemaCreateNonbat,
   schemaUploadMardarek,
 } from "../model/secure/postvalidation.js";
-import { User, updateUser } from "../model/doctorsInfo.js";
+import { User, saveUserConfig, updateUser } from "../model/doctorsInfo.js";
 import { insertNobat, nobatDoctors } from "../model/nobatDoctors.js";
 import passport from "passport";
 import { NazarKarBaran, UpdateNazar, insertNazar } from "../model/NazaratKarbaran.js";
@@ -31,6 +31,7 @@ import { deleteEchoSick, EchoSicks, insertEchoSick } from "../model/echosicks.js
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { error } from "console";
 
 
 const getDashboard = async (req, res) => {
@@ -625,17 +626,16 @@ const getTotalNormalValues = async (req, res) => {
 
   dataPath = path.join(`${rootPrj}/data/`, '18NormalRange.json');
   let data18 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
-  let userEchoSelectWithRow=[];
-  if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) 
-    {userEchoSelectWithRow = user.userEchoSelectWithRow;} 
+  let userEchoSelectWithRow = [];
+  if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) { userEchoSelectWithRow = user.userEchoSelectWithRow; }
 
   return res.render("../views/private/DisplayTotalNormalValue.ejs", {
     pageTitle: "مطب پزشک",
     layout: "../views/layouts/EchoLayout.ejs",
-    path: "setEcho",
+    path: "userSelectEcho",
     data1, data2, data3, data4, data5, data6, data7, data8,
     data9, data10, data11, data12, data13, data14, data15,
-    data16, data17,data18,
+    data16, data17, data18,
     UserSelectedDate: "",
     message: req.flash("success_register"),
     error: req.flash("error"),
@@ -664,9 +664,9 @@ const getBlankEchoConfig = async (req, res) => {
     }
   }
 
-  let config=[];
+  let config = [];
   if (req.user.userEchoConfig && req.user.userEchoConfig != null) {
-     config = JSON.parse(req.user.userEchoConfig);
+    config = JSON.parse(req.user.userEchoConfig);
   }
   return res.render("../views/private/BlankEchoConfig.ejs", {
     pageTitle: "مطب پزشک",
@@ -688,6 +688,76 @@ const getBlankEchoConfig = async (req, res) => {
 
 };
 
+const getEchoForAll = (req, res) => {
+  const user = req.user == undefined ? [] : req.user;
+  let dataPath = path.join(`${rootPrj}/data/`, '1NormalRange.json');
+  let data1 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '2NormalRange.json');
+  let data2 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '3NormalRange.json');
+  let data3 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '4NormalRange.json');
+  let data4 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '5NormalRange.json');
+  let data5 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '6NormalRange.json');
+  let data6 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '7NormalRange.json');
+  let data7 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '8NormalRange.json');
+  let data8 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '9NormalRange.json');
+  let data9 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '10NormalRange.json');
+  let data10 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '11NormalRange.json');
+  let data11 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '12NormalRange.json');
+  let data12 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '13NormalRange.json');
+  let data13 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '14NormalRange.json');
+  let data14 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '15NormalRange.json');
+  let data15 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '16NormalRange.json');
+  let data16 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '17NormalRange.json');
+  let data17 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+
+  dataPath = path.join(`${rootPrj}/data/`, '18NormalRange.json');
+  let data18 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
+  let userEchoSelectWithRow = [];
+  return res.render("../views/private/EchoForAll.ejs", {
+    pageTitle: "مطب پزشک",
+    layout: "../views/layouts/EchoForAllLayout.ejs",
+    path: "EchoForAll",
+    errorCaptcha: "",
+    errorlogin: "",
+    data1, data2, data3, data4, data5, data6, data7, data8,
+    data9, data10, data11, data12, data13, data14, data15,
+    data16, data17, data18,
+    userEchoSelectWithRow,
+    user
+  });
+}
+
 const getِcreateechoreport = async (req, res) => {
   const user = req.user == undefined ? [] : req.user;
   const doctor = await User.findById(req.params.id);
@@ -697,13 +767,12 @@ const getِcreateechoreport = async (req, res) => {
       IsDoctor = true;
     }
   }
-  let data=[];
-  let userEchoSelectWithRow=[];
+  let data = [];
+  let userEchoSelectWithRow = [];
   if (req.user && req.user.userEchoData && Object.keys(req.user.userEchoData).length > 0) {
     data = JSON.parse(req.user.userEchoData);
-    if (data.data) data=data.data;
-    if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) 
-      {userEchoSelectWithRow = user.userEchoSelectWithRow;} 
+    if (data.data) data = data.data;
+    if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) { userEchoSelectWithRow = user.userEchoSelectWithRow; }
     // let dataPath = path.join(`${rootPrj}/public/uploads/${user.mobileId}/`, `echoprofile${user.codemilli}.json`);
     // let data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
     // console.log(data.data)
@@ -711,7 +780,7 @@ const getِcreateechoreport = async (req, res) => {
     // let data = JSON.parse(doctor.userEchoData);
     // console.log(data);
     // new  hassan
-    
+
     let dataPath = path.join(`${rootPrj}/data/`, '18NormalRange.json');
     let data18 = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
@@ -744,8 +813,8 @@ const getِcreateechoreport = async (req, res) => {
   } else {
     // req.flash('error','شما باید از قسمت اکوپروفایل -اکو آزمایش های منتخب ابتدا  اکوهای مورد نظر خود را انتخاب نمایید'),
     // getError404(req, res);
-    req.flash('error','کاربر محترم اکوهای پرکاربرد خود را اینجا برای راحتی کار انتخاب نمایید');
-    res.redirect(`/dashboard/TotalNormalValues/${req.user._id}` ) 
+    req.flash('error', 'کاربر محترم اکوهای پرکاربرد خود را اینجا برای راحتی کار انتخاب نمایید');
+    res.redirect(`/dashboard/TotalNormalValues/${req.user._id}`)
   }
 };
 
@@ -1767,7 +1836,7 @@ const EchoSerachFetch = async (req, res) => {
   if (UserSelectedDate != '') {
     try {
       const createDate = moment(UserSelectedDate, 'jYYYY/jM/jD').format('YYYY-MM-DD');
-      console.log(createDate)
+      // console.log(createDate)
       const EchosOfSicks = await EchoSicks.find(
         {
           createDate:
@@ -1778,7 +1847,7 @@ const EchoSerachFetch = async (req, res) => {
           "DoctorId": req.user._id
         },)
         .sort([["createDate", "descending"]]);
-      console.log(EchosOfSicks)
+      // console.log(EchosOfSicks)
 
       return res.render("../views/private/EchoslistOfday.ejs", {
         pageTitle: "مطب پزشک/قسمت اکو",
@@ -2036,13 +2105,13 @@ const UserEchoSearch = async (req, res) => {
     if (req.user && req.user.userEchoData && Object.keys(req.user.userEchoData).length > 0) {
       //* add hassan
       data = JSON.parse(req.user.userEchoData);
-      if (data.data) data=data.data;
+      if (data.data) data = data.data;
       //* add hassan
     } else {
       // getError404(req, res);
       // return
-      req.flash('error','کاربر محترم اکوهای پرکاربرد خود را اینجا برای راحتی کار انتخاب نمایید');
-      res.redirect(`/dashboard/TotalNormalValues/${req.user._id}` ) 
+      req.flash('error', 'کاربر محترم اکوهای پرکاربرد خود را اینجا برای راحتی کار انتخاب نمایید');
+      res.redirect(`/dashboard/TotalNormalValues/${req.user._id}`)
     }
 
     // let SickEchos = await EchoSicks.find({ $text: { $search: searchInputId }, "DoctorId": req.user._id }, )
@@ -2066,9 +2135,8 @@ const UserEchoSearch = async (req, res) => {
     console.log(SickInfoSave)
     const UserSelectedDate = "";
 
-    let userEchoSelectWithRow=[];
-    if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) 
-    {userEchoSelectWithRow = user.userEchoSelectWithRow;} 
+    let userEchoSelectWithRow = [];
+    if (req.user && req.user.userEchoSelectWithRow && Object.keys(req.user.userEchoSelectWithRow).length > 0) { userEchoSelectWithRow = user.userEchoSelectWithRow; }
 
     if (SickEchos) {
       return res.render("../views/private/BlankEchoReport.ejs", {
@@ -2528,10 +2596,10 @@ const AdminSaveNazarat = async (req, res) => {
 const getNormalValueSelectUser = async (req, res) => {
   if (req.user) {
     try {
-      const{ data,userEchoSelectWithRow} = req.body;
+      const { data, userEchoSelectWithRow } = req.body;
       const { mobileId, codemilli } = req.user;
       // new hassan save defalut echo of user
-      updateUserEchoData(mobileId, JSON.stringify(data, null, 2),userEchoSelectWithRow)
+      updateUserEchoData(mobileId, JSON.stringify(data, null, 2), userEchoSelectWithRow)
       // new hassan 
 
       //*now remove
@@ -2563,12 +2631,12 @@ const getNormalValueSelectUser = async (req, res) => {
 
 }
 
-async function updateUserEchoData(mobileId, newUserEchoData,userEchoSelectWithRow) {
+async function updateUserEchoData(mobileId, newUserEchoData, userEchoSelectWithRow) {
   try {
     const updatedUser = await User.findOneAndUpdate(
       { mobileId: mobileId }, // شرط برای پیدا کردن رکورد
-      { userEchoData: newUserEchoData , userEchoSelectWithRow},
-       // فیلدی که باید به‌روزرسانی شود
+      { userEchoData: newUserEchoData, userEchoSelectWithRow },
+      // فیلدی که باید به‌روزرسانی شود
       { new: true, runValidators: true } // گزینه‌ها: new برای دریافت رکورد به‌روزرسانی شده و runValidators برای اجرای اعتبارسنجی‌ها
     );
     if (!updatedUser) {
@@ -2617,7 +2685,6 @@ const saveEchoCreatedByCodemilli = async (req, res) => {
         sickcodemilli, fullnamesick, mobilesick,
         DoctorId, DoctorFullname, DoctorMobileId, FinalResult, echolabData
       }
-
       //* save in mongodb
       const saveData = await insertEchoSick(LabEcho);
       // console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
@@ -2986,23 +3053,23 @@ const toPersianNumbers = (num) => {
 
 
 async function genEchoRep(data, req, res) {
-  let bodyFont,bodyFontSize, reportTitle, reportFooter, finalFont, finalFontSize;
+  let bodyFont, bodyFontSize, reportTitle, reportFooter, finalFont, finalFontSize;
 
   if (req.user.userEchoConfig && req.user.userEchoConfig != null) {
     const config = JSON.parse(req.user.userEchoConfig);
-    config.bodyFont!==""? bodyFont = config.bodyFont:bodyFont="BYekan";
-    config.bodyFontSize!==""? bodyFontSize = config.bodyFontSize:bodyFontSize=10;
-    config.reportTitle!=="" ? reportTitle = config.reportTitle: reportTitle = "Echo Cardiography Report";
-    config.reportFooter !=="" ? reportFooter = config.reportFooter:reportFooter="Dr................";
-    config.finalFont!==""?finalFont = config.finalFont:finalFont="BYekan";
-    config.finalFontSize!==""?finalFontSize = config.finalFontSize:finalFontSize=10;
+    config.bodyFont !== "" ? bodyFont = config.bodyFont : bodyFont = "BYekan";
+    config.bodyFontSize !== "" ? bodyFontSize = config.bodyFontSize : bodyFontSize = 10;
+    config.reportTitle !== "" ? reportTitle = config.reportTitle : reportTitle = "Echo Cardiography Report";
+    config.reportFooter !== "" ? reportFooter = config.reportFooter : reportFooter = "Dr................";
+    config.finalFont !== "" ? finalFont = config.finalFont : finalFont = "BYekan";
+    config.finalFontSize !== "" ? finalFontSize = config.finalFontSize : finalFontSize = 10;
   } else {
     bodyFont = "BYekan";
     bodyFontSize = 10;
     reportTitle = "Echo Cardiography Report";
     reportFooter = "DR.............................";
     finalFont = "BYekan";
-    finalFontSize =10;
+    finalFontSize = 10;
   }
   try {
     if (!data || !Array.isArray(data) || !data[0]) {
@@ -3057,10 +3124,10 @@ async function genEchoRep(data, req, res) {
     const fontPathRoboto = path.join(__dirname, '../public/fonts/Roboto-Bold.ttf');
     const fontDataroboto = fs.readFileSync(fontPathRoboto);
     const base64Fontroboto = fontDataroboto.toString('base64');
-   
+
     let selectedfontresult = "";
-    finalFont==""? selectedfontresult = "Satisfy" : selectedfontresult=finalFont;
-    
+    finalFont == "" ? selectedfontresult = "Satisfy" : selectedfontresult = finalFont;
+
     const htmlContent = `
     <html>
     <head>
@@ -3276,7 +3343,7 @@ async function genEchoRep(data, req, res) {
 
   } catch (error) {
     console.error("Error generating report:", error);
-    req.flash("errormsg","اشکال در داده های اکو");
+    req.flash("errormsg", "اشکال در داده های اکو");
     res.status(500).send("Error generating report");
   }
 }
@@ -3296,11 +3363,11 @@ function translateName(persianName) {
 
 
 const saveEchoConfig = async (req, res) => {
-  const { bodyFont,bodyFontSize, reportTitle,reportFooter,finalFont,finalFontSize } = req.body;
-  console.log(bodyFont,bodyFontSize, reportTitle,reportFooter,finalFont,finalFontSize)
+  const { bodyFont, bodyFontSize, reportTitle, reportFooter, finalFont, finalFontSize } = req.body;
+  console.log(bodyFont, bodyFontSize, reportTitle, reportFooter, finalFont, finalFontSize)
   const mobileId = req.user.mobileId;
 
-  const userEchoConfig = JSON.stringify({ bodyFont,bodyFontSize,reportTitle,reportFooter,finalFont,finalFontSize }, null, 2);
+  const userEchoConfig = JSON.stringify({ bodyFont, bodyFontSize, reportTitle, reportFooter, finalFont, finalFontSize }, null, 2);
   try {
     const echoConfig = await updateUserEchoConfig(mobileId, userEchoConfig);
     console.log(echoConfig)
@@ -3308,6 +3375,23 @@ const saveEchoConfig = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error })
   }
+}
+
+const savePreFinalSentences = async (req, res) => {
+  const { PreFinalSentences } = req.body;
+  try {
+    const dataSaved= await saveUserConfig(req.user._id,{PreFinalSentences});
+    if (dataSaved) {
+      res.status(200).json({msg:'The default final sentences are saved.!'})
+      return
+    } else {
+      res.status(201).json({msg:'Error for saving data!!'});
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+
 }
 
 export {
@@ -3331,6 +3415,7 @@ export {
   getِcreateechoreport,
   getHelp,
   getContackt,
+  getEchoForAll,
   userDistruct,
   createNobat,
   uploadImageMadarek,
@@ -3364,4 +3449,5 @@ export {
   generateOpenAiReport,
   EchoSerachFetch,
   saveEchoConfig,
+  savePreFinalSentences,
 }

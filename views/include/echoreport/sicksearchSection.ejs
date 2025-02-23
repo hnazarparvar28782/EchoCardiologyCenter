@@ -1,7 +1,8 @@
-<div class="container col-6 col-sm-10 mt-5 " dir="rtl">
-    <table id="ListNobats"
+<div class="container col-6 col-sm-10 mt-5   " dir="rtl">
+    <div class="table-responsive ">
+        <table id="ListNobats" style="text-align: right;"
         class="table  mx-0 align-middle table-sm table-bordered table-hover table-striped table-primary p-2 mt-5 m-4">
-        <thead id="ff" class="table-light ">
+        <thead id="ff" class="table-light " style="text-align: right;">
             <tr id="gg" class="table-primary listechoofdayheader" style="text-align:right">
                 <% let saveOrDel="" %>
                     <% let displayValue="" %>
@@ -23,7 +24,7 @@
                                                     <th id="h" scope="col" onclick="sortTable(0)">نام</th>
             </tr>
         </thead>
-        <tbody class="listdetail">
+        <tbody class="listdetail" style="text-align: right;">
             <% let Iid=0 %>
             <% let lastinfo={} %>
                 <% if (Object.keys(SickEchos).length===0) { %>
@@ -34,8 +35,8 @@
                     <h4 class="text-center text-danger">بیمار آماده برای ثبت اولین اکو</h4>
                     <% } %>
                     <% SickInfo.forEach(Day=> { %>
-                        <tr>
-                            <td id="gg1" scope="row" class="col-1">
+                        <tr style="text-align: right;">
+                            <td id="gg1" scope="row" class="col-1" style="text-align: right;">
                                 <button type="button" class="fa fa-save m-1" onclick="saveCurrEcho(
                                          JSON.stringify({
                                          sickcodemilli: '<%=  Day.codemilli %>',
@@ -107,6 +108,8 @@
                                                 <% } %>
         </tbody>
     </table>
+    </div>   
+    
     <div class="text-start mt-1" <%- displayValue %>> 
         <button id="saveButton" class=" mx-1 btn btn-success" onclick="saveCurrEcho('<%= SickInfoSave %>')">
             <p class="fa fa-plus-square"></p>

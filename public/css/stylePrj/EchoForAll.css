@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "BYekan";
+  src: url("../../fonts/BYekan-webfont.eot") format("eot"),
+      url("../../fonts/BYekan-webfont.woff") format("woff"),
+      url("../../fonts/BYekan-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fanavbar{
+  font-family: "BYekan" !important;
+}
+
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logo i {
+    margin-right: 10px;
+  }
+
+   
+  body {
+    /* background: url('/assets/backgrundecho.jpg') repeat center center / cover; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    /* background: #007bff; */
+    background: #e9edf1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    background: #28a745;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .btn-custom {
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.2s;
+   }
+
+.btn-custom:hover {
+    background-color: #0056b3; /* رنگ پس‌زمینه در حالت hover */
+    transform: scale(1.05); /* بزرگ‌نمایی در حالت hover */
+  }
+
+
+
+.btn-custom:active {
+    transform: scale(0.95); /* کوچک‌نمایی در حالت active */
+}
+
+.icon {
+    margin-right: 8px; /* فاصله بین آیکون و متن */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-control {
+  width: 100%; /* عرض فیلد ورودی به صورت کامل */
+}
+
+@media (max-width: 768px) {
+  .form-group {
+      margin-bottom: 20px; /* فاصله بین فیلدها در حالت موبایل */
+  }
+  
+}
+.linksite{
+   font-family: sans-serif;
+   font-size: 1.5rem;
+   color:aliceblue;
+}  
+footer {
+  background-color:#007bff;
+  padding: 20px 0;
+  text-align: center;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer p {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.book-container {
+  display: flex; /* استفاده از Flexbox برای چیدمان افقی */
+  padding: 16px;
+  transition: box-shadow 0.3s;
+  width: 400px; /* عرض دلخواه */
+  align-items: center; /* تراز کردن عمودی محتوا */
+  flex: 1 1 200px; /* اجازه می‌دهد که اندازه به طور خودکار تغییر کند */
+  margin: 10px; 
+  max-width: 200px; /* حداکثر عرض */
+  max-height:310px;
+}
+
+.book-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+  max-width: 150px; 
+  border-radius: 5px;
+  margin-right: 16px; /* فاصله بین تصویر و متن */
+  height: auto; /* حفظ نسبت ابعاد */
+  border-radius: 5px; /* گوشه‌های گرد */
+}
+
+.book-info {
+  flex-grow: 1; /* اجازه می‌دهد که متن فضای باقی‌مانده را پر کند */
+}
+
+.book-title {
+  font-size: 1.5em; /* اندازه بزرگتر برای عنوان */
+  margin: 0; /* حذف حاشیه */
+}
+
+.book-author {
+  color: #555;
+  font-size: 1em; /* اندازه متن نویسنده */
+  margin: 5px 0 0; /* فاصله بین نویسنده و عنوان */
+}
+.copyright {
+  font-size: 0.8em; /* اندازه کوچک‌تر برای متن حق کپی‌رایت */
+  color: #888; /* رنگ خاکستری برای متن */
+  margin-top: 8px; /* فاصله بین متن نویسنده و حق کپی‌رایت */
+}
+/* heart section image header */
+.heartbeat-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  }
+ .heartbeat-1 svg {
+  height: 260px;
+  fill: none;
+  stroke: #337AB7;
+  stroke-width: 20; 
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: heartbeat-1 3s ease infinite;    
+}
+@keyframes heartbeat-1 {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+.heartbeat-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.heartbeat-2 svg {
+  stroke: #337AB7;
+  stroke-width: 2px;
+  fill: none;
+  stroke-dasharray: 150, 200;
+  stroke-dashoffset: 0;
+  animation: heartbeat-2 4s infinite linear;
+}
+@keyframes heartbeat-2 {
+  to {
+      stroke-dashoffset: 1050;
+  }
+}
+
+
+header {
+  display: flex;
+  flex-wrap: wrap; /* اجازه می‌دهد که محتوا در صورت کمبود فضا به خط بعدی برود */
+  justify-content: center; /* مرکز کردن محتوا */
+  align-items: center; /* تراز کردن عمودی محتوا */
+  padding: 16px; /* حاشیه داخلی */
+}
+
+/* new */
+.hidden2 {
+  display: none; /* مخفی کردن دیو */
+}
+.hidden {
+  display: none; /* مخفی کردن دیو */
+}
+.container {
+  width: 100%; /* اشغال تمام عرض */
+  height: auto; /* ارتفاع خودکار */
+  transition: all 0.5s ease; /* افکت انتقال */
+}
+
+.fullscreen {
+  display: block; /* نمایش دیو */
+  width: 100%; /* اشغال تمام عرض */
+  height: 100%; /* اشغال تمام ارتفاع */
+  background-color: white; /* رنگ پس‌زمینه */
+  transition: all 0.5s ease; /* افکت انتقال */
+}
+/* new hassaan */
+.accordion-button {
+  background-color: #f0f8ff;
+  color: #007bff;
+  font-weight: bold;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.accordion-button {
+  direction: ltr; /* جهت متن به چپ */
+  text-align: left; /* تراز متن به چپ */
+  font-family: Arial, sans-serif; /* انتخاب فونت مناسب */
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  margin-bottom: 5px;
+}
+
+.accordion-body {
+  background-color: #e9f7fd;
+  border: 1px solid #cce7ff;
+  border-radius: 5px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse; /* برای حذف فاصله بین سلول‌ها */
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #cce7ff; /* اضافه کردن حاشیه به سلول‌ها */
+}
+
+.table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.table-bordered {
+  border: 1px solid #cce7ff;
+}
+
+input[type="text"].form-control {
+  border: 1px solid #007bff;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+label {
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+hr {
+  border-top: 1px solid #cce7ff;
+  margin: 10px 0;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  .table thead {
+      display: none; /* مخفی کردن سرستون در حالت موبایل */
+  }
+
+  .table, .table tbody, .table tr, .table td {
+      display: block; /* نمایش هر سلول به صورت بلوک */
+      width: 100%; /* عرض کامل */
+      font-size:9px;
+  }
+  .table tr {
+      margin-bottom: 1rem; /* فاصله بین سطرها */
+      border: none; /* حذف حاشیه‌های پیش‌فرض */
+  }
+
+  .table td {
+      position: relative;
+      padding-left: 50%; /* فضای خالی برای برچسب */
+      border-bottom: 1px solid #ddd; /* خط جداکننده در پایین هر سطر */
+  }
+
+  .table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+  }
+}

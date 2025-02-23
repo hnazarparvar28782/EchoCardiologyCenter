@@ -13,97 +13,47 @@ body {
 
 .listechoofday{
     font-family: "BYekan" !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .listechoofdayheader{
     font-family: "BYekan" !important;
     font-size: medium; 
     font-style: normal;
+    direction: rtl;
+    text-align: right
 }
 .listdetail{
     font-family: "BYekan" !important;
     font-size: medium; 
     font-style: normal; 
+    direction: rtl;
+    text-align: right;
 }
- .accordion-button {
-     background-color: #f0f8ff;
-     color: #007bff;
-     font-weight: bold;
-     border: 1px solid #007bff;
-     border-radius: 5px;
-     transition: background-color 0.3s ease, color 0.3s ease;
- }
-
- .accordion-button:hover {
-     background-color: #007bff;
-     color: #ffffff;
- }
-
- .accordion-button:focus {
-     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
- }
-
- .accordion-item {
-     border: none;
-     margin-bottom: 10px;
- }
-
- .accordion-header {
-     margin-bottom: 5px;
- }
-
- .accordion-body {
-     background-color: #e9f7fd;
-     border: 1px solid #cce7ff;
-     border-radius: 5px;
-     padding: 15px;
-     max-height: 300px;
-     overflow-y: auto;
- }
-
- .table {
-     margin-top: 10px;
- }
-
- .table th,
- .table td {
-     vertical-align: middle;
-     text-align: center;
- }
-
- .table th {
-     background-color: #007bff;
-     color: #ffffff;
- }
-
- .table-bordered {
-     border: 1px solid #cce7ff;
- }
-
- .table-bordered th,
- .table-bordered td {
-     border: 1px solid #cce7ff;
- }
-
- input[type="text"].form-control {
-     border: 1px solid #007bff;
-     border-radius: 3px;
- }
-
- input[type="checkbox"] {
-     transform: scale(1.2);
-     margin-right: 5px;
- }
-
- label {
-     margin-left: 5px;
-     font-weight: normal;
- }
-
- hr {
-     border-top: 1px solid #cce7ff;
-     margin: 10px 0;
- }
-
+/* new */
+.Listofechosofday{
+    margin-top: 20px;
+    width:100%;
+    border-collapse: collapse; /* برای حذف فاصله بین سلول‌ها */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+   .Listofechosofday th,  .Listofechosofday td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1px;
+    border: 1px solid #cce7ff; /* اضافه کردن حاشیه به سلول‌ها */
+  }
+  
+  .Listofechosofday th {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
  
 

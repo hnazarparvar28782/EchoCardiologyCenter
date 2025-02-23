@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "118d2fd7b1e38967cf1e3340"
   },
-   "title": "Pericardium,CardiacFunction,CardiacTamponade,Other...",
+   "title": "Pericardium CardiacFunction CardiacTamponade Other",
   "parameters":[
    {
       "parameter":"Pericardium", 

@@ -1,0 +1,84 @@
+footer {
+    background-color:#007bff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer p {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .btn-custom {
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.2s;
+   }
+
+.btn-custom:hover {
+    background-color: #eceff1; /* رنگ پس‌زمینه در حالت hover */
+    transform: scale(1.05); /* بزرگ‌نمایی در حالت hover */
+    color: #060707;
+  }
+
+  @media (max-width: 768px) {
+    .btn-custom {
+      font-size: 20px;
+      max-height: 70px; 
+      h4{display: none;}
+    }
+
+  } 
+
+.btn-custom:active {
+    transform: scale(0.95); /* کوچک‌نمایی در حالت active */
+}
+#editor {
+  min-height: 300px; /* حداقل ارتفاع برای دیو ویرایشگر */
+  height: auto; /* اجازه می‌دهد ارتفاع به محتوای داخلی بستگی داشته باشد */
+  overflow-y: auto; /* در صورت نیاز نوار پیمایش اضافه می‌شود */
+}
+
+.sample-div {
+  transition: opacity 0.5s ease;
+}
+
+
+.hidden3{
+  opacity: 0;
+  height: 0; /* برای جلوگیری از اشغال فضا */
+  overflow: hidden; /* جلوگیری از نمایش محتوای مخفی */
+}
+
+
+/* new */
+.hidden2 {
+  display: none; /* مخفی کردن دیو */
+}
+.container {
+  width: 100%; /* اشغال تمام عرض */
+  height: auto; /* ارتفاع خودکار */
+  transition: all 0.5s ease; /* افکت انتقال */
+}
+
+.fullscreen {
+  display: block; /* نمایش دیو */
+  width: 100%; /* اشغال تمام عرض */
+  height: 100%; /* اشغال تمام ارتفاع */
+  background-color: white; /* رنگ پس‌زمینه */
+  transition: all 0.5s ease; /* افکت انتقال */
+}
+
+.hnnavbar-top-style {
+  position: relative; /* یا fixed */
+  z-index: 1050; /* اطمینان از اینکه در بالای سایر عناصر قرار گیرد */
+  overflow: hidden; /* جلوگیری از نمایش محتویات اضافی */
+}

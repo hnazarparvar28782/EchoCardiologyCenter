@@ -1,14 +1,15 @@
-
-<link rel="stylesheet" href="/css/stylePrj/paramechoSection.css">
+<!-- <link rel="stylesheet" href="/css/stylePrj/paramechoSection.css"> -->
+<link rel="stylesheet" href="/css/stylePrj/accordion.css">
 <div class="container">
     <% filenames=['heartgood.png','heartusb.png','heartline.png','heartshekast.png','heartrectangle.png','heartgosfand.png','heartamam.png','heartamam.png','heartmath.png','heartsting.png','heartmath.png','heartdoctor.png','herarchart.png','cardio.png','heartnote.png','cardiparvand.png','cardiparvand.png','heartcard.png'] %>
-    <div class="accordion mb-3" id="accordionData">
+    <!-- accordion start -->
+    <div class="accordion mb-3 mt-0" id="accordionData">
         <% data.forEach((item, index)=> { %>
-           <% if ( item.title=="Pericardium,CardiacFunction,CardiacTamponade,Other...") { %>
+           <% if ( item.title=="Pericardium CardiacFunction CardiacTamponade Other") { %>
             <%- include("../../include/18echo.ejs") %>
            <% } else{ %>
-
               <div class="accordion-item">
+                <!-- accordion header&button -->
                 <h2 class="accordion-header" id="heading<%= index %>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse<%= index %>" aria-expanded="false"
@@ -16,75 +17,79 @@
                         <img src="<%- `/assets/${filenames[index]}` %>" alt="Icon" style="width: 30px; height: 30px; margin-right: 5px;" class="icon-small"> <%= item.title %>
                     </button>
                 </h2>
-                <div id="collapse<%= index %>" class="accordion-collapse collapse"
+                <!-- accordion body& table -->
+                <div id="collapse<%= index %>" class="accordion-collapse collapse  scroll"
                     aria-labelledby="heading<%= index %>" data-bs-parent="#accordionData">
-                    <div class="accordion-body">
                         <% item.categories.forEach(category=> { %>
                             <% if (category.category) { %>
                                 <h5 data-type="category">
                                     <%= category.category %>
                                 </h5>
                                 <% } %>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Parameter</th>
-                                                <% Object.keys(category.parameters[0]).forEach(key=> { %>
-                                                    <% if (key !=="Parameter" && key !=="User Value" && key
-                                                        !=="Result" ) { %>
-                                                        <th>
-                                                            <%= key %>
-                                                        </th>
-                                                        <% } %>
-                                                            <% }); %>
-                                                                <th>User Value</th>
-                                                                <th>Result</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <% category.parameters.forEach(parameter=> { %>
+                                     <div class="accordion-body">
+                                     <div class="table-responsive">
+                                        <table  class="genrateTable table table-bordered table-striped">
+                                            <thead>
                                                 <tr>
-                                                    <td>
-                                                        <%= parameter.Parameter || parameter.Stage %>
-                                                    </td>
-                                                    <% Object.keys(parameter).forEach(key=> { %>
+                                                    <th>Parameter</th>
+                                                    <% Object.keys(category.parameters[0]).forEach(key=> { %>
                                                         <% if (key !=="Parameter" && key !=="User Value" && key
                                                             !=="Result" ) { %>
-                                                            <td>
-                                                                <%= parameter[key] %>
-                                                            </td>
+                                                            <th>
+                                                                <%= key %>
+                                                            </th>
                                                             <% } %>
                                                                 <% }); %>
-                                                                    <td>
-                                                                        <input type="text" name="userValue"
-                                                                            value="<%= parameter[" User Value"]
-                                                                            || '' %>">
-                                                                    </td>
-                                                                    <td>
-                                                                        <% if (parameter.Result) { %>
-                                                                            <div>
-                                                                                <!-- <input type="checkbox" name="Normal"  <%= parameter.Result.Normal ? 'checked' : '' %>> Normal -->
-                                                                                <input type="checkbox"
-                                                                                    name="Normal">Normal
-                                                                            </div>
-                                                                            <div>
-                                                                                <!-- <input type="checkbox" name="Moderate"  <%= parameter.Result.Moderate ? 'checked' : '' %>> Moderate -->
-                                                                                <input type="checkbox"
-                                                                                    name="Moderate"> Moderate
-                                                                            </div>
-                                                                            <div>
-                                                                                <!-- <input type="checkbox" name="Abnormal"  <%= parameter.Result.Abnormal ? 'checked' : '' %>> Abnormal -->
-                                                                                <input type="checkbox"
-                                                                                    name="Abnormal"> Abnormal
-                                                                            </div>
-                                                                            <% } %>
-                                                                    </td>
+                                                                    <th>User Value</th>
+                                                                    <th>Result</th>
                                                 </tr>
-                                                <% }); %>
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                <% category.parameters.forEach(parameter=> { %>
+                                                    <tr>
+                                                        <td data-label='Parameter/Stage' onclick="setUserValue(this)">
+                                                            <%= parameter.Parameter || parameter.Stage %>
+                                                        </td>
+                                                        <% Object.keys(parameter).forEach(key=> { %>
+                                                            <% if (key !=="Parameter" && key !=="User Value" && key
+                                                                !=="Result" ) { %>
+                                                                <td data-label= '<%= key %>' onclick="setUserValue(this)">
+                                                                    <%= parameter[key] %>
+                                                                </td>
+                                                                <% } %>
+                                                                    <% }); %>
+                                                                        <td data-label= 'userValue'>
+                                                                            <input type="text" name="userValue" 
+                                                                                value="<%= parameter[" User Value"]
+                                                                                || '' %>">
+                                                                        </td>
+                                                                        <td data-label="Result" class="result-checkboxes">
+                                                                            <% if (parameter.Result) { %>
+                                                                                <div>
+                                                                                    <!-- <input type="checkbox" name="Normal"  <%= parameter.Result.Normal ? 'checked' : '' %>> Normal -->
+                                                                                    <input type="checkbox"
+                                                                                        name="Normal">Normal
+                                                                                </div>
+                                                                                <div>
+                                                                                    <!-- <input type="checkbox" name="Moderate"  <%= parameter.Result.Moderate ? 'checked' : '' %>> Moderate -->
+                                                                                    <input type="checkbox"
+                                                                                        name="Moderate"> Moderate
+                                                                                </div>
+                                                                                <div>
+                                                                                    <!-- <input type="checkbox" name="Abnormal"  <%= parameter.Result.Abnormal ? 'checked' : '' %>> Abnormal -->
+                                                                                    <input type="checkbox"
+                                                                                        name="Abnormal"> Abnormal
+                                                                                </div>
+                                                                                <% } %>
+                                                                        </td>
+                                                    </tr>
+                                                    <% }); %>
+                                            </tbody>
+                                        </table>
+                                     </div> 
+                                     </div>
+                                   
                                     <% }); %>
-                    </div>
                 </div>
               </div>
 

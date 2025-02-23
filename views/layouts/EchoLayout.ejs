@@ -11,20 +11,18 @@
     <%= pageTitle %>
   </title>
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="/css/bootstrap.rtl.min.css" rel="stylesheet">
  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/stylePrj/styles.css">
-  <link rel="stylesheet" href="/css/stylePrj/DisplayTotalNormalVaule.css">
-  <link rel="stylesheet" href="/fonts/font-awesome.css">
+  <link href="/parsianCallender/dist/mds.bs.datetimepicker.style.css" rel="stylesheet"/>
   <link href="/css/stylePrj/sticky-footer-navbar.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="/fonts/font-awesome.css">
+  
 </head>
 
-<body class="d-flex rtl flex-column h-100 ">
+<body  dir="rtl" class="d-flex  flex-column h-100 ">
   
-  <header class="mb-5">
+  <header class="mb-5" dir="rtl">
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark  ">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark hnnavbar-top-style fanavbar" >
       <div class="container-fluid border-success bg-info hnnavbar-top-style ">
         <a class="navbar-brand" href="#"><span class="fa fa-stethoscope bg-success  my-3"></span> دکتر پیش تو</a>
         <button class="navbar-toggler" type="button" 
@@ -32,22 +30,17 @@
            data-bs-target="#navbarCollapse"
            aria-controls="navbarCollapse" aria-expanded="false"
            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+         <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav  mb-2 mb-md-0">
-            <li class="nav-item pl-0">
-               <!-- <a class="nav-link active" href="/users/Mynobats">
-                  <p class="fa fa-clock-o">نوبت حضوری</p>
-               </a> -->
-               <div class="input-group mb-2 mt-1 "
-                 <% if (path=='setEcho') { %>
-                      style="display: none;"
-                 <% }%>
-                   
-                >
-                 <span class="input-group-text " id="dtp1" >📅</span>
+          <ul class="navbar-nav  mb-2 p-0 m-0">
+            <li class="nav-item pl-0  d-flex justify-content-start m-1 p-0 col-7 
+               <% if ((path=='userSelectEcho')|| (path=='setEchoconfig')|| (path=='setEcho')  ) { %>
+                d-none
+               <% }%>
+               " >
+              <div class="input-group mb-2 mt-1 d-flex justify-content-start col-7 m-0 p-0 ">
                  <!-- axelary variales send to javascript file this page -->
                  <script>
                    let UserSelectedDate ="<%=UserSelectedDate %>"
@@ -57,20 +50,20 @@
                    if (DisabledDays!=" ") 
                         DisabledDays = DisabledDays.split(",").map(Number);
                  </script>
-                   <form action="/dashboard/EchoSerachFetch/" method="GET" id="FormSearchDate">
-                      <div class="form-group" >
-                        <input type="text" class="input-group-text form-control" placeholder="انتخاب تاریخ ..." data-name="dtp1text"
-                           name="UserSelectedDate" id="SelectedDate" value="" readonly>
-                      </div>
-                      <div class="form-group">
+                  <form class="m-1 p-1  " action="/dashboard/EchoSerachFetch/" method="GET" id="FormSearchDate">
+                        <div class="form-group d-flex m-0 p-0 " style="flex-direction: row-reverse; ">
+                          <span  class="input-group-text border border-5 m-0 p-0 "  id="dtp1" >📅</span>
+                          <input  type="text" class="form-control m-0 p-0 "  placeholder="انتخاب تاریخ ..." data-name="dtp1text"  name="UserSelectedDate" id="SelectedDate" value="" readonly>
+                       </div>
+                     <div class="form-group m-0 p-0">
                         <input type="hidden" value="<%= user._id  %>" name="iddoctor" >
                         <!-- //* milady date input showing but hide need to developer-->
                         <input type="text" class="form-control" data-name="dtp1date" name="UserSelectedDateMil"
                         id="SelectedDateMil" value="" hidden>
-                      </div>
+                     </div>
                   </form>
                   
-               </div>
+              </div>
                
             </li>
             
@@ -100,21 +93,22 @@
                 <input class="form-check-input " type="checkbox" style="display:none" id="lightSwitch" />
               </div>
             </li>
-          </ul>
            
-          <form class="input-group bg-warning  p-0 col-md " id="FormSearch"
-                role="search" method="GET" action="/dashboard/userEchoSerach" dir="rtl">
-            <input type="hidden" value="<%= user._id  %>" name="iddoctor" >
-            <input autocomplete="off" class="form-control  col-12 " type="search" id="searchInputId" name="searchInputId"
-              placeholder=" برای انجام اکو کدملی بیمار جستجو شود ..." aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-outline-success" type="submit">
-                <span class="fa fa-search blue-color fa-lg fa-fw " aria-hidden="true"></span>
-              </button>
-            </div>
-          </form>
+          </ul>
+          <form class="input-group bg-warning  p-0  col-md mx-lg-5 mx-md-4 mx-sm-1 mb-2" id="FormSearch"
+            role="search" method="GET" action="/dashboard/userEchoSerach" dir="rtl">
+        <input type="hidden" value="<%= user._id  %>" name="iddoctor" >
+        <input autocomplete="off" class="form-control  col-12 " type="search" id="searchInputId" name="searchInputId"
+          placeholder=" برای انجام اکو کدملی بیمار جستجو شود ..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-success" type="submit">
+            <span class="fa fa-search blue-color fa-lg fa-fw " aria-hidden="true"></span>
+          </button>
         </div>
-        <div>
+          </form>  
+         
+        </div>
+        <div class="m-1">
           <a class="p-2 text-bg-success rounded rounded-5 m-1" href="/dashboard/MatabView/<%= user._id  %>" class="text-danger" ></span>مطب پزشک</a> 
         </div>
         <% if (user!='' ) { %>
@@ -126,14 +120,16 @@
       
     </nav>
   </header>
- 
+   
   <%- body %>
-
-    <footer class="footer mt-auto py-3 bg-body-tertiary">
-      <div class="container">
-        <span class="text-body-secondary">باچند کلیک ثبت نام کن! خیلی سریع صاحب یک مطب اینترنتی  شو</span>
-      </div>
-    </footer>
+  
+  <footer id="footer" class="rounded-5 ">
+    <a dir="ltr" class="linksite"><i class="fa fa-copyright"></i> 2024 WWW.doctorpesheto.ir </a>
+    <a dir="ltr" class="linksite" href="http://linkedin.com/in/hassan-nazarparvar-noshadi-3a1892a9"><i
+          class="fa fa-linkedin"></i>
+        LinkedIn </a>
+    <p dir="ltr" class="linksite col-12 m-0"><i class="fa fa-envelope p-1"></i>doctorpesheto@gmail.com</p>
+  </footer>
     <script src="/jsPrj/switch.js"></script>
     <script src="/jsPrj/SignUpSick.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

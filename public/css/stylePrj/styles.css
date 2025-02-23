@@ -11,6 +11,7 @@ body {
     font-family: "BYekan" !important;
 }
 
+
 .custom-file-input ~ .custom-file-label::after {
     content: "انتخاب عکس" !important;
 }
@@ -32,7 +33,7 @@ body {
 /* ECoh style section */
 .table-bordered td, .table-bordered th { border: 1px solid #dee2e6; }
 .table-striped tbody tr:nth-of-type(odd) { background-color: rgba(0,0,0,.05); }
-.result-checkboxes label { display: inline-flex; align-items: center; margin-right: 5px;}
+.result-checkboxes label { display:flex; align-items: center; margin-right: 5px;}
 .accordion { margin-top: 5rem; }
 .table {
     font-family: Arial, sans-serif;
@@ -42,16 +43,262 @@ body {
 @media (max-width: 768px) {
     .table-responsive { overflow-x: auto; }
     .accordion-button { font-size: 1rem; }
+    .copyright { display: none; /* مخفی کردن عنصر کپی رایت */ }
+    .book-container h3 {font-size: 1rem;}
+    .book-containe{text-align: center;}
+    .footer  p{font-size:1px;}
+
+   
+     .li-detail{
+       font-size: 22px;
+       transform: scale(0.60); /* اندازه چک باکس را 70% اندازه اصلی می‌کند */
+       margin-right: 5px; /* فاصله بین چک باکس و متن */
+       cursor: pointer; /* تغییر شکل نشانگر ماوس */
+       display: flex;
+       flex-direction: column; /* تغییر جهت به عمودی در موبایل */
+       align-items: center;
+       input[type="checkbox"] {
+        padding: 8px;
+        transform: scale(1.2); /* بزرگنمایی چکباکس */
+      }
+     }
+     
 }
-/* end of ecoh style section */
 
 
+.book-container, .heartbeat-container {
+    margin: 10px; /* فاصله بین دیوها */
+}
 
+.heartbeat-1 {
+    width: 100%; /* عرض دیو قلب */
+    max-width: 100px; /* حداکثر عرض برای دیو قلب */
+}
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer p {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  footer span {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .linksite{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color:aliceblue;
+ }  
 
+/* new hassan */
+.accordion-button {
+  background-color: #f0f8ff;
+  color: #007bff;
+  font-weight: bold;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.accordion-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
 
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
 
+.accordion-button {
+  direction: ltr; /* جهت متن به چپ */
+  text-align: left; /* تراز متن به چپ */
+  font-family: Arial, sans-serif; /* انتخاب فونت مناسب */
+}
 
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  margin-bottom: 5px;
+}
+
+.accordion-body {
+  background-color: #e9f7fd;
+  border: 1px solid #cce7ff;
+  border-radius: 5px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse; /* برای حذف فاصله بین سلول‌ها */
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #cce7ff; /* اضافه کردن حاشیه به سلول‌ها */
+}
+
+.table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.table-bordered {
+  border: 1px solid #cce7ff;
+}
+
+input[type="text"].form-control {
+  border: 1px solid #007bff;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+label {
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+hr {
+  border-top: 1px solid #cce7ff;
+  margin: 10px 0;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  /* مخفی کردن سرستون در حالت موبایل */
+  .gentable thead {
+      display: none; 
+  }
+
+  /* انتخاب دیوهایی که ID آن‌ها با 'collapse' شروع می‌شود */
+  div[id^="collapse"] .table, 
+  div[id^="collapse"] .table tbody, 
+  div[id^="collapse"] .table tr, 
+  div[id^="collapse"] .table td {
+      display: block; /* نمایش هر سلول به صورت بلوک */
+      width: 100%; /* عرض کامل */
+      font-size: 9px; /* اندازه فونت */
+  }
+  
+  div[id^="collapse"] .table tr {
+      margin-bottom: 1rem; /* فاصله بین سطرها */
+      border: none; /* حذف حاشیه‌های پیش‌فرض */
+  }
+
+  div[id^="collapse"] .table td {
+      position: relative;
+      padding-left: 50%; /* فضای خالی برای برچسب */
+      border-bottom: 1px solid #ddd; /* خط جداکننده در پایین هر سطر */
+  }
+
+  div[id^="collapse"] .table td:before {
+      content: attr(data-label); /* استفاده از برچسب‌های تعریفی */
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+
+  /*efect zarban ghalb  */
+  @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* اندازه اصلی */
+    }
+    50% {
+        transform: scale(1.1); /* بزرگ‌تر شدن */
+    }
+}
+
+.heartbeat {
+    animation: heartbeat 1s infinite; /* انیمیشن ضربان قلب */
+}
+/*efect zarban ghalb  */
+
+/* new hassan */
+.hnnavbar-top-style {
+  position: relative; /* یا fixed */
+  z-index: 1050; /* اطمینان از اینکه در بالای سایر عناصر قرار گیرد */
+  overflow: hidden; /* جلوگیری از نمایش محتویات اضافی */
+}
+
+/* new */
+.listechoofday{
+  font-family: "BYekan" !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.listechoofdayheader{
+  font-family: "BYekan" !important;
+  font-size: medium; 
+  font-style: normal;
+  direction: rtl;
+  text-align: right
+}
+.listdetail{
+  font-family: "BYekan" !important;
+  font-size: medium; 
+  font-style: normal; 
+  direction: rtl;
+  text-align: right;
+}
+/* new */
+.Listofechosofday{
+  margin-top: 20px;
+  width:100%;
+  border-collapse: collapse; /* برای حذف فاصله بین سلول‌ها */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ .Listofechosofday th,  .Listofechosofday td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 1px;
+  border: 1px solid #cce7ff; /* اضافه کردن حاشیه به سلول‌ها */
+}
+
+.Listofechosofday th {
+  background-color: #007bff;
+  color: #ffffff;
+}
 
 
 

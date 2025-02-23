@@ -4,33 +4,40 @@
             <h2 class="accordion-header" id="heading<%= index %>">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo14" aria-expanded="true" aria-controls="collapse<%= index %>echo14">
                     <img src="/assets/cardio.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
-                    <%= item.title %>
                 </button>
             </h2>
             <div id="collapse<%= index %>echo14" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionEcho14">
                 <div class="accordion-body">
-                    <table class="table custom-table14 table-bordered">
+                    <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
+                                <% if (path!='EchoForAll') { %>
                                 <th>Select</th>
+                                <% } %>
                                 <th>Stage</th>
                                 <th>Definition</th>
                                 <th>Valve Anatomy</th>
                                 <th>Valve Hemodynamics</th>
                                 <th>Hemodynamic Consequences</th>
                                 <th>Symptoms</th>
+                                <th>userValue</th>
                             </tr>
                         </thead>
                         <tbody>
                             <% item.parameters.forEach(parameter => { %>
                                 <tr>
-                                    <td><input type="checkbox" name="select"></td>
-                                    <td><%= parameter.stage %></td>
-                                    <td><%= parameter.definition %></td>
-                                    <td><%= parameter.valve_anatomy %></td>
-                                    <td><%= parameter.valve_hemodynamics %></td>
-                                    <td style="font-size: small;"><%= parameter.hemodynamic_consequences %></td>
-                                    <td><%= parameter.symptoms %></td>
+                                  <% if (path!='EchoForAll') { %>
+                                    <td data-label="Select"><input type="checkbox" name="select"></td>
+                                   <% } %> 
+                                    <td data-label="Stage"><%= parameter.stage %></td>
+                                    <td data-label="Definition"><%= parameter.definition %></td>
+                                    <td data-label="Valve Anatomy"><%= parameter.valve_anatomy %></td>
+                                    <td data-label="Valve Hemodynamics"><%= parameter.valve_hemodynamics %></td>
+                                    <td data-label="Hemodynamic Consequences"><%= parameter.hemodynamic_consequences %></td>
+                                    <td data-label="Symptoms"><%= parameter.symptoms %></td>
+                                    <td data-label="User Value">
+                                            <input type="text" name="userValue" value="<%= parameter.userValue || '' %>" class="form-control" >
+                                    </td>
                                 </tr>
                             <% }) %>
                         </tbody>

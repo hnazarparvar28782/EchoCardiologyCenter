@@ -1,5 +1,5 @@
 
-<div class="accordion mb-1" id="accordionecho1">
+<div class="accordion mb-1 mt-0" id="accordionecho1">
     <% data1.forEach((item, index) => { %>
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading<%= index %>">
@@ -13,7 +13,9 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Select</th>
+                                    <% if (path!='EchoForAll') { %>
+                                        <th>Select</th>
+                                    <% } %>
                                     <th>Parameter</th>
                                     <th>Male (Mean ± SD)</th>
                                     <th>Male (Range)</th>
@@ -26,7 +28,9 @@
                             <tbody>
                                 <% item.parameters.forEach(parameter => { %>
                                     <tr>
-                                        <td data-label="Select"><input type="checkbox" name="select"></td>
+                                        <% if (path!='EchoForAll') { %>
+                                            <td data-label="Select"><input type="checkbox" name="select"></td>
+                                        <% } %>
                                         <td data-label="Parameter"><%= parameter.parameter %></td>
                                         <td data-label="Male (Mean ± SD)"><%= parameter.male.mean_sd %></td>
                                         <td data-label="Male (Range)"><%= parameter.male.range %></td>
@@ -38,15 +42,19 @@
                                             <td data-label="Female (Range)"></td>
                                         <% } %>
                                         <td data-label="User Value">
-                                            <input type="text" name="userValue" value="<%= parameter.userValue || '' %>" class="form-control" disabled>
-                                            <label for="userValueCheckbox">select</label>
-                                            <input type="checkbox" name="uservalue-select">
+                                            <input type="text" name="userValue" value="<%= parameter.userValue || '' %>" class="form-control" >
+                                            <% if (path!='EchoForAll') { %>
+                                              <label for="userValueCheckbox">select</label>
+                                              <input type="checkbox" name="uservalue-select">
+                                            <% } %>
                                         </td>
-                                        <td class="result-checkboxes" data-label="Result" class="d-sm-flex">
-                                            <label><input type="checkbox" name="normal" disabled <%= parameter.result && parameter.result.normal ? 'checked' : '' %>> Normal</label>
-                                            <label><input type="checkbox" name="moderate" disabled <%= parameter.result && parameter.result.moderate ? 'checked' : '' %>> Moderate</label>
-                                            <label><input type="checkbox" name="abnormal" disabled <%= parameter.result && parameter.result.abnormal ? 'checked' : '' %>> Abnormal</label>
-                                            <label><input type="checkbox" name="selectResult" <%= parameter.result && true ? 'checked' : '' %>>select</label>
+                                        <td class="result-checkboxes" data-label="Result" >
+                                            <label><input type="checkbox" name="Normal"  <%= parameter.result && parameter.result.normal ? 'checked' : '' %>> Normal</label>
+                                            <label><input type="checkbox" name="Moderate"  <%= parameter.result && parameter.result.moderate ? 'checked' : '' %>> Moderate</label>
+                                            <label><input type="checkbox" name="Abnormal"  <%= parameter.result && parameter.result.abnormal ? 'checked' : '' %>> Abnormal</label>
+                                            <% if (path!='EchoForAll') { %>
+                                                <label><input type="checkbox" name="selectResult" <%= parameter.result && true ? 'checked' : '' %>>select</label>
+                                            <% } %>
                                         </td>
                                     </tr>
                                 <% }); %>

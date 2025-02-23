@@ -127,6 +127,7 @@ const userSchema = new mongoose.Schema({
   },
   userEchoData: mongoose.Schema.Types.Mixed, // برای ذخیره JSON به صورت کامل
   userEchoConfig: mongoose.Schema.Types.Mixed,
+  PreFinalSentences:{type:String,trim:true,},
   userEchoSelectWithRow:[{
     disc:{type:String},
     echoNumber: { type: Number, required: true }, // شماره اکو
@@ -205,7 +206,7 @@ const saveUserConfig = async (id, newInfo) => {
       ); 
 
       // چاپ نتیجه به روزرسانی
-      console.log(updatedResult);
+      // console.log(updatedResult);
       return updatedResult; // می‌توانید نتیجه را برگردانید
   } catch (error) { 
       console.log(error); 

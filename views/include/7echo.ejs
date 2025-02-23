@@ -4,19 +4,20 @@
             <h2 class="accordion-header" id="heading<%= index %>">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>echo7" aria-expanded="true" aria-controls="collapse<%= index %>echo7">
                     <img src="/assets/heartamam.png" alt="Icon" style="width: 30px;height: 30px;margin-right: 5px;" class="icon-small"> <%= item.title %>
-                    <%= item.title %>
                 </button>
             </h2>
             <div id="collapse<%= index %>echo7" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionEcho7">
                 <div class="accordion-body">
                     <% item.parameters.forEach(category => { %>
                         <h5><%= category.category %></h5>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
+                                    <% if (path!='EchoForAll') { %>
                                     <th>Select</th>
+                                    <% } %>
                                     <th>Parameter</th>
-                                    <th>Mild</th>
+                                    <th >Mild</th>
                                     <th>Moderate</th>
                                     <th>Severe</th>
                                     <th>User Value</th>
@@ -26,31 +27,27 @@
                             <tbody>
                                 <% category.parameters.forEach(parameter => { %>
                                     <tr>
+                                        <% if (path!='EchoForAll') { %>
                                         <td data-label="Select"><input type="checkbox" name="select"></td>
+                                        <% } %>
                                         <td data-label="Parameter"><%= parameter.parameter %></td>
-                                        <td data-label="Mild"><%= parameter.mild %></td>
-                                        <td data-label="Moderate"><%= parameter.moderate %></td>
-                                        <td data-label="Severe"><%= parameter.severe %></td>
+                                        <td data-label="Mild" onclick="setUserValue(this)"><%= parameter.mild %></td>
+                                        <td data-label="Moderate"  onclick="setUserValue(this)"><%= parameter.moderate %></td>
+                                        <td data-label="Severe"  onclick="setUserValue(this)"><%= parameter.severe %></td>
                                         <td data-label="User Value">
-                                            <input type="text" name="uservalue" class="form-control" disabled>
+                                            <input type="text" name="uservalue" class="form-control">
+                                            <% if (path!='EchoForAll') { %>
                                             <input type="checkbox" name="uservalue-select" id="uservalue-<%= index %>">
                                             <label for="uservalue-<%= index %>">select</label>
+                                            <% } %>
                                         </td>
-                                        <td data-label="Result" class="d-sm-flex">
-                                            <div>
-                                                <input type="checkbox" id="normal-<%= index %>" name="result" value="Normal" disabled>
-                                                <label for="normal-<%= index %>">Normal</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="moderate-<%= index %>" name="result" value="Moderate" disabled>
-                                                <label for="moderate-<%= index %>">Moderate</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="abnormal-<%= index %>" name="result" value="Abnormal" disabled>
-                                                <label for="abnormal-<%= index %>">Abnormal</label>
-                                            </div>
-                                            <input type="checkbox" name="selectResult" id="selectResult-<%= index %>">
-                                            <label class="m-auto" for="selectResult-<%= index %>">select</label>
+                                        <td data-label="Result" class="result-checkboxes">
+                                                <label for="normal-<%= index %>"> <input type="checkbox" id="normal-<%= index %>" name="Normal" value="Normal">Normal</label>
+                                                <label for="moderate-<%= index %>"> <input type="checkbox" id="moderate-<%= index %>" name="Moderate" value="Moderate"> Moderate</label>
+                                                <label for="abnormal-<%= index %>"><input type="checkbox" id="abnormal-<%= index %>" name="Abnormal" value="Abnormal"> Abnormal</label>
+                                            <% if (path!='EchoForAll') { %>
+                                            <label for="selectResult-<%= index %>"> <input type="checkbox" name="selectResult" id="selectResult-<%= index %>">select</label>
+                                            <% } %>
                                         </td>
                                     </tr>
                                 <% }) %>

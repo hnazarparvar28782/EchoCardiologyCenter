@@ -56,8 +56,8 @@
 
 body {
     font-family:"BYekan";
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     background-color: #f4f4f4;
 }
 .form-group {
@@ -111,6 +111,51 @@ button:hover {
     margin-left: 1rem;
 }
 
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer p {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  footer span {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .linksite{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color:aliceblue;
+ }  
+
+ @media (max-width: 768px) {
+    .copyright { display: none; /* مخفی کردن عنصر کپی رایت */ }
+    .footer  p{font-size:1px;}
+     }
+     
+     .latin-numbers {
+        font-family: Arial, sans-serif; /* یا هر فونت دیگری که می‌خواهید */
+        unicode-bidi: bidi-override; /* برای اطمینان از اینکه اعداد به صورت لاتین نمایش داده شوند */
+        direction: ltr; /* جهت متن را به چپ به راست تنظیم می‌کند */
+    }
 
    
    

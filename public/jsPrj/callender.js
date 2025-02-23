@@ -1,10 +1,11 @@
+
 var vueApp = new Vue({
     el: "#vueAppOptions",
     data: {
       persianNumber: "0",
       disabled: "0",
       isGregorian: "0",
-      inLine: "0",
+      inLine: "1",
       modalMode: "0",
       enableTimePicker: "0",
       toDateFromDate: "0",
@@ -222,6 +223,7 @@ var vueApp = new Vue({
       targetDateSelector: '[data-name="in-line-dtp1-date"]',
     }
   );
+  
   const inLineDtp2 = new mds.MdsPersianDateTimePicker(
     document.querySelector('[data-name="in-line-dtp2"]'),
     {

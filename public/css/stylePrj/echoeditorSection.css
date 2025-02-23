@@ -7,6 +7,14 @@
 .loader-inner div {
    background-color: #000; /* رنگ دایره‌ها به مشکی */
 }
+.btn-custom1 {
+   padding: 0; /* حذف padding اضافی */
+   width: auto; /* تنظیم عرض به صورت خودکار */
+   display: inline-flex; /* استفاده از inline-flex برای بهتر کردن تراز متن */
+   align-items: center; /* تراز عمودی متن */
+   justify-content: center; /* تراز افقی متن */
+}
+
 body {
    direction: ltr;
    /* Set text direction to left-to-right */
@@ -57,18 +65,15 @@ body {
 }
 
 #editor {
-   max-height: 250px;
-   /* Set a max height for scrolling */
-   overflow-y: auto;
-   /* Enable vertical scrolling */
-   border: 1px solid #ccc;
-   /* Border for editor */
-   padding: 10px;
-   /* Padding for editor */
-   font-size: 18px;
-   /* Increase font size for editor */
-   position: relative;
-   /* Position relative for cursor effect */
+   max-height: 250px; /* حداکثر ارتفاع برای اسکرول */
+   overflow-y: auto; /* فعال‌سازی اسکرول عمودی */
+   border: 1px solid #ccc; /* حاشیه برای ویرایشگر */
+   padding: 10px; /* حاشیه داخلی برای ویرایشگر */
+   font-size: 18px; /* افزایش اندازه فونت برای ویرایشگر */
+   position: relative; /* موقعیت نسبی برای اثر نشانگر */
+   width: 100%; /* عرض کامل برای جا شدن در div والد */
+   box-sizing: border-box; /* شامل حاشیه و پدینگ در محاسبه عرض */
+   margin-top: 10px; /* فاصله بالایی برای جداسازی از دکمه‌ها */
 }
 
 .draggable {
@@ -98,4 +103,164 @@ body {
 h3 {
    margin: 0 0 10px;
    /* Margin for headings */
+}
+
+
+#aiButton {
+   height: 2.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   border: 2px solid blue;
+   border-radius: 0.25rem;
+   cursor: pointer; /* تغییر نشانگر ماوس */
+   transition: background-color 0.3s, border-color 0.3s; /* انیمیشن برای تغییرات */
+ }
+ 
+ #aiButton:hover {
+   background-color: lightblue; /* تغییر رنگ پس‌زمینه در حالت هور */
+   border-color: darkblue; /* تغییر رنگ مرز در حالت هور */
+ }
+ 
+ #aiButton img {
+   height: 2rem; /* اندازه آیکون */
+   width: auto; /* حفظ نسبت ابعاد */
+   margin-right: 0.5rem; /* فاصله بین آیکون و متن */
+   padding:2px;
+
+ }
+ 
+ #aiButton span {
+   font-size: 1rem; /* اندازه متن */
+ }
+
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+   .mobile-display {
+       padding: 10px !important;
+   }
+
+   #genderSelect {
+       width: 120px !important;
+       font-size: 16px !important;
+       margin-right: 8px;
+   }
+
+   .d-flex.justify-content-between {
+       flex-wrap: wrap;
+       gap: 10px;
+   }
+
+   #btnsample img {
+       width: 25px !important;
+   }
+
+   #aiButton {
+       padding: 3px 6px;
+   }
+
+   #aiButton img {
+       width: 25px;
+       height: 25px;
+   }
+
+   .btn-custom {
+       padding: 4px 8px;
+       margin-right: 4px !important;
+   }
+
+   #editor {
+       min-height: 150px;
+       height: 50vh;
+       padding: 10px;
+   }
+}
+
+@media (max-width: 576px) {
+   .d-flex.justify-content-between > *:not(:first-child) {
+       margin-top: 8px;
+   }
+   
+   #spinner {
+       order: 3;
+       margin-left: auto;
+   }
+   
+   #aiButton {
+       order: 4;
+   }
+}
+
+
+/* استایل اختصاصی برای نمونه */
+#sampleDiv {
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+   transition: all 0.3s ease;
+   overflow: hidden;
+}
+
+.sample-header {
+   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+   border-bottom: 2px solid #0d6efd;
+   padding: 12px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+#btnfinalResult {
+   transition: transform 0.2s ease;
+   border-radius: 8px;
+   padding: 5px;
+}
+
+#btnfinalResult:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#btnfinalResult img {
+   width: 28px;
+   height: 28px;
+   object-fit: contain;
+}
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+   #sampleDiv {
+       border-radius: 8px;
+       padding: 0;
+   }
+   
+   .sample-mobile-topbar {
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+   }
+   
+   .sample-header {
+       flex-direction: column;
+       align-items: stretch;
+       padding: 15px;
+       gap: 12px;
+   }
+   
+   #sampleDiv h4 {
+       font-size: 1.1rem;
+       margin-bottom: 10px;
+   }
+   
+   #btnfinalResult {
+       padding: 4px;
+       margin-left: auto;
+   }
+   
+   #btnfinalResult img {
+       width: 24px;
+       height: 24px;
+   }
 }

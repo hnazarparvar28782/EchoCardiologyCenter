@@ -1,0 +1,122 @@
+@media (max-width: 768px) {
+   
+  /* تغییر ساختار جدول برای موبایل */
+  .table-responsive {
+    overflow-x: hidden;
+    
+  }
+ 
+ 
+  /* .table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+    width: 100% !important;
+  } */
+  .genrateTable, .genrateTable thead, .genrateTable tbody, .genrateTable th, .genrateTable td, .genrateTable tr {
+    display: block;
+    width: 100% !important;
+  }
+  
+  .genrateTable thead { display: none; }
+ 
+  
+  .genrateTable tr {
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background: #f8f9fa;
+    font-size: small;
+  }
+  
+  .genrateTable td {
+    position: relative;
+    padding-left: 50%; /* افزایش فضای سمت چپ */
+    text-align: left !important;
+    border: none !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    font-size: small;
+  }
+  
+  .genrateTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem; /* فاصله از سمت چپ */
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #007bff; /* رنگ عنوان */
+    width: 40%; /* عرض عنوان */
+    white-space: nowrap; /* جلوگیری از شکستن خط */
+    overflow: hidden; /* جلوگیری از overflow */
+    text-overflow: ellipsis; /* استفاده از نقاط سه‌نقطه برای متن طولانی */
+  }
+  .result-checkboxes {
+      white-space: normal; /* اجازه شکسته شدن خط در موبایل */
+      min-width: auto;
+   } 
+  /* بهبود استایل آکاردئون */
+  .accordion-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .accordion-body {
+    padding: 10px;
+   }
+  
+  /* مخفی کردن عناصر اضافی */
+  .table-bordered td:last-child, .table-bordered td:last-child {
+    border-bottom: none !important;
+  }
+
+  .genrateTable td input[type="text"] {
+      width: 100%; /* عرض ورودی به اندازه کامل سلول */
+      box-sizing: border-box; /* شامل padding و border در عرض */
+      border: 1px solid #ced4da; /* حاشیه ورودی */
+      border-radius: 4px; /* گوشه‌های گرد ورودی */
+      padding: 5px; /* فاصله داخلی ورودی */
+      font-size:9px; /* اندازه فونت ورودی */
+  }
+  /* .accordion-button {
+      display: flex;
+      align-items: center;
+    } */
+ 
+}
+
+
+  /*new  */
+  .table td {
+    text-align: left; /* تراز متن به چپ */
+ }
+ .result-checkboxes {
+    min-width: 120px; /* حداقل عرض برای حفظ خوانایی */
+    padding: 12px 16px; /* فاصله داخلی مناسب */
+    white-space: nowrap; /* پیشگیری از شکسته شدن خطوط */
+  }
+  
+  .result-checkboxes div {
+    margin-bottom: 8px; /* فاصله عمودی بین چکباکسها */
+    display: flex; /* برای ترازبندی بهتر المانها */
+    align-items: center; /* تراز عمودی المانها */
+  }
+  
+  .result-checkboxes input[type="checkbox"] {
+    margin: 0 8px 0 0; /* فاصله بین چکباکس و متن */
+    width: 16px; /* اندازه ثابت برای چکباکس */
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  .result-checkboxes div:last-child {
+    margin-bottom: 0; /* حذف فاصله برای آخرین آیتم */
+  }
+  
+  .accordion-body-scroll {
+    max-height: 300px; /* حداکثر ارتفاع برای آکاردئون */
+    overflow-y: auto; /* اجازه به overflow عمودی */
+    padding: 10px; /* فاصله داخلی */
+    border: 1px solid #dee2e6; /* حاشیه برای زیبایی */
+    border-radius: 5px; /* گوشه‌های گرد */
+    background: #f8f9fa; /* رنگ پس‌زمینه */
+}
+

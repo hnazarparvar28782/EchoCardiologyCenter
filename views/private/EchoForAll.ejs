@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo Cardiology Center</title>
+  <link rel="stylesheet" href="/css/stylePrj/styles.css">
+  <link rel="stylesheet" href="/css/stylePrj/EchoForAll.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css" />
+  <title>Echocardiography Report Preparation | Specialized Services for Physicians</title>
+  <meta name="description" content="We provide specialized echocardiography report preparation services for physicians. Our advanced technology enhances accuracy and speed in diagnosis.">
+  <meta name="keywords" content="echocardiography, echocardiogram report, medical services, heart disease diagnosis, physicians">
+  </head>
+  
+<body dir="ltr" class="hero">
+  <!-- image book -->
+  <heaer>
+    <h1 class=" text-start text-primary rounded rounded-4 bg-light p-3 mt-1">Echo Cardiology Center</h1>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="book-container" style="width: 100%;">
+          <a class="" href="https://www.amazon.com/Braunwalds-Heart-Disease-Textbook-Cardiovascular/dp/0323463428" target="_blank">
+              <img src="/assets/amazonbook1brownwald.jpg" alt="Book Cover Braunwalds-Heart-Disease-Textbook" class="book-image">
+          </a>
+      </div> 
+      <div class="heartbeat-container ">
+          <div class="heartbeat-1 col-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 523.7 481.8">
+                  <path pathLength="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M25.2 256h100.3l37.2-86.9 49.1 191.8L280 20l51.8 438.2 50.9-200.9h119.8"/>
+              </svg>    
+          </div>
+      </div>
+     
+    </div>
+  </header>
+ <!-- doctor patieant names  -->
+  <div class="d-flex flex-column flex-md-row col-12 text-center  border-3 border-bottom border-danger p-3">
+    
+    <div class="form-group col-md-4 mx-2">
+      <label for="doctorName">Doctor’s Name:</label>
+      <input class="form-control" type="text" id="doctorName" placeholder="Enter doctor's name" required>
+    </div>
+    <div class="form-group col-md-4 mx-2">
+      <label for="patientName">Patient’s Name:</label>
+      <input class="form-control" type="text" id="patientName" placeholder="Enter patient's name" required>
+    </div>
+    <button id="generatorButn" class="btn btn-success mx-md-4 mt-3 mt-md-0" onclick="DisplayEchoRep()"><p class="fa fa-file-pdf m-1" style="font-size: 1.5rem;"></p> Generate Report</button>
+    
+  </div>
+  <!-- editor totalnormals values -->
+  <section>
+    <!-- editor section -->
+    <%- include("../include/echoreport/echoeditorSection.ejs") %>
+      <!-- end editor section -->
+      <!--Toatalnormal ranges  -->
+      <div class="container mb-0 mt-0" style="max-height: 120px;">
+        <div class="d-flex flex-column align-items-center">
+            <button id="tickAllNormals" onclick="tickAllNormals()" class="btn-custom  btn btn-primary fa fa-check text-light mb-2">All Normal</button>
+            <div class="search-container text-center d-flex align-items-center">
+                <input type="text" id="searchInput" placeholder="Parameter..." class="form-control mt-0" style="width: auto; margin-right: 5px;">
+                <button id="searchButton" class="btn btn-primary fa fa-search text-light"></button>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3 class="text-center mb-0 border-bottom m-1">Select Parameter And Values <p
+            class="fa fa-arrow-alt-circle-down text-primary"></p>
+          </h3>
+          <%- include("../include/1echo.ejs") %>
+            <%- include("../include/2echo.ejs") %>
+              <%- include("../include/3echo.ejs") %>
+                <%- include("../include/4echo.ejs") %>
+                  <%- include("../include/5echo.ejs") %>
+                    <%- include("../include/6echo.ejs") %>
+                      <%- include("../include/7echo.ejs") %>
+                        <%- include("../include/8echo.ejs") %>
+                          <%- include("../include/9echo.ejs") %>
+                            <%- include("../include/10echo.ejs") %>
+                              <%- include("../include/11echo.ejs") %>
+                                <%- include("../include/12echo.ejs") %>
+                                   <%- include("../include/13echo.ejs") %>
+                                    <%- include("../include/14echo.ejs") %>
+                                      <%- include("../include/15echo.ejs") %>
+                                        <%- include("../include/16echo.ejs") %>
+                                          <%- include("../include/17echo.ejs") %>
+                                            <%- include("../include/18echo.ejs") %>
+                                              <!-- نوار ابزار ثابت برای دکمه "قبلی" و "بعدی" -->
+                                              <!-- نوار ابزار ثابت برای دکمه "قبلی"، "بعدی" و "به بالا برو" -->
+                                              <div id="navigationButtons"
+                                                style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: none;">
+                                                <button id="prevButton" class="btn btn-secondary"
+                                                  style="margin-right: 5px;">Pre</button>
+                                                <button id="nextButton" class="btn btn-secondary"
+                                                  style="margin-right: 5px;">Next</button>
+                                                <button id="backToTopButton" class="btn btn-info">Top</button>
+                                              </div>
+      </div>
+      <!--end of Toatalnormal ranges  -->
+  </section>
+
+   <!-- image Book brown wald -->
+   <div class="book-container mt-5 " style="width: 100%;">
+    <a style="width: 100%;" class=" d-flex" href="https://www.amazon.com/Braunwalds-Heart-Disease-Textbook-Cardiovascular/dp/0323463428" target="_blank">
+        <img  src="/assets/amazonbook1brownwald.jpg" alt="Book Cover" class="book-image">
+        <h3 class="book-title">Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 2-Volume Set 11th Edition</h3>
+        <p class="copyright ">Image adapted from Amazon.</p>
+
+    </a>
+   </div> 
+
+  <footer id="footer" class="rounded-5">
+
+    <a dir="ltr" class="linksite"><i class="fa fa-copyright"></i> 2024 WWW.doctorpesheto.ir </a>
+    <a dir="ltr" class="linksite" href="http://linkedin.com/in/hassan-nazarparvar-noshadi-3a1892a9"><i
+          class="fa fa-linkedin"></i>
+        LinkedIn </a>
+    <p dir="ltr" class="linksite col-12 m-0"><i class="fa fa-envelope p-1"></i>doctorpesheto@gmail.com</p>
+
+  </footer>
+
+  <script src="/jsPrj/EchoForAll.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -6,39 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/stylePrj/echoeditorSection.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="d-flex flex-column">
         <button id="toggleButton" type="button"
-            class="btn btn-primary m-4  col-sm-3 rounded-4 align-self-center text-center" onclick="toggleVisibility()">
-            <P class="p-1 m-1" style="font-size: 22px;">
-                <span class="material-symbols-outlined">edit_note </span> Final Result
-            </P>
+            class="btn btn-primary btn-custom1 m-4 col-sm-3 rounded-4 align-self-center text-center btn-custom"
+            onclick="toggleVisibility()">
+            <p class="p-1 m-1 ">
+                <span class="fa fa-pencil icon"></span> Write Final Result
+            </p>
         </button>
-    
+
     </div>
 
 
     <div id="content" style="display:none" class="mb-4">
-
-        <div class="container">
-            <!-- tooles section editor -->
+        <!-- editor div final result-->
+        <div id="finalResultDiv" class="container border border-black  mobile-display">
+            <h3 class="m-0">Final Result</h3>
             <div class="d-flex justify-content-between align-items-center">
-                <h3 class="m-0">Final Result</h3>
                 <select id="genderSelect" class="form-select" style="width: 150px;font-size:20px;">
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select>
-                <!-- spinner -->
+                <div class="d-flex bg-light mb-1">
+                    <button type="button" onclick="savePreSentence()" class="btn btn-custom border border-primary me-2">
+                        <i class="fa fa-file-text text-primary"></i><i class="fa fa-plus text-primary"></i>
+                    </button>
+                    <button type="button" onclick="quill.setText('')" class="btn btn-custom border border-dark me-2">
+                        <i class="fa fa-eraser text-primary"></i>
+                    </button>
+                    <button type="button" id="setTextButton" class="btn btn-custom border border-dark me-2"
+                     <% if (user && user.PreFinalSentences) { %>
+                        onclick="setPreTextInEditor(decodeURIComponent('<%= encodeURIComponent(user.PreFinalSentences)  %>'))"
+                            style="display: block;"
+                            <% } else { %>
+                                style="display: none;"
+                                <% } %>
+                     <% if ( path=="EchoForAll") { %>
+                        style="display: none;"
+                     <% } %>           
+                                    >
+                                    <i class="fa fa-download text-primary"></i>
+                    </button>
+                    <button id="btnsample" type="button" onclick="toggleSampleDiv('finalResultDiv')"
+                        class="btn btn-custom border border-dark me-2 p-0"><img src="/assets/fullscreen.png" class="col-5 m-0" alt="f"></button>
+                </div>
                 <div id="spinner" class="loader loader--style1" title="3">
-                    <!--<div class="loader-inner ball-pulse">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div> -->
-                
                     <div class="loader-inner line-scale">
                         <div></div>
                         <div></div>
@@ -47,47 +65,114 @@
                         <div></div>
                     </div>
                 </div>
-                <!-- spinner -->
-                <button id="aiButton" type="button" onclick="ReporterAI()" style="height: 2.5rem;;" class="btn btn-primary m-0 text-center rounded-4">
-                    <p class="fa fa-android fa-2x m-0"></p>
+                <button id="aiButton" type="button" onclick="ReporterAI()" class="m-0">
+                    <img src="/assets/Ai3.png" alt="AI Icon">
+                    <span class="p-1">AI</span>
                 </button>
             </div>
-            
-            <div id="editor" tabindex="0"></div> <!-- Add tabindex for focus -->
+
+            <div id="editor" tabindex="0"></div>
         </div>
 
-        <div class="container">
-            <h3>Sample Sentences</h3>
-            <div id="sampleSentences">
-                <div class="draggable text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LEFT VENTRICLE</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV Size-end systole........mm        23-24mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV Size end diastole.......mm        35-52mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Fractional shortening......%         30-45mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">E point septal separation......mm    0-34mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post. Wall thickness.....mm       5.5-11mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post. Wall excursion.....mm       5.5-11mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV septal. Wall thickness.....mm     6-11mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV septal. Wall excursion.....mm     6-11mm</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality of motion.....EF                %</div>
-                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">MITRAL VALVE</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve excursion.....mm   </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve E - F slope.....mm/sac   </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral valve quality..............   </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Pattern of motion..............   </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others..............   </div>
-                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LEFT ATRIAL DIAMETER</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others..............      mm </div>
-                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">AORTA</div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic root dimension............mm      12-40mm </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic valve opening............mm       12-50mm </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality of leaflets............................. </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others.......................................... </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RIGHT VENTRICULAR Dimension..........mm </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">TRICUSPID VALVE................ </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">PULMONIC VALVE................ </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">PERICARDIUM................... </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Others................... </div>
-                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RESULT AND COMMENT.................... </div>
+        <!-- samples div -->
+        <div id="sampleDiv" class="container border border-primary">
+            <div id="sampleDiv" class="container border border-primary">
+                <div class="sample-mobile-topbar d-flex">
+                    <!-- btn:set text in presavesentence samples side -->
+                    <button type="button" id="setTextButton" class="btn btn-custom border border-dark me-2"
+                    <% if (user && user.PreFinalSentences) { %>
+                       onclick="setPreTextInSamples(decodeURIComponent('<%= encodeURIComponent(user.PreFinalSentences)  %>'))"
+                           style="display: block;"
+                           <% } else { %>
+                               style="display: none;"
+                               <% } %>
+                                   >
+                                   <i class="fa fa-download text-primary"></i>
+                    </button>
+                    <!--btn:set text in factory sentence in samples side  -->
+                    <button type="button" id="setFactoryTextButton" class="btn btn-custom border border-dark me-2"
+                    <% if (user && user.PreFinalSentences) { %>
+                       onclick="updateSampleSentences()"
+                           style="display: block;"
+                           <% } else { %>
+                               style="display: none;"
+                               <% } %>
+                                   >
+                                   <i class="fa fa-book text-primary"></i>
+                    </button>
+                     <!-- fullscreen btn -->
+                     <button id="btnfinalResult" type="button" onclick="toggleSampleDiv('sampleDiv')"
+                     class="btn btn-custom border border-dark me-2">
+                     <img src="/assets/fullscreen.png" class="m-0"  alt="full">
+                    </button>
+                </div>
+                <div class="sample-header">
+                    <h4 class="text-dark  m-0">Drag and drop the selected sentences into the editor</h4>
+                    <div class="d-flex bg-light mb-1">
+                        <!-- سایر دکمه‌ها اگر وجود داشته باشد -->
+                         
+                    </div>
+                </div>
+            </div>           
+             <div id="sampleSentences" class="text-black">
+                <div class="draggable text-decoration-underline" draggable="true" ondragstart="drag(event)"
+                    onclick="toggleSelect(this)">LEFT VENTRICLE</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV
+                    Size-end systole........mm 23-24mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV Size
+                    end diastole.......mm 35-52mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Fractional shortening......% 30-45mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">E point
+                    septal separation......mm 0-34mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post.
+                    Wall thickness.....mm 5.5-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV post.
+                    Wall excursion.....mm 5.5-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV
+                    septal. Wall thickness.....mm 6-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV
+                    septal. Wall excursion.....mm 6-11mm</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality
+                    of motion.....EF %</div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)"
+                    onclick="toggleSelect(this)">MITRAL VALVE</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral
+                    valve excursion.....mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral
+                    valve E - F slope.....mm/sac </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Mitral
+                    valve quality.............. </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Pattern
+                    of motion.............. </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Others.............. </div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)"
+                    onclick="toggleSelect(this)">LEFT ATRIAL DIAMETER</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Others.............. mm </div>
+                <div class="draggable  text-decoration-underline" draggable="true" ondragstart="drag(event)"
+                    onclick="toggleSelect(this)">AORTA</div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic
+                    root dimension............mm 12-40mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Aortic
+                    valve opening............mm 12-50mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">Quality
+                    of leaflets............................. </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Others.......................................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RIGHT
+                    VENTRICULAR Dimension..........mm </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    TRICUSPID VALVE................ </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">PULMONIC
+                    VALVE................ </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    PERICARDIUM................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">
+                    Others................... </div>
+                <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">RESULT
+                    AND COMMENT.................... </div>
                 <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The left
                     ventricular size is within normal limits</div>
                 <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">There is
@@ -130,6 +215,7 @@
                     findings are consistent with dilated cardiomyopathy.</div>
             </div>
         </div>
+
     </div>
 
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
@@ -203,6 +289,7 @@
                 behavior: 'smooth' // اسکرول نرم
             });
         }
+
     </script>
 
 </body>

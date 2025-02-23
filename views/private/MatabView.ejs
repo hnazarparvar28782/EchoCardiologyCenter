@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/stylePrj/styleTable.css">
-    
+    <!-- <link rel="stylesheet" href="/css/stylePrj/styleTable.css"> -->
+    <link href="/parsianCallender/dist/mds.bs.datetimepicker.style.css" rel="stylesheet"/>
 </head>
 <body>
     <script>
       var disableBeforeDate=("<%= disableBeforeDate %>"==""? 
           "":new Date("<%= disableBeforeDate %>")) 
     </script>
-    <div class="row mt-5 table-responsive p-4 mx-5 " >
+    <div class="row mt-5 table-responsive p-4 mx-5 mb-5 " >
         <!-- section Amar -->
         <% if (HozorCountMon!=0 ||VisitCountMon!=0) { %>
             <h5 class="rounded rounded-4 bg-info col-lg-1 text-center p-2 m-1">حاضرین صبح
@@ -31,9 +31,9 @@
                 </h5>
           <% } %>
         <!--check nobat dariem?! Loop through NobatsResult and Day.nobats -->
-        <table id="ListNobats"  class="table mx-2  align-middle table-sm table-bordered table-hover table-striped table-primary p-2 mt-5 m-4">
-              <thead id="ff" class="table-light">
-                <tr id="gg" class="table-primary">
+        <table id="ListNobats"  class=" listechoofdayheader table mx-2  align-middle table-sm table-bordered table-hover table-striped table-primary p-2 mt-5 m-4">
+              <thead id="ff" class="table-light ">
+                <tr id="gg" class="table-primary  listechoofdayheader">
                     <th id="h" scope="col"  onclick="sortTable(0)" >نام</th>
                     <th id="g" scope="col"  onclick="sortTable(1)">موبایل</th>
                     <th id="hh" scope="col" onclick="sortTable(2)" >کد ملی</th>
@@ -49,11 +49,21 @@
                     <th id="k" scope="col" onclick="sortTable(12)">نوع نوبت</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="listdetail">
                   
                   <% let Iid=0 %>
                   <% if (Object.keys(NobatsResult).length === 0) { %>
-                    <h4 class="text-center text-danger">فاقد نوبت در این روز!</h4>
+                    <tr>
+                        <td colspan="12">
+                            <div class="container  bg-info border-1 rounded-5 border-danger text-center">
+                                <h4 class="text-danger p-1">
+                                    <span class="text-info-emphasis">
+                                        <span class="text-white p-0 m-0">فاقد نوبت در این روز!</span> 
+                                    </span>
+                                </h4>
+                            </div>
+                        </td>
+                    </tr>      
                   <% } else {%>
                     <h4 class="text-center text-danger">بیمار با رنگ آبی ویزیت شده و به رنگ  قرمز در انتظار ویزیت </h4>
                     <% NobatsResult.forEach(Day=> { %>

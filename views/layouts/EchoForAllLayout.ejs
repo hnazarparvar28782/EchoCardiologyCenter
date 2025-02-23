@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" class="h-100" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="دریافت نوبت اینترنتی ویزیت با قلم نوری  و ایجاد پرونده  پزشکی  برای بیماران مطب-اکوی قلب echo Cardiology">
+  <meta name="author" content="hassan nazarparvar talash computer co.ltd">
+  <meta name="generator" content="hassan 0.112.5">
+  <title>Echocardiography Report Preparation | Specialized Services for Physicians</title>
+  <meta name="description" content="We provide specialized echocardiography report preparation services for physicians. Our advanced technology enhances accuracy and speed in diagnosis.">
+  <meta name="keywords" content="echocardiography,اکوکاردیولوژی,echocardiogram report, medical services, heart disease diagnosis, physicians">
+
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/stylePrj/styles.css">
+  <link rel="stylesheet" href="/fonts/font-awesome.css">
+  <link href="/css/stylePrj/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex rtl flex-column h-100 ">
+
+  <header class="mb-4">
+   <!-- Fixed navbar -->
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid border-success bg-info hnnavbar-top-style">
+        <a class="navbar-brand" href="#">
+            <span class="fa fa-stethoscope bg-success my-3 p-2 rounded-circle"></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <!-- Home link -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="/dashboard"  style="margin-right: 20px;">
+                        <p class="fa fa-2x fa-home mb-0"></p>
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-right: 20px;"> <!-- Increased spacing -->
+                    <a class="nav-link" href="#footer" aria-label="Help" data-bs-toggle="tooltip" title="Help">
+                        <p class="fa fa-ambulance fa-2x mb-0"></p>
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-right: 20px;"> <!-- Increased spacing -->
+                    <a class="nav-link" href="#footer" aria-label="Contact & Support" data-bs-toggle="tooltip" title="Contact & Support">
+                        <p class="fa fa-support fa-2x mb-0"></p>
+                    </a>
+                </li>
+                <!-- Add more nav items here if needed -->
+                    <!-- Dark & Light Mode Switch -->
+            <div class="form-check form-switch ms-auto mt-2">
+                <label class="form-check-label ms-3" for="lightSwitch" aria-label="Toggle light/dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </svg>
+                </label>
+                <input class="form-check-input" type="checkbox" style="display:none" id="lightSwitch" />
+            </div>
+            </ul>
+
+         
+        </div>
+    </div>
+   </nav>
+  </header>
+  
+    <%- body %>
+
+      <script src="/jsPrj/switch.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <script>
+        // Initialize Bootstrap tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+                                     
+</body>
+
+</html>

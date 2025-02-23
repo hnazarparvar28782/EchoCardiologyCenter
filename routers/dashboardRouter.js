@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import {FetchNobat, getLightPenVisit, MatabNobatUsersearch, MatabNobatsFetch, ReservNobat, SabtNazarKarbar, SignUpSick, createNobat, getCreateNobat, getDashboard,getDoctorProfile,getMatabView,getNobatDoctor,getPreRegister,getRegisterDoctor, getSearchForDoctor, selectedPlan, uploadImageMadarek, SaveHandDoctorVisit, SaveEditHandDoctorVisit, EndVisit, SaveStateNobat, getNobatDoctorHozori, SignUpSickHozri, getSearchForSickUser, ReservNobatHozri, getAdminUserPanel, SavePanelByadmin, PanelSerach, getAdminNazarat, AdminSaveNazarat, AdminSearchNazarkarbaran, SignUpEditSick, getVisitWithLisit, EndVisitWithList, getLightPenVisitWithList, MatabNobatsFetchWithList, MatabNobatUsersearchVisitWithList, getHelp, getContackt, getTotalNormalValues, getNormalValueSelectUser, getِcreateechoreport , saveEchoCreatedByCodemilli, generateReportEchoBycodemilli, UserEchoSearch, DeleteEchoById, generateOpenAiReport, EchoSerachFetch, getBlankEchoConfig, saveEchoConfig } from '../controllers/adminController.js';
+import {FetchNobat, getLightPenVisit, MatabNobatUsersearch, MatabNobatsFetch, ReservNobat, SabtNazarKarbar, SignUpSick, createNobat, getCreateNobat, getDashboard,getDoctorProfile,getMatabView,getNobatDoctor,getPreRegister,getRegisterDoctor, getSearchForDoctor, selectedPlan, uploadImageMadarek, SaveHandDoctorVisit, SaveEditHandDoctorVisit, EndVisit, SaveStateNobat, getNobatDoctorHozori, SignUpSickHozri, getSearchForSickUser, ReservNobatHozri, getAdminUserPanel, SavePanelByadmin, PanelSerach, getAdminNazarat, AdminSaveNazarat, AdminSearchNazarkarbaran, SignUpEditSick, getVisitWithLisit, EndVisitWithList, getLightPenVisitWithList, MatabNobatsFetchWithList, MatabNobatUsersearchVisitWithList, getHelp, getContackt, getTotalNormalValues, getNormalValueSelectUser, getِcreateechoreport , saveEchoCreatedByCodemilli, generateReportEchoBycodemilli, UserEchoSearch, DeleteEchoById, generateOpenAiReport, EchoSerachFetch, getBlankEchoConfig, saveEchoConfig, getEchoForAll, savePreFinalSentences } from '../controllers/adminController.js';
 import { authenticatedCheek } from '../middlewares/Auth.js';
 
 
@@ -28,6 +28,9 @@ dashboardRouter.get("/TotalNormalValues/:id",authenticatedCheek,getTotalNormalVa
 
 //* @router for /dashboard/ِBlankEchoConfig/for matab's echo report config 
 dashboardRouter.get("/BlankEchoConfig/:id",authenticatedCheek,getBlankEchoConfig);
+
+//* @router for /dashboard/ِEchoForAll-free report Echo for all users
+dashboardRouter.get("/EchoForAll",getEchoForAll);
 
 //* @router for /dashboard/ِcreateechoreport/for matab's doctors 
 dashboardRouter.get("/createechoreport/:id",authenticatedCheek,getِcreateechoreport);
@@ -112,9 +115,11 @@ dashboardRouter.post("/saveUserValueselected/",getNormalValueSelectUser);
 dashboardRouter.post("/saveCreatedEcho/",saveEchoCreatedByCodemilli);
 //* @router for /dashboard/generate-report-echo  for sick's echo by codemilli//
 dashboardRouter.post("/generate-report-echo/",generateReportEchoBycodemilli );
-
 //* @router for /dashboard/AIapireport  for open Ai report generator//
 dashboardRouter.post("/AIapireport/",generateOpenAiReport );
+
+//* @router for /dashboard/savePreFinalSentences  for pre final sentences//
+dashboardRouter.post("/savePreFinalSentences/",savePreFinalSentences );
 
 //* @router for /dashboard/saveEchoConfig  for config's Echo//
 dashboardRouter.post("/saveEchoConfig/",saveEchoConfig );
