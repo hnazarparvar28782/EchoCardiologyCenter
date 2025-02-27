@@ -23,6 +23,10 @@ Echo Cardiology Center : "A Comprehensive Tool for Cardiac Echo Reporting"
 Medical Echo Application
 “This application is based on the textbook ‘Braunwald’s Heart Disease: A Textbook of Cardiovascular Medicine, 2-Volume Set, 11th Edition.’”
 This application is developed using Node.js and Bootstrap.
+## Technologies Used
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
 Features:
   - Manage and display echo-related information
