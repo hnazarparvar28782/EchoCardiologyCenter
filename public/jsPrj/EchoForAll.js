@@ -1,6 +1,6 @@
 let sampleDivVisible = true;
 let finalResultDivVisible = true;
-let nextOn=true;
+let nextOn = true;
 function collectData() {
 
     const accordions = document.querySelectorAll('.accordion-item');
@@ -18,13 +18,13 @@ function collectData() {
             const category = previousElement && previousElement.tagName === 'H5' ? previousElement.textContent.trim() : null;
             const tableRows = table.querySelectorAll('tbody tr');
             const parameters = [];
-            
+
             // شناسایی ستون "Select"
             const selectColumnIndex = Array.from(table.querySelectorAll('th')).findIndex(th => th.textContent.trim() === 'Select');
 
             tableRows.forEach(row => {
-                
-                const userValueInput = row.querySelector('input[name="userValue"]')||row.querySelector('input[name="uservalue"]');
+
+                const userValueInput = row.querySelector('input[name="userValue"]') || row.querySelector('input[name="uservalue"]');
 
                 const normalCheckbox = row.querySelector('input[type="checkbox"][name="Normal"]');
                 const moderateCheckbox = row.querySelector('input[type="checkbox"][name="Moderate"]');
@@ -45,7 +45,7 @@ function collectData() {
                 // منطق جمع‌آوری داده‌های ستون "Details"
                 const details = [];
                 const detailItems = row.querySelectorAll('td[data-label="Details"] ul li');
-                   
+
                 detailItems.forEach(item => {
                     const checkboxes = item.querySelectorAll('input[type="checkbox"]');
                     const input = item.querySelector('input[type="text"]');
@@ -169,14 +169,14 @@ function DisplayEchoRep() {
     // //* sending data to nodjs server....
     if ((contentEditor == '<p><br></p>') & (userSelectedData.length == 0)) {
         Swal.fire({
-            title: "کاربر محترم",
-            text: 'اطلاعات اکو تکمیل نشده است',
+            title: "Dear User",
+            text: 'The echo information is incomplete',
             icon: "error",
-            confirmButtonText: "تایید"
+            confirmButtonText: "Confirm"
         })
         return
     }
-    
+
     genEchoRep(userSelectedData, fullnamesick, doctorName, FinalResult, sickcodemilli);
 
 }
@@ -439,7 +439,7 @@ async function ReporterAI() {
             spinner.style.display = 'none';
             const result = response.data.report; // استخراج گزارش از پاسخ
             // quill.clipboard.dangerouslyPasteHTML(0, result);//* if result be  in html code
-           quill.setText(result); // نمایش گزارش در ویرایشگر Quill
+            quill.setText(result); // نمایش گزارش در ویرایشگر Quill
         } else {
             console.error('Error in response:', response);
             alert('خطا در دریافت پاسخ از سرور');
@@ -459,7 +459,7 @@ function tickAllNormals() {
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Yes",
-        cancelButtonText:"No" 
+        cancelButtonText: "No"
     }).then((result) => {
         if (result.isConfirmed) {
             // دریافت تمام چک باکس‌های مورد نظر
@@ -482,7 +482,7 @@ function tickAllNormals() {
 function setUserValue(cell) {
     // پیدا کردن input مربوط به user value در همان ردیف
     const userInput = cell.closest('tr').querySelector('input[name="uservalue"]') || cell.closest('tr').querySelector('input[name="userValue"]');
-    
+
     // پیدا کردن عنوان ستون (header) با استفاده از index
     const headerIndex = cell.cellIndex; // index سلول کلیک شده
     const headerText = cell.closest('table').querySelector('thead tr').cells[headerIndex].innerText; // عنوان ستون
@@ -532,16 +532,16 @@ async function savePreSentence() {
 }
 
 //* load pre sentencs
-function setPreText(pretext){
+function setPreText(pretext) {
     // const safeText = preText.replace(/'/g, "\\'").replace(/"/g, '\\"');
     // quill.setText(pretext);
-    
+
     document.getElementById('samplesContent').innerHTML = pretext;
 
 
 }
 
-function setPreTextInEditor(pretext){
+function setPreTextInEditor(pretext) {
     quill.root.innerHTML = pretext;
 }
 function setPreTextInSamples(pretext) {
@@ -555,7 +555,7 @@ function setPreTextInSamples(pretext) {
     paragraphs.forEach(item => {
         item.classList.add('draggable'); // اضافه کردن کلاس draggable
         item.setAttribute('draggable', 'true');
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             toggleSelect(this); // افزودن رویداد کلیک
         });
     });
@@ -563,8 +563,8 @@ function setPreTextInSamples(pretext) {
 
 
 // function setPreTextInSample()
-function setPreTextDefaultSample (){
- const htmlContent=` <div id="sampleSentences" class="text-black">
+function setPreTextDefaultSample() {
+    const htmlContent = ` <div id="sampleSentences" class="text-black">
                 <div class="draggable text-decoration-underline" draggable="true" ondragstart="drag(event)"
                     onclick="toggleSelect(this)">LEFT VENTRICLE</div>
                 <div class="draggable " draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">LV
@@ -663,24 +663,24 @@ function setPreTextDefaultSample (){
                     significant valvular abnormalities were detected.</div>
                 <div class="draggable" draggable="true" ondragstart="drag(event)" onclick="toggleSelect(this)">The
                     findings are consistent with dilated cardiomyopathy.</div>
-            </div>`  
- document.getElementById('samplesContent').innerHTML = htmlContent;
+            </div>`
+    document.getElementById('samplesContent').innerHTML = htmlContent;
 
 }
 
 
-function toggleSampleDiv(curr){
-    let nextDiv=''
-    let currDiv=document.getElementById(curr);
-    curr=='sampleDiv'? nextDiv=document.getElementById('finalResultDiv') :
-                       nextDiv=document.getElementById('sampleDiv')     ;
-    if (!nextOn){
+function toggleSampleDiv(curr) {
+    let nextDiv = ''
+    let currDiv = document.getElementById(curr);
+    curr == 'sampleDiv' ? nextDiv = document.getElementById('finalResultDiv') :
+        nextDiv = document.getElementById('sampleDiv');
+    if (!nextOn) {
         nextDiv.classList.remove('hidden2');
-        nextOn=true;
+        nextOn = true;
         currDiv.classList.remove('fullscreen');
-    } else{
+    } else {
         nextDiv.classList.add('hidden2');
-        nextOn=false;
+        nextOn = false;
         currDiv.classList.add('fullscreen')
     }
 }
@@ -688,7 +688,7 @@ function toggleSampleDiv(curr){
 function updateSampleSentences() {
     // انتخاب دیو با شناسه sampleSentences
     const sampleSentencesDiv = document.getElementById('sampleSentences');
-    
+
     // خالی کردن محتوای دیو
     sampleSentencesDiv.innerHTML = '';
 

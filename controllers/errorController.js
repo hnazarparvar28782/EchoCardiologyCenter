@@ -2,12 +2,7 @@
 const getError404 = (req,res) => { 
    console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
    console.log("Hassan! you stay in section's 404 not found!!! ")
-   // console.log(req.flash('error'));
-   // let errormsg=""
-   // if ((req.flash('error'))!=""){
-   //   errormsg= req.flash('error'); 
-   //   console.log(errormsg);
-   // } 
+  
    let errormsg = req.flash('error');
    if (errormsg==undefined)errormsg="";
     res.status(404).render("errors/404", {errormsg, pageTitle: "صفحه مورد نظر پیدا نشد" ,path:"/404" });
