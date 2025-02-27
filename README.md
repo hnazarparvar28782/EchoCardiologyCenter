@@ -1,3 +1,23 @@
+Echo-Kardiologiezentrum
+
+Echo-Kardiologiezentrum: "Ein umfassendes Werkzeug für die Echokardiographie-Berichterstattung" Medizinische Echo-Anwendung „Diese Anwendung basiert auf dem Lehrbuch 'Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 2-Volume Set, 11th Edition.'“ Diese Anwendung wurde mit Node.js und Bootstrap entwickelt.
+
+Merkmale:
+
+    Verwaltung und Anzeige von echokardiografischen Informationen
+    Benutzersitzungen
+    Responsives Design
+
+Verwendete Technologien:
+
+    EJS für Templating
+    MongoDB für die Datenspeicherung
+
+Die vollständige Demoversion ist verfügbar unter: https://doctorpesheto.ir/dashboard/EchoForAll
+
+
+
+
 # Echo Cardiology Center
 Echo Cardiology Center : "A Comprehensive Tool for Cardiac Echo Reporting"
 Medical Echo Application
