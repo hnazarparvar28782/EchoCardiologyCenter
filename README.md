@@ -59,4 +59,15 @@ git clone https://github.com/your-username/EchoCardiologyCenter.git
 cd EchoCardiologyCenter
 ```
 
-3. **Follow the project-specific instructions** (e.g., installing dependencies, running the app).
+3. **installing dependencies** (e.g., installing dependencies, running the app).
+```bash
+npm install
+```
+4.**running the app**:
+```bash
+npm strat
+```
+5-**open your browser** : 
+```bash
+http://localhost:3000/dashboard
+```
