@@ -47,29 +47,10 @@ Technologies Used:
  The full demo version is available at:
  https://doctorpesheto.ir/dashboard/EchoForAll”
 
-### توضیحات برای کد Markdown:
+## Installation and Usage
 
-1. **عنوان اصلی:**
-   - `## Installation and Usage`  
-     این عنوان بخش اصلی را مشخص می‌کند.
+### Navigate to the project directory:
+```bash
+cd EchoCardiologyCenter
 
-2. **زیرعنوان برای ناوبری به دایرکتوری پروژه:**
-   - `### Navigate to the project directory:`  
-     این زیرعنوان نشان‌دهنده این است که کاربر باید به دایرکتوری پروژه برود.
-
-3. **بلاک کد برای دستور `cd`:**
-   - ```bash
-     cd EchoCardiologyCenter
-     ```  
-     این بلاک کد دستور `cd` را به صورت واضح نمایش می‌دهد.
-
-4. **زیرعنوان برای نصب وابستگی‌ها:**
-   - `### Install the dependencies:`  
-     این زیرعنوان نشان‌دهنده بخش نصب وابستگی‌ها است.
-
-5. **بلاک کد برای دستور `npm install`:**
-   - ```bash
-     npm install
-     ```  
-     این بلاک کد دستور `npm install` را نمایش می‌دهد.
 
