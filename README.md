@@ -49,9 +49,14 @@ Technologies Used:
 
 ## Installation and Usage
 
+1. **Clone the repository** (if you haven’t already):
 ```bash
-cd EchoCardiologyCenter
+git clone https://github.com/your-username/EchoCardiologyCenter.git
+```
 
-### Navigate to the project directory:
+2. **Navigate to the project directory**:
 ```bash
 cd EchoCardiologyCenter
+```
+
+3. **Follow the project-specific instructions** (e.g., installing dependencies, running the app).
