@@ -47,3 +47,11 @@ Technologies Used:
  The full demo version is available at:
  https://doctorpesheto.ir/dashboard/EchoForAll”
 
+ ### توضیحات:
+
+1. **Clone the repository:** این بخش به کاربر نشان می‌دهد که چگونه می‌تواند ریپازیتوری را به سیستم خود کپی کند.
+2. **Navigate to the project directory:** کاربر باید به پوشه پروژه خود برود.
+3. **Install the dependencies:** با استفاده از `npm install`، تمامی وابستگی‌های پروژه نصب می‌شود.
+4. **Start the application:** با `npm start`، برنامه شروع به کار می‌کند.
+5. **Open your web browser:** کاربر باید آدرس `http://localhost:3000` را در مرورگر خود باز کند تا به برنامه دسترسی پیدا کند.
+
