@@ -2,7 +2,7 @@ Echo-Kardiologiezentrum
 
 Echo-Kardiologiezentrum: "Ein umfassendes Werkzeug für die Echokardiographie-Berichterstattung" Medizinische Echo-Anwendung „Diese Anwendung basiert auf dem Lehrbuch 'Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine, 2-Volume Set, 11th Edition.'“ Diese Anwendung wurde mit Node.js und Bootstrap entwickelt.
 
-![amazonbook1brownwald](https://github.com/hnazarparvar28782/EchoCardiologyCenter/public/assets/amazonbook1brownwald.jpg?raw=true)
+![amazonbook1brownwald](https://github.com/hnazarparvar28782/EchoCardiologyCenter/blob/master/public/assets/amazonbook1brownwald.jpg?raw=true)
 
 ## Verwendete Technologien
 
