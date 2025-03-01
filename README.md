@@ -52,8 +52,6 @@ Technologies Used:
 ```bash
 cd EchoCardiologyCenter
 
-## Installation and Usage
-
 ### Navigate to the project directory:
 ```bash
 cd EchoCardiologyCenter
