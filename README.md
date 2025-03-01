@@ -51,6 +51,8 @@ Technologies Used:
 
 ### Navigate to the project directory:
 ```bash
-cd REPOSITORY_NAME
-
+cd EchoCardiologyCenter
+### Install the dependencies:
+```bash
+npm install
 
