@@ -53,6 +53,6 @@ Technologies Used:
 ```bash
 cd EchoCardiologyCenter```
 
-### Install the dependencies:
+## Install the dependencies:
 ```bash
 npm install```
