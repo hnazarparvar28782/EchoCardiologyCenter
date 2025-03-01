@@ -49,9 +49,9 @@ Technologies Used:
 
 ## Installation and Usage
 
-### Navigate to the project directory:
 ```bash
 cd EchoCardiologyCenter
 
-Install the dependencies:
-npm install`
+Install the dependencies: npm install
+
+Open your web browser and go to: http://localhost:3000
